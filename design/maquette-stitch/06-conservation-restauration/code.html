@@ -1,0 +1,1034 @@
+<!DOCTYPE html>
+
+<html lang="fr"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"surface-container-high":"#dee8ff","error":"#ba1a1a","surface":"#f9f9ff","on-tertiary":"#ffffff","primary-fixed":"#c0edd1","tertiary-fixed":"#ffdea5","on-tertiary-container":"#bf9b54","surface-container":"#e7eeff","on-primary":"#ffffff","primary-fixed-dim":"#a5d0b6","on-error":"#ffffff","secondary":"#1b6d24","on-secondary-container":"#217128","inverse-on-surface":"#ebf1ff","primary":"#002817","secondary-fixed-dim":"#88d982","surface-bright":"#f9f9ff","primary-container":"#153e2b","surface-variant":"#d8e3fa","error-container":"#ffdad6","on-tertiary-fixed-variant":"#5d4201","surface-container-low":"#f0f3ff","on-error-container":"#93000a","tertiary-container":"#493300","on-surface":"#111c2c","inverse-surface":"#263142","on-primary-container":"#7fa990","on-primary-fixed-variant":"#264e3a","background":"#f9f9ff","secondary-fixed":"#a3f69c","outline-variant":"#c1c8c1","surface-dim":"#cfdaf1","inverse-primary":"#a5d0b6","surface-tint":"#3e6751","on-primary-fixed":"#002113","tertiary-fixed-dim":"#e9c176","on-secondary":"#ffffff","on-background":"#111c2c","on-secondary-fixed":"#002204","secondary-container":"#a0f399","on-surface-variant":"#414943","surface-container-highest":"#d8e3fa","tertiary":"#2e1f00","on-tertiary-fixed":"#261900","on-secondary-fixed-variant":"#005312","outline":"#717973","surface-container-lowest":"#ffffff"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"gutter-mobile":"0.75rem","space-sm":"0.5rem","gutter":"1.5rem","space-lg":"1.5rem","space-xs":"0.25rem","space-xl":"2.5rem","margin-mobile":"1rem","margin":"2rem","space-md":"1rem"},"fontFamily":{"data-mono":["Inter"],"body-lg":["Inter"],"label-md":["Inter"],"headline-md":["Playfair Display"],"body-sm":["Inter"],"label-sm":["Inter"],"headline-sm":["Playfair Display"],"headline-lg":["Playfair Display"],"body-md":["Inter"],"headline-xl":["Playfair Display"],"headline-lg-mobile":["Playfair Display"],"headline-xl-mobile":["Playfair Display"]},"fontSize":{"data-mono":["13px",{"lineHeight":"18px","letterSpacing":"-0.01em","fontWeight":"500"}],"body-lg":["18px",{"lineHeight":"28px","fontWeight":"400"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.06em","fontWeight":"600"}],"headline-md":["24px",{"lineHeight":"32px","fontWeight":"600"}],"body-sm":["13px",{"lineHeight":"20px","fontWeight":"400"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.08em","fontWeight":"500"}],"headline-sm":["20px",{"lineHeight":"28px","fontWeight":"500"}],"headline-lg":["36px",{"lineHeight":"44px","letterSpacing":"-0.015em","fontWeight":"600"}],"body-md":["15px",{"lineHeight":"24px","fontWeight":"400"}],"headline-xl":["48px",{"lineHeight":"56px","letterSpacing":"-0.02em","fontWeight":"700"}],"headline-lg-mobile":["26px",{"lineHeight":"34px","letterSpacing":"-0.01em","fontWeight":"600"}],"headline-xl-mobile":["32px",{"lineHeight":"40px","letterSpacing":"-0.01em","fontWeight":"700"}]}}}}</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 right-0 z-50 bg-surface/85 backdrop-blur-md shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="w-full px-margin h-20 flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md shrink-0"><a class="flex items-center gap-space-sm group text-decoration-none" data-path="accueil" href="#"><div class="relative w-10 h-10 rounded-lg bg-primary flex items-center justify-center shadow-[0_2px_8px_rgba(0,40,23,0.12)]"><span class="material-symbols-outlined text-secondary-fixed text-[24px]">eco</span><div class="absolute -right-1 -top-1 w-2.5 h-2.5 rounded-full bg-tertiary-fixed border border-primary"></div><div class="absolute -left-0.5 -bottom-0.5 w-1.5 h-1.5 rounded-full bg-tertiary-fixed-dim"></div></div><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-primary leading-none tracking-tight">Green Biometry</span><span class="font-label-sm text-label-sm text-outline tracking-wider uppercase mt-0.5">Scientific Telemetry Network</span></div></a></div><nav class="hidden lg:flex items-center gap-space-xs" data-active-classes="bg-primary-container text-on-primary font-semibold rounded-lg shadow-sm"><a class="px-space-md py-space-sm rounded-lg font-label-md text-label-md uppercase tracking-wider text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all" data-path="explorer" href="#">EXPLORER</a><a aria-current="page" class="px-space-md py-space-sm uppercase tracking-wider transition-all bg-primary-container text-on-primary font-semibold rounded-lg shadow-sm" data-path="comprendre" href="#">COMPRENDRE</a><a class="px-space-md py-space-sm rounded-lg font-label-md text-label-md uppercase tracking-wider text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all" data-path="outils" href="#">OUTILS</a><a class="px-space-md py-space-sm rounded-lg font-label-md text-label-md uppercase tracking-wider text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all" data-path="communaute" href="#">COMMUNAUTÉ</a></nav><div class="flex items-center gap-space-sm shrink-0"><div class="hidden sm:flex items-center px-space-xs py-0.5 rounded-lg bg-surface-container font-label-sm text-label-sm text-on-surface-variant"><button class="px-space-xs py-0.5 rounded text-primary font-bold hover:text-primary transition-colors" type="button">FR</button><span class="text-outline-variant select-none">|</span><button class="px-space-xs py-0.5 rounded text-outline hover:text-on-surface transition-colors" type="button">EN</button></div><button aria-label="Rechercher" class="p-space-sm rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors flex items-center justify-center" type="button"><span class="material-symbols-outlined text-[20px]">search</span></button><a class="hidden sm:flex items-center gap-space-xs px-space-md py-space-sm rounded-lg bg-primary text-on-primary font-label-md text-label-md hover:bg-primary-container hover:text-on-primary transition-all shadow-[0_2px_8px_rgba(0,40,23,0.08)]" data-path="espace-chercheur" href="#"><span class="material-symbols-outlined text-[18px]">person</span><span>Espace Chercheur</span></a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-20 bg-surface"><div class="flex flex-col w-full text-on-surface">
+<!-- ========================================== -->
+<!-- 1. BREADCRUMB & HERO SECTION               -->
+<!-- ========================================== -->
+<section class="relative w-full bg-surface-container-lowest overflow-hidden pb-space-xl">
+<!-- Atmospheric subtle ambient mesh gradient -->
+<div class="absolute inset-0 bg-gradient-to-b from-surface-container-low/70 via-surface-container-lowest/90 to-surface pointer-events-none"></div>
+<div class="relative w-full px-margin pt-space-lg flex flex-col gap-space-lg max-w-7xl mx-auto">
+<!-- Top Meta Navigation & Breadcrumb -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm pt-space-xs">
+<nav aria-label="Breadcrumb" class="flex items-center gap-space-xs font-body-sm text-body-sm text-outline">
+<a class="hover:text-primary transition-colors" data-path="accueil" href="#">Home</a>
+<span class="text-outline-variant">/</span>
+<a class="hover:text-primary transition-colors" data-path="comprendre" href="#">Understand</a>
+<span class="text-outline-variant">/</span>
+<span class="text-on-surface font-semibold">Conservation &amp; Ecological Restoration</span>
+</nav>
+<div class="inline-flex items-center gap-space-xs px-space-sm py-1 rounded-full bg-surface-container font-data-mono text-label-sm text-primary uppercase tracking-wider shadow-sm">
+<span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+<span>SER STANDARDS • FAIR SPEC v2.4 • ISO-14064 READY</span>
+</div>
+</div>
+<!-- Main Hero Grid: Editorial Typography + Photogrammetric Visual Frame -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center pt-space-sm">
+<div class="lg:col-span-7 flex flex-col gap-space-md">
+<div class="inline-flex items-center gap-space-xs font-label-md text-label-md uppercase tracking-wider text-secondary">
+<span class="material-symbols-outlined text-[16px]">nature_people</span>
+<span>Outcome-Based Biospheric Biometry</span>
+</div>
+<h1 class="font-headline-xl text-headline-xl text-primary leading-none tracking-tight">
+            Conservation &amp; <br/>
+<span class="italic font-headline-xl text-on-tertiary-container font-normal">Ecological Restoration</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl leading-relaxed">
+            Discover conservation initiatives, explore ecological restoration projects, and understand how environmental outcomes are rigorously monitored, calibrated, and evaluated across space and time through multi-sensor biometry.
+          </p>
+<!-- Action Triggers -->
+<div class="flex flex-wrap items-center gap-space-sm pt-space-xs">
+<a class="inline-flex items-center gap-space-xs px-space-lg py-space-sm rounded-lg bg-primary text-on-primary font-label-md text-label-md uppercase tracking-wider hover:bg-primary-container transition-all shadow-md" href="#registry">
+<span>Explore Projects</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+<a class="inline-flex items-center gap-space-xs px-space-lg py-space-sm rounded-lg bg-surface-container text-primary font-label-md text-label-md uppercase tracking-wider hover:bg-surface-container-high transition-all shadow-sm" href="#indicators">
+<span class="material-symbols-outlined text-[18px]">monitoring</span>
+<span>Discover Indicators</span>
+</a>
+</div>
+<!-- Prototype Disclaimer Pill -->
+<div class="flex items-center gap-space-xs text-outline font-data-mono text-label-sm pt-space-xs">
+<span class="material-symbols-outlined text-[16px] text-on-tertiary-container">verified</span>
+<span>Illustrative Demonstration Prototype — Calibrated Empirical Research Telemetry</span>
+</div>
+</div>
+<!-- Visual Hero Mosaic: Dual Imagery + Telemetry Crosshair Overlays -->
+<div class="lg:col-span-5 relative">
+<div class="relative w-full rounded-xl overflow-hidden shadow-xl aspect-[4/3] bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="High angle drone photograph capturing a dense tropical forest canopy bordered by regenerated secondary understory and scientific research trail, illuminated by soft golden morning sun, lush forest greens and rich loam hues, documentary style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDypA43NGjWmPgk6oFgsZrrTBBm1YRYpOZANRFJsRg2uc1Nq8ulZBk-4vAStfOZnhvk-9n3dc2UX-E6WSQ4DAhggKE7AR_K4gwFyOc1qk6E1uiZwlTlREC0YCm2wnug_9390SN-SN_0CNk1n3SAK-Wxo0Uz9LYEtPASyuLAMh3ADYIgzBimMw3vKcg72fXYRokTqMuV8r2rCRcwqmy2FrPyuKsbc-58EX1bYKwBGII"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent"></div>
+<!-- Floating Geomatic Metadata Pin -->
+<div class="absolute top- space-sm left-space-sm px-space-sm py-1 rounded bg-surface/90 backdrop-blur-md shadow-md flex items-center gap-space-xs font-data-mono text-label-sm text-primary">
+<span class="material-symbols-outlined text-[14px] text-secondary">satellite_alt</span>
+<span>SENTINEL-2C / NDVI 0.82 ± 0.04</span>
+</div>
+<!-- Inset Active Scientist Badge -->
+<div class="absolute bottom-space-md left-space-md right-space-md p-space-sm rounded-lg bg-surface/95 backdrop-blur-md shadow-lg flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full overflow-hidden shrink-0 bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Close up environmental researcher checking biometric field sensors and foliage caliper in a dense green forest, high clarity documentary photograph." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAeqboctR8H-lREQI_coR45i5aNnXBjnsXkpUf-elsFaUFQVeFdU3AYVhlaW7XPUUovt0lJYPoJ3cfYkWC7WEeJrUiZBLC1QUUZJn4tB9Z_UNEsLtS9ineZXa1O0_hscM35k7vnVq6D6xC5l9tiyGUCjqF3lsgw9PKO6zjRIk33855bVtowlGZn1-wO-oGK_0eOTmgjdoh8Lde55UsajTWe9cdbcO7lRfQs4wyTiIA"/>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-primary font-bold">In-situ Ground Validation</span>
+<span class="font-data-mono text-label-sm text-outline">Lat: 02°18'44"S • Lon: 29°14'12"E</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-secondary text-[22px]">check_circle</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Telemetry Mini-Stats Bar -->
+<div class="w-full grid grid-cols-2 md:grid-cols-4 gap-gutter mt-space-md p-space-md rounded-xl bg-surface-container-low shadow-sm">
+<div class="flex flex-col gap-0.5">
+<div class="flex items-center gap-space-xs font-headline-md text-headline-md text-primary">
+<span>142</span>
+<span class="font-label-sm text-secondary material-symbols-outlined text-[18px]">add</span>
+</div>
+<span class="font-label-md text-label-md uppercase tracking-wider text-outline font-semibold">Active Corridors</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Continuous telemetry logging</span>
+</div>
+<div class="flex flex-col gap-0.5">
+<div class="flex items-center gap-space-xs font-headline-md text-headline-md text-primary">
+<span>1.84M</span>
+<span class="font-data-mono text-label-md text-outline">ha</span>
+</div>
+<span class="font-label-md text-label-md uppercase tracking-wider text-outline font-semibold">Monitored Canopy</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Across 18 Global Biomes</span>
+</div>
+<div class="flex flex-col gap-0.5">
+<div class="flex items-center gap-space-xs font-headline-md text-headline-md text-secondary">
+<span>86.4%</span>
+<span class="material-symbols-outlined text-[16px]">trending_up</span>
+</div>
+<span class="font-label-md text-label-md uppercase tracking-wider text-outline font-semibold">Seedling Survival</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">24-month rolling mean</span>
+</div>
+<div class="flex flex-col gap-0.5">
+<div class="flex items-center gap-space-xs font-headline-md text-headline-md text-primary">
+<span>VM0047</span>
+</div>
+<span class="font-label-md text-label-md uppercase tracking-wider text-outline font-semibold">Standard Aligned</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Verra &amp; ISO-14064 metrics</span>
+</div>
+</div>
+</div>
+</section>
+<!-- ========================================== -->
+<!-- 2. RESTORATION & CONSERVATION DOMAINS      -->
+<!-- ========================================== -->
+<section class="w-full py-space-xl px-margin bg-surface">
+<div class="max-w-7xl mx-auto flex flex-col gap-space-lg">
+<!-- Section Header -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-sm">
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-md text-label-md uppercase tracking-wider text-secondary font-bold">Taxonomic Interventions</span>
+<h2 class="font-headline-lg text-headline-lg text-primary tracking-tight">Domains of Ecological Intervention</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl">
+            Systematic categorization of terrestrial, coastal, and freshwater restoration protocols monitored across global biosphere observatories.
+          </p>
+</div>
+<div class="flex items-center gap-space-xs font-data-mono text-label-sm text-outline">
+<span class="material-symbols-outlined text-[16px]">schema</span>
+<span>6 KEY SYSTEM DOMAINS</span>
+</div>
+</div>
+<!-- Domain Cards Grid (6 cards) -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<!-- Domain 1: Forest -->
+<div class="group flex flex-col rounded-xl bg-surface-container-lowest overflow-hidden shadow-sm hover:shadow-md transition-all">
+<div class="relative h-48 w-full overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Dense multi strata tropical rainforest canopy with emergent tall hardwood trees and lush lianas under hazy cinematic sunlight." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDxvgtBwNLY-terPIjb3OHKoEyNiod6V35Dqx4QjY0wc-b86OPtwAgdQgisJAdXskeiVG8QyJcyYOTDsXFFGgvHZRsLqmo-09Lbodzx3C3gNlTKZoHxpXfKbtOqPjivcdqNIXFMKen6BKB_DgSncGfNcp6glDmMnOZCSNMh9onObOpINB-h7a_CRKgKZNLwH625JpdA45mJ1sLLx6aZ7ReexbBpxXvILnZ-PjVjqr8"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/70 via-transparent to-transparent"></div>
+<span class="absolute top-space-sm right-space-sm px-space-xs py-0.5 rounded bg-surface/90 text-primary font-data-mono text-label-sm uppercase font-semibold">ANR &amp; Climax</span>
+</div>
+<div class="p-space-md flex flex-col flex-1 justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<h3 class="font-headline-sm text-headline-sm text-primary group-hover:text-secondary transition-colors">Forest Restoration</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                Assisted natural regeneration (ANR), framework species planting, and multi-strata canopy densification to re-establish primary forest structure and carbon storage.
+              </p>
+</div>
+<div class="pt-space-xs flex items-center justify-between font-label-md text-label-md text-secondary font-semibold">
+<span>Explore Protocols</span>
+<span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+</div>
+</div>
+<!-- Domain 2: Mangrove -->
+<div class="group flex flex-col rounded-xl bg-surface-container-lowest overflow-hidden shadow-sm hover:shadow-md transition-all">
+<div class="relative h-48 w-full overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Ecological volunteers and field botanists planting Rhizophora mangrove seedlings in intertidal coastal mudflats under warm tropical light." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAtInUVQl1eCTctJZJFSnxASUJNx1KcoyAr-vDBhp6vXC7iKWvYjpwAVxLiH-3r3Sr5z4_OedbFQzDXy52p_QInOmw1GuF0lE6IrmiUj0mhwnk16YSD7f2q8bGq-reEtHmU-lUUWRFcyVmk9Ro3utfPUf9RoLvo_WilRbCMiEQDKhD7abUVeGj4uDTuKIw35v0GpIpa7mX0VTqD8uzUm3jasdJFjXLUVtUsvWHypXE"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/70 via-transparent to-transparent"></div>
+<span class="absolute top-space-sm right-space-sm px-space-xs py-0.5 rounded bg-surface/90 text-primary font-data-mono text-label-sm uppercase font-semibold">Blue Carbon</span>
+</div>
+<div class="p-space-md flex flex-col flex-1 justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<h3 class="font-headline-sm text-headline-sm text-primary group-hover:text-secondary transition-colors">Mangrove Rehabilitation</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                Hydrological channel reconnection, Rhizophora &amp; Avicennia propagation, sediment stabilization, and blue carbon accretion measurement.
+              </p>
+</div>
+<div class="pt-space-xs flex items-center justify-between font-label-md text-label-md text-secondary font-semibold">
+<span>Explore Protocols</span>
+<span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+</div>
+</div>
+<!-- Domain 3: Biodiversity Corridors -->
+<div class="group flex flex-col rounded-xl bg-surface-container-lowest overflow-hidden shadow-sm hover:shadow-md transition-all">
+<div class="relative h-48 w-full overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Forest rangers and field ecologists carrying telemetry field notebooks along a dense jungle transect path, high resolution academic documentary." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA1wlmZvwi63QcVxuUzx-UhEnbvU70wHQhuPmDaTTUHr5UoFU2DtpC-AHSKjgw-XQXBiGBAAGFXk-K3QgeC65lKbmHdTTw9MftGC0Gjh453wXVZ3DJfln1TR57BoMiaQMv_QRrQ9K59BfkVRwo9h7OGOIxrr8jqgo5NVFkZ7sWj7Bh5gMUVhjnJTPuo80AEGLmpDC1C-0-n1K9ajVTwl95k2eCu26FrlttrjHlbLzg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/70 via-transparent to-transparent"></div>
+<span class="absolute top-space-sm right-space-sm px-space-xs py-0.5 rounded bg-surface/90 text-primary font-data-mono text-label-sm uppercase font-semibold">Bioacoustics &amp; Fauna</span>
+</div>
+<div class="p-space-md flex flex-col flex-1 justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<h3 class="font-headline-sm text-headline-sm text-primary group-hover:text-secondary transition-colors">Biodiversity Corridors</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                Rebuilding structural continuity between fragmented reserves to facilitate animal gene flow, monitored via autonomous bioacoustics and camera traps.
+              </p>
+</div>
+<div class="pt-space-xs flex items-center justify-between font-label-md text-label-md text-secondary font-semibold">
+<span>Explore Protocols</span>
+<span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+</div>
+</div>
+<!-- Domain 4: Wetland Restoration -->
+<div class="group flex flex-col rounded-xl bg-surface-container-lowest overflow-hidden shadow-sm hover:shadow-md transition-all">
+<div class="relative h-48 w-full overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Panoramic aerial view of a regenerated freshwater wetland marsh with winding natural water channels, reeds, and water lilies, serene pristine wilderness." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCT614fjR9wAIEIqzNa1vG9JA9oOzaPQSvTMBiQA2lzw6tQk08gk2__8mGuF4WBZqL_k8K8pMx-QYDNprQFuEDKc3iKaJ4nVB45HS2WsG2LsW-eHs8pNjNntY_flCXJZpa8TmZ0gC2eQ9875vFltQARyyNhwd5jXrx82mAh7rL_T9eR7904XnMIdJvWk_vc2hZ5a8PzWX-_FDW1mT685L5rGpOrV5MW2yzL62reYRQ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/70 via-transparent to-transparent"></div>
+<span class="absolute top-space-sm right-space-sm px-space-xs py-0.5 rounded bg-surface/90 text-primary font-data-mono text-label-sm uppercase font-semibold">Peatland Hydrology</span>
+</div>
+<div class="p-space-md flex flex-col flex-1 justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<h3 class="font-headline-sm text-headline-sm text-primary group-hover:text-secondary transition-colors">Wetland &amp; Peatland</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                Ditch blocking, peat re-wetting, macrophyte community restoration, and greenhouse gas flux monitoring across temperate and tropical mires.
+              </p>
+</div>
+<div class="pt-space-xs flex items-center justify-between font-label-md text-label-md text-secondary font-semibold">
+<span>Explore Protocols</span>
+<span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+</div>
+</div>
+<!-- Domain 5: Soil Rehabilitation -->
+<div class="group flex flex-col rounded-xl bg-surface-container-lowest overflow-hidden shadow-sm hover:shadow-md transition-all">
+<div class="relative h-48 w-full overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Macro view of rich dark humus soil holding fresh fungal mycorrhizae networks and emerging green fern shoots in gentle morning dew." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAX2_MK2J7ps_9nMGov7LBohgqkhafaRHRLEZsYJGQ5TzNlYv9dnR27TUGqFrjtkpT-Up9lPxhATOrpZ7g1C-DklMya4205C2pBaaunvQ7bE9C2Yu_F4hlfMaeXcV2f0dOgALYmwWn_afANFNUMsR9USjdHWQvciXQjKJxGVBZCTAVfLL9V8L91WNWos4QrLfJOYEdPorOnijNhDT5c9nsDhpHgNk2vKh-mluIxqik"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/70 via-transparent to-transparent"></div>
+<span class="absolute top-space-sm right-space-sm px-space-xs py-0.5 rounded bg-surface/90 text-primary font-data-mono text-label-sm uppercase font-semibold">Microbial &amp; SOC</span>
+</div>
+<div class="p-space-md flex flex-col flex-1 justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<h3 class="font-headline-sm text-headline-sm text-primary group-hover:text-secondary transition-colors">Soil Rehabilitation</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                Mycorrhizal inoculation, anti-erosion biological terracing, and recovery of Soil Organic Carbon (SOC) in heavily degraded landscapes.
+              </p>
+</div>
+<div class="pt-space-xs flex items-center justify-between font-label-md text-label-md text-secondary font-semibold">
+<span>Explore Protocols</span>
+<span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+</div>
+</div>
+<!-- Domain 6: Aquatic Ecosystems -->
+<div class="group flex flex-col rounded-xl bg-surface-container-lowest overflow-hidden shadow-sm hover:shadow-md transition-all">
+<div class="relative h-48 w-full overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Clear mountain river stream running over gravel beds with native riparian forest trees hanging over the water, crystal clear current." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDbdHCgCn6Sg_W3p4WiUF9fbBmOECx1Rzdl4eY8V02nE-eQ3pRFAeMGkTTBZ-sgonMQSCXXHo6S_V4LAJ9uNPRz8PideXqQoFr_R2QhSLM-NSyxhtIbA3e4nqTTx9uA7Aello_EoMmelaYk25xE4j9FjtNpGRnn9swB6wOleeTxRW1k6ZmvUVXGCH-jXflzD9Gmg13VKYP0dRy7JwtgWoaglixfUG8ModlNXd86RbM"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/70 via-transparent to-transparent"></div>
+<span class="absolute top-space-sm right-space-sm px-space-xs py-0.5 rounded bg-surface/90 text-primary font-data-mono text-label-sm uppercase font-semibold">Riparian Buffers</span>
+</div>
+<div class="p-space-md flex flex-col flex-1 justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<h3 class="font-headline-sm text-headline-sm text-primary group-hover:text-secondary transition-colors">Aquatic &amp; Riparian</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                Riverbank re-vegetation, macroinvertebrate benthos repopulation, turbidity reduction, and cold-water refuge preservation for native ichthyofauna.
+              </p>
+</div>
+<div class="pt-space-xs flex items-center justify-between font-label-md text-label-md text-secondary font-semibold">
+<span>Explore Protocols</span>
+<span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ========================================== -->
+<!-- 3. PROJECT REGISTRY & FILTERING SYSTEM     -->
+<!-- ========================================== -->
+<section class="w-full py-space-xl px-margin bg-surface-container-low" id="registry">
+<div class="max-w-7xl mx-auto flex flex-col gap-space-lg">
+<!-- Registry Heading -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-sm">
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-md text-label-md uppercase tracking-wider text-secondary font-bold">Empirical Field Index</span>
+<h2 class="font-headline-lg text-headline-lg text-primary tracking-tight">Global Restoration Project Registry</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl">
+            Explore verified geolocated conservation and restoration initiatives. Filter by geographic region, biome category, intervention methodology, and monitoring longevity.
+          </p>
+</div>
+<div class="flex items-center gap-space-xs bg-surface px-space-md py-space-xs rounded-lg shadow-sm">
+<span class="font-data-mono text-data-mono text-primary font-bold">142</span>
+<span class="font-body-sm text-body-sm text-outline">Projects Cataloged</span>
+</div>
+</div>
+<!-- Glassmorphic Filter Matrix -->
+<div class="w-full p-space-md rounded-xl bg-surface/90 backdrop-blur-md shadow-sm flex flex-col gap-space-md">
+<!-- Search bar + main dropdowns -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-space-sm">
+<div class="lg:col-span-4 relative flex items-center">
+<span class="material-symbols-outlined absolute left-space-sm text-outline text-[20px]">search</span>
+<input class="w-full pl-10 pr-space-sm py-2 rounded-lg bg-surface-container font-body-sm text-body-sm text-on-surface placeholder:text-outline focus:outline-none focus:ring-1 focus:ring-primary" placeholder="Search by name, taxon, or coordinates..." type="text"/>
+</div>
+<div class="lg:col-span-3">
+<select class="w-full px-space-sm py-2 rounded-lg bg-surface-container font-body-sm text-body-sm text-on-surface focus:outline-none focus:ring-1 focus:ring-primary">
+<option>All Biomes &amp; Ecoregions</option>
+<option>Tropical &amp; Subtropical Moist Forest</option>
+<option>Mangrove &amp; Estuarine</option>
+<option>Montane Cloud Forest</option>
+<option>Peatlands &amp; Floodplains</option>
+</select>
+</div>
+<div class="lg:col-span-3">
+<select class="w-full px-space-sm py-2 rounded-lg bg-surface-container font-body-sm text-body-sm text-on-surface focus:outline-none focus:ring-1 focus:ring-primary">
+<option>All Interventions</option>
+<option>Assisted Natural Regeneration (ANR)</option>
+<option>Active Multi-Species Planting</option>
+<option>Hydrological Reconnection</option>
+<option>Faunal Corridor Protection</option>
+</select>
+</div>
+<div class="lg:col-span-2">
+<select class="w-full px-space-sm py-2 rounded-lg bg-surface-container font-body-sm text-body-sm text-on-surface focus:outline-none focus:ring-1 focus:ring-primary">
+<option>All Statuses</option>
+<option>Active Monitoring</option>
+<option>Baseline Validated</option>
+<option>Long-Term Observation</option>
+</select>
+</div>
+</div>
+<!-- Filter Tags Bar -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm pt-space-xs">
+<div class="flex flex-wrap items-center gap-space-xs font-label-sm text-label-sm">
+<span class="text-outline uppercase tracking-wider font-semibold mr-1">Active filters:</span>
+<span class="px-space-xs py-0.5 rounded bg-primary text-on-primary inline-flex items-center gap-1">
+              Sub-Saharan Africa
+              <span class="material-symbols-outlined text-[14px] cursor-pointer">close</span>
+</span>
+<span class="px-space-xs py-0.5 rounded bg-primary text-on-primary inline-flex items-center gap-1">
+              Field Telemetry Active
+              <span class="material-symbols-outlined text-[14px] cursor-pointer">close</span>
+</span>
+<button class="text-secondary hover:underline font-semibold ml-2" type="button">Clear all filters</button>
+</div>
+<div class="flex items-center gap-space-xs font-data-mono text-label-sm text-outline">
+<span>Sort:</span>
+<button class="font-bold text-primary hover:text-secondary" type="button">Recently Calibrated ↓</button>
+</div>
+</div>
+</div>
+<!-- 4 Rich Project Cards -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<!-- Project Card 1: Albertine Rift -->
+<div class="group flex flex-col rounded-xl bg-surface-container-lowest overflow-hidden shadow-sm hover:shadow-md transition-all">
+<div class="relative h-56 w-full overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Mountain cloud forest ridge with lush green canopy and misty mountain summits in East Africa Albertine Rift, cinematic scientific photography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDjAazShP63ny2NGwVoBVfuLXnjGzFXnDU4gqdLIeKpF0rXClRMYll2r-TL0DA9GZFHJnZVvtaM5ZNznkblvHTZNQXLENgUpk97hbq4jzo9QGcoEpJAECvbJC6cv6pjF3n1r2E0swMh_qlBWTJ3AsmWs8O7XvKJlCNatDOS68eZz4Df-1jwl6llPgd_ig7lch4wXXs9VQ_eZqcYHCCzNYkxFaphV6gu1ZK07CkTYHM"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent"></div>
+<div class="absolute top-space-sm left-space-sm flex items-center gap-space-xs">
+<span class="px-space-xs py-0.5 rounded bg-surface/90 backdrop-blur-md text-primary font-data-mono text-label-sm font-semibold">RWANDA / BURUNDI</span>
+<span class="px-space-xs py-0.5 rounded bg-secondary-fixed text-on-secondary-fixed font-data-mono text-label-sm font-bold">YEAR 4 ACTIVE</span>
+</div>
+<div class="absolute bottom-space-sm left-space-sm right-space-sm flex items-end justify-between text-on-primary">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary-fixed">Nyungwe-Kibira Transboundary Corridor</span>
+<span class="font-headline-sm text-headline-sm font-semibold text-surface-bright">Albertine Rift Primate Corridor</span>
+</div>
+</div>
+</div>
+<div class="p-space-md flex flex-col flex-1 justify-between gap-space-md">
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Reconnecting fragmented afromontane cloud forest using indigenous climax species (<span class="italic">Syzygium guineense</span>, <span class="italic">Carapa grandiflora</span>) to secure viable migration pathways for endangered endemic primates.
+            </p>
+<!-- Key Biometric Metrics -->
+<div class="grid grid-cols-3 gap-space-xs p-space-sm rounded-lg bg-surface-container font-data-mono text-label-sm text-center">
+<div>
+<span class="text-primary font-bold block text-body-md">+18,400 ha</span>
+<span class="text-outline text-[10px] uppercase">Restored Area</span>
+</div>
+<div>
+<span class="text-secondary font-bold block text-body-md">88.2%</span>
+<span class="text-outline text-[10px] uppercase">Canopy Closure</span>
+</div>
+<div>
+<span class="text-primary font-bold block text-body-md">14 Nodes</span>
+<span class="text-outline text-[10px] uppercase">IoT Acoustic</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<span class="font-label-sm text-label-sm text-outline">Lead: Albertine Conservation Alliance</span>
+<a class="inline-flex items-center gap-space-xs text-primary hover:text-secondary font-label-md text-label-md font-bold" href="#">
+<span>View Dossier</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Project Card 2: Sine-Saloum Delta -->
+<div class="group flex flex-col rounded-xl bg-surface-container-lowest overflow-hidden shadow-sm hover:shadow-md transition-all">
+<div class="relative h-56 w-full overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Aerial view of tidal mangrove creeks and dense prop roots in Sine Saloum delta Senegal with deep turquoise water channels, scientific observation style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC8vDilRcAOj2T6cASOxmvOwqjGrUB2P91A1rCEXKXuppagLvGyBizv21PQ94s7oa0vdfwKywALeP_5TZKQjgzZeDvz5LCtgdIZ-BuIDONLQbxUXXC9egzuBDHFn-pvigiGnvdCT6J1ugHq7zRjIsxiq97Ks7xsqyE7ioT1NNdTxHF0SJMEUt_0RDJcsmH8C9r18UrrUxKbNHx5SYZOG5yb47IYES0grvF47g33xEU"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent"></div>
+<div class="absolute top-space-sm left-space-sm flex items-center gap-space-xs">
+<span class="px-space-xs py-0.5 rounded bg-surface/90 backdrop-blur-md text-primary font-data-mono text-label-sm font-semibold">SENEGAL</span>
+<span class="px-space-xs py-0.5 rounded bg-primary-fixed text-on-primary-fixed font-data-mono text-label-sm font-bold">YEAR 7 OBSERVED</span>
+</div>
+<div class="absolute bottom-space-sm left-space-sm right-space-sm flex items-end justify-between text-on-primary">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary-fixed">Saloum Estuarine Biosphere</span>
+<span class="font-headline-sm text-headline-sm font-semibold text-surface-bright">Sine-Saloum Blue Carbon Basin</span>
+</div>
+</div>
+</div>
+<div class="p-space-md flex flex-col flex-1 justify-between gap-space-md">
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Large-scale hydrological re-engineering and community planting of <span class="italic">Rhizophora mangle</span> to counter hypersalinization, sequester blue carbon, and rebuild critical offshore fish nursery stocks.
+            </p>
+<div class="grid grid-cols-3 gap-space-xs p-space-sm rounded-lg bg-surface-container font-data-mono text-label-sm text-center">
+<div>
+<span class="text-primary font-bold block text-body-md">14,200 ha</span>
+<span class="text-outline text-[10px] uppercase">Replanted</span>
+</div>
+<div>
+<span class="text-secondary font-bold block text-body-md">312 t/ha</span>
+<span class="text-outline text-[10px] uppercase">CO2e Storage</span>
+</div>
+<div>
+<span class="text-primary font-bold block text-body-md">42 Bays</span>
+<span class="text-outline text-[10px] uppercase">Fisheries Nursery</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<span class="font-label-sm text-label-sm text-outline">Lead: Cheikh Anta Diop Univ.</span>
+<a class="inline-flex items-center gap-space-xs text-primary hover:text-secondary font-label-md text-label-md font-bold" href="#">
+<span>View Dossier</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Project Card 3: Dja Faunal Reserve -->
+<div class="group flex flex-col rounded-xl bg-surface-container-lowest overflow-hidden shadow-sm hover:shadow-md transition-all">
+<div class="relative h-56 w-full overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Botanists and forest rangers measuring tree circumferences and logging data on digital tablets inside primary Congo Basin evergreen rainforest." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBL8e60i661XTi5hNWbm0J-G3shw7d1L_uEqoaAcguISZVvDj0a6MWbw7rgTK_BNscNu6ZfpbE9GQHxBOUazz7clx7WNrMoN56j-n6T66RwZkhhmfQwHMJERr-E6eZaiHDWo0P2Z65K1HOEtGWvAKiYYHjHtmc6sBrjYaUXmmWKap4-vXv29MWvHdJi-r73RH2Qy_unh9AxRZx3iCWknvlT9ALRn9tLAqt-c6DkPMc"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent"></div>
+<div class="absolute top-space-sm left-space-sm flex items-center gap-space-xs">
+<span class="px-space-xs py-0.5 rounded bg-surface/90 backdrop-blur-md text-primary font-data-mono text-label-sm font-semibold">CAMEROON</span>
+<span class="px-space-xs py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed font-data-mono text-label-sm font-bold">YEAR 2 FIELDWORK</span>
+</div>
+<div class="absolute bottom-space-sm left-space-sm right-space-sm flex items-end justify-between text-on-primary">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary-fixed">Congo Basin Core Buffer Zone</span>
+<span class="font-headline-sm text-headline-sm font-semibold text-surface-bright">Dja Reserve Canopy Enrichment</span>
+</div>
+</div>
+</div>
+<div class="p-space-md flex flex-col flex-1 justify-between gap-space-md">
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Assisted natural succession on former logging skid trails using fast-growing native fabaceae trees to rebuild the structural canopy shield and suppress invasive herbaceous competition.
+            </p>
+<div class="grid grid-cols-3 gap-space-xs p-space-sm rounded-lg bg-surface-container font-data-mono text-label-sm text-center">
+<div>
+<span class="text-primary font-bold block text-body-md">9,600 ha</span>
+<span class="text-outline text-[10px] uppercase">Passive ANR</span>
+</div>
+<div>
+<span class="text-secondary font-bold block text-body-md">94% Parity</span>
+<span class="text-outline text-[10px] uppercase">Climax Richness</span>
+</div>
+<div>
+<span class="text-primary font-bold block text-body-md">28 Traps</span>
+<span class="text-outline text-[10px] uppercase">Camera Feeds</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<span class="font-label-sm text-label-sm text-outline">Lead: Central African Forest Obs.</span>
+<a class="inline-flex items-center gap-space-xs text-primary hover:text-secondary font-label-md text-label-md font-bold" href="#">
+<span>View Dossier</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Project Card 4: Fouta Djallon Water Tower -->
+<div class="group flex flex-col rounded-xl bg-surface-container-lowest overflow-hidden shadow-sm hover:shadow-md transition-all">
+<div class="relative h-56 w-full overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Highland plateau headwater spring surrounded by newly planted native bamboo and gallery forest in Fouta Djallon Guinea under crystal clear sky." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDyfj4CfDb2Rkh-Iwcjc050j_-f0bt3L03rjgkeSCs0CdT-hVHgw_SZSekinPOQv8FrR7_j3UnuO_KRglA6p-aSH86hMRbkVSmP3IeyCHfEumhIq5W17FyyuBjHXX4py8KnabiHj_rRVjy2IeEjzQ3T-0eX5WfCCoad55y6KnA3RcH0qi9MRsx8pH26nVrz3INddL-yawhmAkil_941Mp2IzuFRbeDCWvx09kH9lUU"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent"></div>
+<div class="absolute top-space-sm left-space-sm flex items-center gap-space-xs">
+<span class="px-space-xs py-0.5 rounded bg-surface/90 backdrop-blur-md text-primary font-data-mono text-label-sm font-semibold">GUINEA</span>
+<span class="px-space-xs py-0.5 rounded bg-surface-container-high text-primary font-data-mono text-label-sm font-bold">YEAR 3 VALIDATED</span>
+</div>
+<div class="absolute bottom-space-sm left-space-sm right-space-sm flex items-end justify-between text-on-primary">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary-fixed">West African Water Tower</span>
+<span class="font-headline-sm text-headline-sm font-semibold text-surface-bright">Fouta Djallon Headwater Protection</span>
+</div>
+</div>
+</div>
+<div class="p-space-md flex flex-col flex-1 justify-between gap-space-md">
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Stabilizing sub-humid montane watershed gullies through native bamboo propagation and riparian gallery restoration, securing water security for the Niger and Senegal rivers.
+            </p>
+<div class="grid grid-cols-3 gap-space-xs p-space-sm rounded-lg bg-surface-container font-data-mono text-label-sm text-center">
+<div>
+<span class="text-primary font-bold block text-body-md">420 km</span>
+<span class="text-outline text-[10px] uppercase">Riparian Buffer</span>
+</div>
+<div>
+<span class="text-secondary font-bold block text-body-md">-46% Turbidity</span>
+<span class="text-outline text-[10px] uppercase">Erosion Decline</span>
+</div>
+<div>
+<span class="text-primary font-bold block text-body-md">112 Plots</span>
+<span class="text-outline text-[10px] uppercase">Nurseries</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<span class="font-label-sm text-label-sm text-outline">Lead: Niger Basin Hydrology Comm.</span>
+<a class="inline-flex items-center gap-space-xs text-primary hover:text-secondary font-label-md text-label-md font-bold" href="#">
+<span>View Dossier</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ========================================== -->
+<!-- 4. ECOLOGICAL MONITORING & INDICATORS      -->
+<!-- ========================================== -->
+<section class="w-full py-space-xl px-margin bg-surface" id="indicators">
+<div class="max-w-7xl mx-auto flex flex-col gap-space-lg">
+<!-- Section Header -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-sm">
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-md text-label-md uppercase tracking-wider text-secondary font-bold">Verification Architecture</span>
+<h2 class="font-headline-lg text-headline-lg text-primary tracking-tight">Ecological Monitoring &amp; Biomarker Verification</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl">
+            How Green Biometry tracks and evaluates ecological recovery trajectories using calibrated remote sensing, soundscape indices, and in-situ edaphic sensors.
+          </p>
+</div>
+<div class="flex items-center gap-space-xs font-data-mono text-label-sm text-outline">
+<span class="material-symbols-outlined text-[16px] text-secondary">verified_user</span>
+<span>ISO-14064-2 &amp; SER 5-STAR RECOVERY</span>
+</div>
+</div>
+<!-- 4 Technical Telemetry Panels -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-gutter">
+<!-- Panel 1: Canopy & NDVI Chart -->
+<div class="flex flex-col rounded-xl bg-surface-container-lowest p-space-md shadow-sm gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[22px]">forest</span>
+<h3 class="font-headline-sm text-headline-sm text-primary">Canopy Structure &amp; Fractional Cover (NDVI/LiDAR)</h3>
+</div>
+<span class="font-data-mono text-label-sm px-space-xs py-0.5 rounded bg-surface-container font-semibold text-primary">8-Year Trajectory</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Multi-epoch canopy height models (CHM) from airborne LiDAR cross-referenced with Sentinel-2 Surface Reflectance. Compares assisted restoration zone against unassisted control.
+          </p>
+<!-- Inline SVG Time-series Graph -->
+<div class="w-full h-44 bg-surface-container-low rounded-lg p-space-sm flex flex-col justify-between">
+<div class="flex items-center justify-between font-data-mono text-label-sm text-outline">
+<span>Canopy Density (%)</span>
+<div class="flex items-center gap-space-md">
+<span class="flex items-center gap-1 text-primary"><span class="w-2.5 h-0.5 bg-primary"></span> Restoration Parcel</span>
+<span class="flex items-center gap-1 text-outline"><span class="w-2.5 h-0.5 bg-outline stroke-dasharray"></span> Control Baseline</span>
+</div>
+</div>
+<!-- SVG Vector Chart Line -->
+<svg class="w-full h-24 overflow-visible" preserveaspectratio="none" viewbox="0 0 500 100">
+<!-- Grid lines -->
+<line class="text-outline-variant/30" stroke="currentColor" stroke-width="1" x1="0" x2="500" y1="20" y2="20"></line>
+<line class="text-outline-variant/30" stroke="currentColor" stroke-width="1" x1="0" x2="500" y1="50" y2="50"></line>
+<line class="text-outline-variant/30" stroke="currentColor" stroke-width="1" x1="0" x2="500" y1="80" y2="80"></line>
+<!-- Control line (shallow increase) -->
+<polyline class="text-outline" fill="none" points="0,85 70,82 140,80 210,76 280,75 350,72 420,70 500,68" stroke="currentColor" stroke-dasharray="4" stroke-width="2"></polyline>
+<!-- Active parcel (strong sigmoid growth curve) -->
+<path class="text-secondary" d="M 0,85 Q 120,82 200,55 T 400,22 L 500,16" fill="none" stroke="currentColor" stroke-width="3"></path>
+<!-- Active Points -->
+<circle class="fill-primary" cx="200" cy="55" r="4"></circle>
+<circle class="fill-secondary" cx="400" cy="22" r="4"></circle>
+<circle class="fill-tertiary-container" cx="500" cy="16" r="4"></circle>
+</svg>
+<div class="flex justify-between font-data-mono text-label-sm text-outline border-t border-outline-variant/30 pt-1">
+<span>Year 0 (2016)</span>
+<span>Year 2</span>
+<span>Year 4</span>
+<span>Year 6</span>
+<span>Year 8 (2024)</span>
+</div>
+</div>
+<div class="flex items-center justify-between text-body-sm font-data-mono pt-1">
+<span class="text-secondary font-semibold">+34.2% Canopy Accretion</span>
+<span class="text-outline">p-value &lt; 0.001 (Mann-Kendall)</span>
+</div>
+</div>
+<!-- Panel 2: Native Species Survival Rates -->
+<div class="flex flex-col rounded-xl bg-surface-container-lowest p-space-md shadow-sm gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[22px]">potted_plant</span>
+<h3 class="font-headline-sm text-headline-sm text-primary">Floristic &amp; Native Climax Survival</h3>
+</div>
+<span class="font-data-mono text-label-sm px-space-xs py-0.5 rounded bg-surface-container font-semibold text-primary">24-Month Tagged Cohorts</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Survival rates across verified native canopy species, monitored using RFID barcodes and permanent quadrant resampling.
+          </p>
+<!-- Bar Chart Comparison -->
+<div class="flex flex-col gap-space-sm pt-space-xs">
+<div class="flex flex-col gap-1">
+<div class="flex justify-between font-body-sm text-body-sm">
+<span class="italic text-primary font-medium">Khaya anthotheca (African Mahogany)</span>
+<span class="font-data-mono text-secondary font-bold">92.4%</span>
+</div>
+<div class="w-full h-2 rounded bg-surface-container overflow-hidden">
+<div class="h-full bg-secondary rounded" style="width: 92.4%"></div>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<div class="flex justify-between font-body-sm text-body-sm">
+<span class="italic text-primary font-medium">Albizia adianthifolia (West African Albizia)</span>
+<span class="font-data-mono text-secondary font-bold">88.1%</span>
+</div>
+<div class="w-full h-2 rounded bg-surface-container overflow-hidden">
+<div class="h-full bg-secondary rounded" style="width: 88.1%"></div>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<div class="flex justify-between font-body-sm text-body-sm">
+<span class="italic text-primary font-medium">Polyscias fulva (Parasol Tree)</span>
+<span class="font-data-mono text-secondary font-bold">81.5%</span>
+</div>
+<div class="w-full h-2 rounded bg-surface-container overflow-hidden">
+<div class="h-full bg-secondary rounded" style="width: 81.5%"></div>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<div class="flex justify-between font-body-sm text-body-sm">
+<span class="italic text-primary font-medium">Prunus africana (Red Stinkwood)</span>
+<span class="font-data-mono text-secondary font-bold">76.3%</span>
+</div>
+<div class="w-full h-2 rounded bg-surface-container overflow-hidden">
+<div class="h-full bg-secondary rounded" style="width: 76.3%"></div>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between text-body-sm font-data-mono pt-1">
+<span class="text-primary font-semibold">Mean Cohort Vitality: 84.6%</span>
+<span class="text-outline">N = 4,280 Tagged Stems</span>
+</div>
+</div>
+<!-- Panel 3: Soundscape Complexity (Bioacoustics) -->
+<div class="flex flex-col rounded-xl bg-surface-container-lowest p-space-md shadow-sm gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[22px]">graphic_eq</span>
+<h3 class="font-headline-sm text-headline-sm text-primary">Acoustic Complexity Index (ACI)</h3>
+</div>
+<span class="font-data-mono text-label-sm px-space-xs py-0.5 rounded bg-surface-container font-semibold text-primary">Passive AudioMoth v1.2</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Diurnal soundscape energy in 2kHz - 12kHz biophony bands indicating bird song diversity, orthoptera cadence, and amphibian nocturnal chorus recovery.
+          </p>
+<!-- Spectral Sparkline / Visual Frequency Bands -->
+<div class="grid grid-cols-12 gap-1 h-28 items-end p-space-sm bg-surface-container-low rounded-lg">
+<div class="col-span-1 bg-secondary/30 h-1/4 rounded-t"></div>
+<div class="col-span-1 bg-secondary/40 h-1/3 rounded-t"></div>
+<div class="col-span-1 bg-secondary/50 h-2/5 rounded-t"></div>
+<div class="col-span-1 bg-secondary/60 h-1/2 rounded-t"></div>
+<div class="col-span-1 bg-secondary/70 h-3/5 rounded-t"></div>
+<div class="col-span-1 bg-secondary/80 h-3/4 rounded-t"></div>
+<div class="col-span-1 bg-secondary h-5/6 rounded-t"></div>
+<div class="col-span-1 bg-secondary h-full rounded-t"></div>
+<div class="col-span-1 bg-secondary h-4/5 rounded-t"></div>
+<div class="col-span-1 bg-secondary/80 h-3/4 rounded-t"></div>
+<div class="col-span-1 bg-secondary/60 h-3/5 rounded-t"></div>
+<div class="col-span-1 bg-secondary/40 h-2/5 rounded-t"></div>
+</div>
+<div class="flex items-center justify-between text-body-sm font-data-mono pt-1">
+<span class="text-secondary font-semibold">ACI Index: 0.74 (+148% vs Baseline)</span>
+<span class="text-outline">64 Indicator Avian Species</span>
+</div>
+</div>
+<!-- Panel 4: Edaphic & Soil Health Radar -->
+<div class="flex flex-col rounded-xl bg-surface-container-lowest p-space-md shadow-sm gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[22px]">terrain</span>
+<h3 class="font-headline-sm text-headline-sm text-primary">Edaphic Regeneration &amp; Carbon</h3>
+</div>
+<span class="font-data-mono text-label-sm px-space-xs py-0.5 rounded bg-surface-container font-semibold text-primary">Core Depth 0-30cm</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Quantitative assessment of soil organic carbon (SOC), aggregate stability, bulk density reduction, and water infiltration retention.
+          </p>
+<div class="grid grid-cols-2 gap-space-sm p-space-sm bg-surface-container-low rounded-lg">
+<div class="flex flex-col gap-0.5">
+<span class="font-data-mono text-label-sm text-outline">Organic Carbon (SOC)</span>
+<span class="font-headline-sm text-headline-sm text-primary font-bold">3.4% <span class="font-body-sm text-secondary font-normal">(+2.6%)</span></span>
+<span class="font-body-sm text-label-sm text-on-surface-variant">Dry combustion method</span>
+</div>
+<div class="flex flex-col gap-0.5">
+<span class="font-data-mono text-label-sm text-outline">Infiltration Rate</span>
+<span class="font-headline-sm text-headline-sm text-primary font-bold">48 mm/h</span>
+<span class="font-body-sm text-label-sm text-on-surface-variant">Double-ring infiltrometer</span>
+</div>
+<div class="flex flex-col gap-0.5">
+<span class="font-data-mono text-label-sm text-outline">Bulk Density</span>
+<span class="font-headline-sm text-headline-sm text-primary font-bold">1.18 g/cm³</span>
+<span class="font-body-sm text-label-sm text-secondary">Optimal porosity recovered</span>
+</div>
+<div class="flex flex-col gap-0.5">
+<span class="font-data-mono text-label-sm text-outline">Microbial Biomass N</span>
+<span class="font-headline-sm text-headline-sm text-primary font-bold">42 mg/kg</span>
+<span class="font-body-sm text-label-sm text-on-surface-variant">Chloroform fumigation</span>
+</div>
+</div>
+<div class="flex items-center justify-between text-body-sm font-data-mono pt-1">
+<span class="text-secondary font-semibold">Soil Health Index: Grade A</span>
+<span class="text-outline">ISO-10694 Standard</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ========================================== -->
+<!-- 5. BEFORE-AND-AFTER COMPARISON SECTION     -->
+<!-- ========================================== -->
+<section class="w-full py-space-xl px-margin bg-surface-container-low">
+<div class="max-w-7xl mx-auto flex flex-col gap-space-lg">
+<!-- Section Header -->
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-md text-label-md uppercase tracking-wider text-secondary font-bold">Empirical Proof of Concept</span>
+<h2 class="font-headline-lg text-headline-lg text-primary tracking-tight">Observe Ecological Change Over Time</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl">
+          Multi-sensor radiometric and field photogrammetry comparisons across monitoring epochs, tracking real-world biospheric recovery.
+        </p>
+</div>
+<!-- Scientific Caveat Banner -->
+<div class="p-space-md rounded-xl bg-surface-container-high/60 backdrop-blur-sm flex items-start gap-space-sm text-on-surface">
+<span class="material-symbols-outlined text-primary text-[22px] shrink-0 mt-0.5">info</span>
+<div class="flex flex-col gap-1">
+<span class="font-label-md text-label-md uppercase tracking-wider text-primary font-bold">Scientific Telemetry Protocol Note</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Observable greening and biomass accretion require multi-variable regression analysis (rainfall anomalies, control reference plots, floristic richness) to formally isolate active restoration effects from climatic fluctuations.
+          </p>
+</div>
+</div>
+<!-- Before and After Comparison Showcase -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-gutter">
+<!-- Left: Baseline (2018) -->
+<div class="flex flex-col rounded-xl bg-surface-container-lowest overflow-hidden shadow-md">
+<div class="relative h-72 w-full bg-surface-container overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="High angle aerial shot of degraded eroded hillside with exposed dry brown soil, scarce scrub and clear signs of clear cutting under harsh dry sunlight." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAP0OdH6mMOQF3gzCG9J3qgDhwO59jEh1vqEOrKTyUjk-pVaot_MOtidL46F27eQaSERPIJVic4FSIH1C6VlT31r_YdXdphGFbe3dANi4kvaw3TZtG30I12oI4skgA_jNX58lVhLNuVx--hgEURsQoiuTYeGWWDnbNtAdhrK97p6Al4j5255AUuYhjAorsqJC48LiS7yuUKElXRqRXIYakVPwnCtmDGxwAuUfoWNPE"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/70 via-transparent to-transparent"></div>
+<div class="absolute top-space-sm left-space-sm px-space-sm py-1 rounded bg-error/90 text-on-error font-data-mono text-label-sm font-bold uppercase shadow-sm">
+              Baseline State • Jan 2018
+            </div>
+<div class="absolute bottom-space-sm left-space-sm right-space-sm text-on-primary">
+<span class="font-label-sm text-label-sm uppercase tracking-wider opacity-80">Initial Disturbance</span>
+<p class="font-headline-sm text-headline-sm font-semibold">Severely Degraded Agricultural Clearing</p>
+</div>
+</div>
+<div class="p-space-md flex flex-col gap-space-sm">
+<div class="grid grid-cols-3 gap-space-xs font-data-mono text-label-sm text-center">
+<div class="p-space-xs rounded bg-surface-container">
+<span class="text-error font-bold block text-body-md">12.4%</span>
+<span class="text-outline text-[10px] uppercase">Canopy Cover</span>
+</div>
+<div class="p-space-xs rounded bg-surface-container">
+<span class="text-error font-bold block text-body-md">0.8%</span>
+<span class="text-outline text-[10px] uppercase">Soil Carbon</span>
+</div>
+<div class="p-space-xs rounded bg-surface-container">
+<span class="text-error font-bold block text-body-md">14 Taxa</span>
+<span class="text-outline text-[10px] uppercase">Tree Richness</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Severe topsoil erosion, absent secondary seed bank, soil compaction index &gt; 2.4 MPa, high wet-season sediment runoff into local drainage creeks.
+            </p>
+</div>
+</div>
+<!-- Right: Year 6 (2024) -->
+<div class="flex flex-col rounded-xl bg-surface-container-lowest overflow-hidden shadow-md">
+<div class="relative h-72 w-full bg-surface-container overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Vibrant healthy regenerated tropical canopy forest teeming with high biodiversity, emergent trees, and dense foliage under soft atmospheric lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAldXo0Wv9p1j-7tlzFKRDR6kurxOGwjuLOziJYqNS8CUZjOsunpICNdDQ2XdyziIIsFditP4SF92dZ4QH5spOck7bjln_S9WIv6AHrTOgJWAJ_NCaiO_cPbGuHHMq18NSdJu3ZXbn0V2fsBmaSXEZqBNevPls9tznBy6lx0-WtbaZqL5ZFllgjFYjLYQNpopzjB_g9PcV-5NSNiM_Gc6WJg05upEzPm1awj8W_RvM"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/70 via-transparent to-transparent"></div>
+<div class="absolute top-space-sm left-space-sm px-space-sm py-1 rounded bg-secondary text-on-secondary font-data-mono text-label-sm font-bold uppercase shadow-sm">
+              Observed State • Jan 2024 (Year 6)
+            </div>
+<div class="absolute bottom-space-sm left-space-sm right-space-sm text-on-primary">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary-fixed">Assisted Natural Regeneration</span>
+<p class="font-headline-sm text-headline-sm font-semibold">Closed Climax Multi-Strata Canopy</p>
+</div>
+</div>
+<div class="p-space-md flex flex-col gap-space-sm">
+<div class="grid grid-cols-3 gap-space-xs font-data-mono text-label-sm text-center">
+<div class="p-space-xs rounded bg-surface-container">
+<span class="text-secondary font-bold block text-body-md">74.8%</span>
+<span class="text-outline text-[10px] uppercase">Canopy Cover</span>
+</div>
+<div class="p-space-xs rounded bg-surface-container">
+<span class="text-secondary font-bold block text-body-md">3.4%</span>
+<span class="text-outline text-[10px] uppercase">Soil Carbon</span>
+</div>
+<div class="p-space-xs rounded bg-surface-container">
+<span class="text-secondary font-bold block text-body-md">68 Taxa</span>
+<span class="text-outline text-[10px] uppercase">Tree Richness</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Full continuous upper canopy cover, return of endemic avian dispersers, stable soil humus layer, sediment discharge reduced by 84% at flume station.
+            </p>
+</div>
+</div>
+</div>
+<!-- Timeseries Orthomosaic Deep Dive Action -->
+<div class="flex items-center justify-between p-space-md rounded-xl bg-surface shadow-sm">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[24px]">layers</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-primary font-bold">Inspect Complete Multi-Spectral Dataset</span>
+<span class="font-body-sm text-body-sm text-outline">STAC GeoParquet format • Sentinel-2 &amp; UAV LiDAR orthomosaic stacks</span>
+</div>
+</div>
+<button class="px-space-md py-space-xs rounded-lg bg-surface-container text-primary font-label-md text-label-md uppercase tracking-wider hover:bg-surface-container-high transition-colors font-bold" type="button">
+          Open Telemetry Viewport
+        </button>
+</div>
+</div>
+</section>
+<!-- ========================================== -->
+<!-- 6. PROJECT MONITORING LIFECYCLE            -->
+<!-- ========================================== -->
+<section class="w-full py-space-xl px-margin bg-surface">
+<div class="max-w-7xl mx-auto flex flex-col gap-space-lg">
+<!-- Section Header -->
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-md text-label-md uppercase tracking-wider text-secondary font-bold">Methodological Rigor</span>
+<h2 class="font-headline-lg text-headline-lg text-primary tracking-tight">The Ecological Monitoring Lifecycle</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl">
+          An open, standardized 8-stage scientific protocol ensuring every recorded restoration outcome is verifiable, reproducible, and ready for global policy synthesis.
+        </p>
+</div>
+<!-- 8-Stage Process Workflow Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<!-- Step 1 -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col gap-space-sm">
+<div class="flex items-center justify-between font-data-mono">
+<span class="text-label-sm text-secondary font-bold uppercase tracking-wider">STAGE 01</span>
+<span class="material-symbols-outlined text-outline text-[20px]">polyline</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary">Spatial Delimitation</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            High-precision perimeter mapping via GeoJSON &amp; STAC metadata, establishing verified boundary coordinates and land tenure baseline.
+          </p>
+</div>
+<!-- Step 2 -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col gap-space-sm">
+<div class="flex items-center justify-between font-data-mono">
+<span class="text-label-sm text-secondary font-bold uppercase tracking-wider">STAGE 02</span>
+<span class="material-symbols-outlined text-outline text-[20px]">assignment_turned_in</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary">Baseline Characterization</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Documenting initial degraded state and benchmarking against nearby reference climax ecosystems (SER 5-Star recovery framework).
+          </p>
+</div>
+<!-- Step 3 -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col gap-space-sm">
+<div class="flex items-center justify-between font-data-mono">
+<span class="text-label-sm text-secondary font-bold uppercase tracking-wider">STAGE 03</span>
+<span class="material-symbols-outlined text-outline text-[20px]">tune</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary">Indicator Selection</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Customizing biomarker telemetry metrics: canopy height, species diversity (Shannon-Wiener), soil organic carbon, and blue carbon accretion.
+          </p>
+</div>
+<!-- Step 4 -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col gap-space-sm">
+<div class="flex items-center justify-between font-data-mono">
+<span class="text-label-sm text-secondary font-bold uppercase tracking-wider">STAGE 04</span>
+<span class="material-symbols-outlined text-outline text-[20px]">sensors</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary">Multi-Sensor Ingestion</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Coordinating satellite constellations (Sentinel/Landsat), UAV-LiDAR surveys, AudioMoth acoustic nodes, and eDNA sampling runs.
+          </p>
+</div>
+<!-- Step 5 -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col gap-space-sm">
+<div class="flex items-center justify-between font-data-mono">
+<span class="text-label-sm text-secondary font-bold uppercase tracking-wider">STAGE 05</span>
+<span class="material-symbols-outlined text-outline text-[20px]">security</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary">QA &amp; Verification</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Topological QA checks, outlier filtering, and cryptographic validation ensuring full compliance with ISO-19115 geographic standards.
+          </p>
+</div>
+<!-- Step 6 -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col gap-space-sm">
+<div class="flex items-center justify-between font-data-mono">
+<span class="text-label-sm text-secondary font-bold uppercase tracking-wider">STAGE 06</span>
+<span class="material-symbols-outlined text-outline text-[20px]">history_toggle_off</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary">Longitudinal Tracking</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Multi-year trajectory mapping to capture inter-annual seasonal rhythms, droughts, and long-term biomass succession trends.
+          </p>
+</div>
+<!-- Step 7 -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col gap-space-sm">
+<div class="flex items-center justify-between font-data-mono">
+<span class="text-label-sm text-secondary font-bold uppercase tracking-wider">STAGE 07</span>
+<span class="material-symbols-outlined text-outline text-[20px]">model_training</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary">Biometric Modeling</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Algorithmic carbon stock calculation, habitat fragmentation analysis, and faunal carrying capacity predictive simulations.
+          </p>
+</div>
+<!-- Step 8 -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col gap-space-sm">
+<div class="flex items-center justify-between font-data-mono">
+<span class="text-label-sm text-secondary font-bold uppercase tracking-wider">STAGE 08</span>
+<span class="material-symbols-outlined text-outline text-[20px]">public</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary">Open Science Sharing</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            FAIR-compliant open access data publishing into the Green Biometry index for global conservation policy integration.
+          </p>
+</div>
+</div>
+</div>
+</section>
+<!-- ========================================== -->
+<!-- 7. CONTRIBUTION & COLLABORATION            -->
+<!-- ========================================== -->
+<section class="w-full py-space-xl px-margin bg-surface-container-lowest">
+<div class="max-w-7xl mx-auto flex flex-col gap-space-lg">
+<!-- Section Header -->
+<div class="flex flex-col text-center items-center gap-space-xs max-w-2xl mx-auto">
+<span class="font-label-md text-label-md uppercase tracking-wider text-secondary font-bold">Participatory Science</span>
+<h2 class="font-headline-lg text-headline-lg text-primary tracking-tight">Make Your Restoration Work Visible</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          Document your field initiatives, contribute empirical multi-temporal monitoring data, and strengthen the international body of open ecological evidence.
+        </p>
+</div>
+<!-- Dual Cards: Submit Project vs Upload Datasets -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<!-- Card A: Register Initiative -->
+<div class="p-space-xl rounded-xl bg-surface-container-low flex flex-col justify-between gap-space-lg shadow-sm">
+<div class="flex flex-col gap-space-md">
+<div class="w-12 h-12 rounded-lg bg-primary text-on-primary flex items-center justify-center shadow-md">
+<span class="material-symbols-outlined text-[28px]">add_location_alt</span>
+</div>
+<div class="flex flex-col gap-space-xs">
+<h3 class="font-headline-md text-headline-md text-primary">Submit a Conservation Project</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                Designed for field NGOs, national park services, community conservancies, and scientific consortia wishing to index their interventions on the Green Biometry global atlas.
+              </p>
+</div>
+<ul class="flex flex-col gap-space-xs font-body-sm text-body-sm text-on-surface-variant">
+<li class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[18px]">check</span>
+<span>Standardized spatial perimeter upload (Shapefile, GeoJSON, KML)</span>
+</li>
+<li class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[18px]">check</span>
+<span>Baseline reference state guided submission wizard</span>
+</li>
+<li class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[18px]">check</span>
+<span>Automated pairing with historical satellite reflectance archives</span>
+</li>
+</ul>
+</div>
+<a class="inline-flex items-center justify-center gap-space-xs px-space-lg py-space-sm rounded-lg bg-primary text-on-primary font-label-md text-label-md uppercase tracking-wider hover:bg-primary-container transition-all shadow-md" href="#">
+<span>Register Restoration Project</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</div>
+<!-- Card B: Upload Sensor Feeds -->
+<div class="p-space-xl rounded-xl bg-surface-container-low flex flex-col justify-between gap-space-lg shadow-sm">
+<div class="flex flex-col gap-space-md">
+<div class="w-12 h-12 rounded-lg bg-surface text-primary flex items-center justify-center shadow-md">
+<span class="material-symbols-outlined text-[28px]">cloud_upload</span>
+</div>
+<div class="flex flex-col gap-space-xs">
+<h3 class="font-headline-md text-headline-md text-primary">Share Monitoring Datasets</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                For researchers, drone operators, and field ecologists with calibrated raw datasets: LiDAR point clouds, acoustic recordings, or permanent botanical quadrant inventories.
+              </p>
+</div>
+<ul class="flex flex-col gap-space-xs font-body-sm text-body-sm text-on-surface-variant">
+<li class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[18px]">check</span>
+<span>Raw LiDAR LAS/LAZ point cloud ingestion &amp; automated CHM parsing</span>
+</li>
+<li class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[18px]">check</span>
+<span>Darwin Core Archive (DwC-A) botany plot tabular uploads</span>
+</li>
+<li class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[18px]">check</span>
+<span>Automated DOI minting for open academic citation</span>
+</li>
+</ul>
+</div>
+<a class="inline-flex items-center justify-center gap-space-xs px-space-lg py-space-sm rounded-lg bg-surface text-primary font-label-md text-label-md uppercase tracking-wider hover:bg-surface-container-high transition-all shadow-sm" href="#">
+<span>Upload Research Datasets</span>
+<span class="material-symbols-outlined text-[18px]">file_upload</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- ========================================== -->
+<!-- 8. FINAL CALL TO ACTION                    -->
+<!-- ========================================== -->
+<section class="w-full py-space-xl px-margin bg-primary text-on-primary relative overflow-hidden">
+<!-- Subtle geometric background accent -->
+<div class="absolute -right-24 -bottom-24 w-96 h-96 rounded-full bg-secondary-container/10 blur-3xl pointer-events-none"></div>
+<div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between gap-space-lg relative z-10">
+<div class="flex flex-col gap-space-xs max-w-xl">
+<span class="font-label-md text-label-md uppercase tracking-wider text-secondary-fixed font-bold">Open Planetary Biometry</span>
+<h2 class="font-headline-lg text-headline-lg text-surface-bright tracking-tight">
+          Better evidence for better ecological decisions.
+        </h2>
+<p class="font-body-md text-body-md text-on-primary-container leading-relaxed">
+          Connect your research or conservation fieldwork with the global biospheric network. Explore verified baseline datasets and monitor ecosystem restoration across the planet in real-time.
+        </p>
+</div>
+<div class="shrink-0 flex flex-col sm:flex-row gap-space-sm">
+<a class="inline-flex items-center gap-space-xs px-space-lg py-space-sm rounded-lg bg-surface text-primary font-label-md text-label-md uppercase tracking-wider hover:bg-surface-container transition-all shadow-lg" data-path="observatoire" href="#">
+<span>Explore Observatory</span>
+<span class="material-symbols-outlined text-[18px]">explore</span>
+</a>
+</div>
+</div>
+</section>
+</div></main><footer class="w-full bg-surface-container-low text-on-surface mt-space-xl"><div class="w-full px-margin pt-space-xl pb-space-lg"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-gutter"><div class="lg:col-span-4 flex flex-col gap-space-md"><div class="flex items-center gap-space-sm"><div class="w-9 h-9 rounded-lg bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-secondary-fixed text-[20px]">eco</span></div><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-primary leading-none">Green Biometry</span><span class="font-label-sm text-label-sm text-outline tracking-wider uppercase mt-0.5">Open Science Initiative</span></div></div><p class="font-body-sm text-body-sm text-on-surface-variant max-w-sm leading-relaxed">Plateforme internationale d'observation biogéographique dédiée à l'acquisition, la normalisation et la valorisation des données environnementales pour la décision écologique globale.</p><div class="flex flex-col gap-space-xs"><span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Spécification Télémétrique</span><div class="flex flex-wrap gap-space-xs"><span class="font-data-mono text-data-mono px-space-xs py-0.5 rounded bg-surface-container font-medium text-on-surface">STAC v1.0.0</span><span class="font-data-mono text-data-mono px-space-xs py-0.5 rounded bg-surface-container font-medium text-on-surface">EPSG:4326</span><span class="font-data-mono text-data-mono px-space-xs py-0.5 rounded bg-surface-container font-medium text-on-surface">ISO-19115</span></div></div></div><div class="lg:col-span-2 flex flex-col gap-space-sm"><h3 class="font-label-md text-label-md uppercase tracking-wider text-primary font-bold">Plateforme &amp; Données</h3><ul class="flex flex-col gap-space-xs font-body-sm text-body-sm text-on-surface-variant"><li><a class="hover:text-primary transition-colors" data-path="observatoire" href="#">Observatoire biogéographique</a></li><li><a class="hover:text-primary transition-colors" data-path="cartographie-interactive" href="#">Cartographie interactive</a></li><li><a class="hover:text-primary transition-colors" data-path="catalogue-donnees" href="#">Catalogue de données</a></li><li><a class="hover:text-primary transition-colors" data-path="indicateurs-environnementaux" href="#">Indicateurs environnementaux</a></li><li><a class="hover:text-primary transition-colors" data-path="capteurs-in-situ" href="#">Capteurs in situ &amp; Satellites</a></li></ul></div><div class="lg:col-span-2 flex flex-col gap-space-sm"><h3 class="font-label-md text-label-md uppercase tracking-wider text-primary font-bold">Science &amp; Méthodes</h3><ul class="flex flex-col gap-space-xs font-body-sm text-body-sm text-on-surface-variant"><li><a class="hover:text-primary transition-colors" data-path="biodiversite-ecosystemes" href="#">Biodiversité et écosystèmes</a></li><li><a class="hover:text-primary transition-colors" data-path="restauration-ecologique" href="#">Conservation &amp; Restauration</a></li><li><a class="hover:text-primary transition-colors" data-path="publications-scientifiques" href="#">Publications scientifiques</a></li><li><a class="hover:text-primary transition-colors" data-path="methodologies-biometrie" href="#">Méthodologies d'échantillonnage</a></li><li><a class="hover:text-primary transition-colors" data-path="api-documentation" href="#">Documentation API REST &amp; STAC</a></li></ul></div><div class="lg:col-span-4 flex flex-col gap-space-md"><div class="flex flex-col gap-space-xs"><h3 class="font-label-md text-label-md uppercase tracking-wider text-primary font-bold">Revue Scientifique &amp; Télémesures</h3><p class="font-body-sm text-body-sm text-on-surface-variant">Recevez la synthèse mensuelle des relevés d'observation, flux de biomasse et publications indexées.</p></div><form class="flex flex-col sm:flex-row gap-space-xs"><input class="flex-1 px-space-md py-space-sm rounded-lg bg-surface font-body-sm text-body-sm text-on-surface placeholder:text-outline focus:outline-none focus:ring-1 focus:ring-primary shadow-sm" placeholder="nom.chercheur@institut.org" type="email"/><button class="px-space-md py-space-sm rounded-lg bg-primary text-on-primary font-label-md text-label-md uppercase tracking-wider hover:bg-primary-container hover:text-on-primary transition-all shrink-0" type="button">S'abonner</button></form><div class="flex flex-wrap gap-x-space-md gap-y-space-xs font-body-sm text-body-sm text-on-surface-variant pt-space-xs"><span>Directives CODATA</span><span>Protocole GBIF</span><span>Standard INSPIRE</span></div></div></div><div class="mt-space-xl pt-space-md flex flex-col lg:flex-row items-start lg:items-center justify-between gap-space-md font-body-sm text-body-sm text-outline"><div class="flex flex-wrap items-center gap-x-space-md gap-y-space-xs"><a class="hover:text-on-surface transition-colors" data-path="charte-ethique" href="#">Charte éthique des données</a><a class="hover:text-on-surface transition-colors" data-path="licence-open-access" href="#">Licence Open Access (CC-BY 4.0)</a><a class="hover:text-on-surface transition-colors" data-path="confidentialite" href="#">Confidentialité</a><a class="hover:text-on-surface transition-colors" data-path="mentions-legales" href="#">Mentions légales</a></div><div class="flex items-center gap-space-xs font-data-mono text-data-mono text-outline-variant"><span>© 2025 GREEN BIOMETRY. All scientific rights reserved. Luminous &amp; Open Science Edition. GEO-EPSG:4326 STAC-v1.0.0 ISO-19115.</span></div></div></div></footer></body></html>

@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+
+<html lang="fr"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"on-primary-fixed-variant":"#264e3a","inverse-on-surface":"#ebf1ff","on-background":"#111c2c","on-surface-variant":"#414943","on-tertiary":"#ffffff","surface-container-highest":"#d8e3fa","surface-container":"#e7eeff","surface-container-lowest":"#ffffff","surface-dim":"#cfdaf1","surface-variant":"#d8e3fa","on-error-container":"#93000a","on-secondary-fixed-variant":"#005312","secondary-container":"#a0f399","primary-fixed-dim":"#a5d0b6","surface-tint":"#3e6751","error":"#ba1a1a","tertiary-fixed-dim":"#e9c176","surface-container-low":"#f0f3ff","on-primary-container":"#7fa990","secondary":"#1b6d24","background":"#f9f9ff","primary-container":"#153e2b","secondary-fixed":"#a3f69c","on-tertiary-fixed-variant":"#5d4201","surface-container-high":"#dee8ff","tertiary-container":"#493300","on-surface":"#111c2c","on-secondary-container":"#217128","surface":"#f9f9ff","on-secondary":"#ffffff","error-container":"#ffdad6","outline":"#717973","on-error":"#ffffff","surface-bright":"#f9f9ff","on-secondary-fixed":"#002204","inverse-primary":"#a5d0b6","on-tertiary-container":"#bf9b54","tertiary":"#2e1f00","on-primary-fixed":"#002113","tertiary-fixed":"#ffdea5","primary-fixed":"#c0edd1","on-tertiary-fixed":"#261900","secondary-fixed-dim":"#88d982","outline-variant":"#c1c8c1","primary":"#002817","on-primary":"#ffffff","inverse-surface":"#263142"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"space-sm":"0.5rem","space-lg":"1.5rem","gutter-mobile":"0.75rem","margin":"2rem","space-xs":"0.25rem","space-xl":"2.5rem","space-md":"1rem","gutter":"1.5rem","margin-mobile":"1rem"},"fontFamily":{"headline-xl-mobile":["Playfair Display"],"label-sm":["Inter"],"label-md":["Inter"],"body-lg":["Inter"],"headline-xl":["Playfair Display"],"headline-sm":["Playfair Display"],"body-md":["Inter"],"headline-lg-mobile":["Playfair Display"],"body-sm":["Inter"],"headline-lg":["Playfair Display"],"headline-md":["Playfair Display"],"data-mono":["Inter"]},"fontSize":{"headline-xl-mobile":["32px",{"lineHeight":"40px","letterSpacing":"-0.01em","fontWeight":"700"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.08em","fontWeight":"500"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.06em","fontWeight":"600"}],"body-lg":["18px",{"lineHeight":"28px","fontWeight":"400"}],"headline-xl":["48px",{"lineHeight":"56px","letterSpacing":"-0.02em","fontWeight":"700"}],"headline-sm":["20px",{"lineHeight":"28px","fontWeight":"500"}],"body-md":["15px",{"lineHeight":"24px","fontWeight":"400"}],"headline-lg-mobile":["26px",{"lineHeight":"34px","letterSpacing":"-0.01em","fontWeight":"600"}],"body-sm":["13px",{"lineHeight":"20px","fontWeight":"400"}],"headline-lg":["36px",{"lineHeight":"44px","letterSpacing":"-0.015em","fontWeight":"600"}],"headline-md":["24px",{"lineHeight":"32px","fontWeight":"600"}],"data-mono":["13px",{"lineHeight":"18px","letterSpacing":"-0.01em","fontWeight":"500"}]}}}}</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 right-0 w-full z-50 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-20 w-full px-margin flex items-center justify-between gap-space-md"><a class="flex items-center gap-space-md shrink-0" data-path="about-green-biometry" href="#"><div class="relative flex items-center justify-center w-10 h-10 rounded-lg bg-primary-container text-tertiary-fixed shadow-[0_2px_8px_-2px_rgba(21,62,43,0.12)] overflow-hidden"><span class="material-symbols-outlined text-[24px] text-primary-fixed">eco</span><div class="absolute bottom-0 right-0 flex items-end gap-[1.5px] p-1"><div class="w-[1.5px] h-2 bg-tertiary-fixed-dim rounded-full"></div><div class="w-[1.5px] h-3.5 bg-tertiary-fixed rounded-full"></div><div class="w-[1.5px] h-1.5 bg-tertiary-fixed-dim rounded-full"></div><div class="w-[1.5px] h-4 bg-tertiary-fixed rounded-full"></div></div></div><div class="flex flex-col"><span class="font-headline-sm text-headline-sm tracking-tight text-primary leading-none uppercase">Green Biometry</span><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider mt-space-xs">Environmental Data &amp; Science</span></div></a><nav class="hidden xl:flex items-center gap-space-sm" data-active-classes="bg-primary-container text-primary-fixed font-semibold rounded-lg"><div class="relative group"><a class="flex items-center px-space-md py-space-sm text-on-surface-variant hover:text-on-surface transition-colors font-body-md text-body-md rounded-lg" data-path="green-biometry-environmental-observatory" href="#">EXPLORER</a><div class="absolute top-full left-0 hidden group-hover:flex flex-col bg-surface-container-lowest shadow-[0_8px_24px_-4px_rgba(21,62,43,0.1)] rounded-lg py-space-xs min-w-[240px] z-50"><a class="px-space-md py-space-sm text-on-surface-variant hover:text-primary hover:bg-surface-container-low transition-colors font-body-sm text-body-sm" data-path="green-biometry-environmental-observatory" href="#">Observatoire</a><a class="px-space-md py-space-sm text-on-surface-variant hover:text-primary hover:bg-surface-container-low transition-colors font-body-sm text-body-sm" data-path="green-biometry-cartographie-interactive-donnees-geomatiques" href="#">Cartographie interactive</a><a class="px-space-md py-space-sm text-on-surface-variant hover:text-primary hover:bg-surface-container-low transition-colors font-body-sm text-body-sm" data-path="green-biometry-environmental-data-catalogue" href="#">Catalogue de données</a><a class="px-space-md py-space-sm text-on-surface-variant hover:text-primary hover:bg-surface-container-low transition-colors font-body-sm text-body-sm" data-path="green-biometry-indicateurs-mondiaux" href="#">Indicateurs mondiaux</a></div></div><div class="relative group"><a class="flex items-center px-space-md py-space-sm text-on-surface-variant hover:text-on-surface transition-colors font-body-md text-body-md rounded-lg" data-path="green-biometry-biodiversity-ecosystems" href="#">COMPRENDRE</a><div class="absolute top-full left-0 hidden group-hover:flex flex-col bg-surface-container-lowest shadow-[0_8px_24px_-4px_rgba(21,62,43,0.1)] rounded-lg py-space-xs min-w-[240px] z-50"><a class="px-space-md py-space-sm text-on-surface-variant hover:text-primary hover:bg-surface-container-low transition-colors font-body-sm text-body-sm" data-path="green-biometry-biodiversity-ecosystems" href="#">Biodiversité &amp; Écosystèmes</a><a class="px-space-md py-space-sm text-on-surface-variant hover:text-primary hover:bg-surface-container-low transition-colors font-body-sm text-body-sm" data-path="green-biometry-conservation-ecological-restoration" href="#">Conservation &amp; Restauration</a><a class="px-space-md py-space-sm text-on-surface-variant hover:text-primary hover:bg-surface-container-low transition-colors font-body-sm text-body-sm" data-path="green-biometry-scientific-publications-resources" href="#">Publications &amp; Ressources</a></div></div><div class="relative group"><a class="flex items-center px-space-md py-space-sm text-on-surface-variant hover:text-on-surface transition-colors font-body-md text-body-md rounded-lg" data-path="green-biometry-tools-environmental-resources" href="#">OUTILS</a><div class="absolute top-full left-0 hidden group-hover:flex flex-col bg-surface-container-lowest shadow-[0_8px_24px_-4px_rgba(21,62,43,0.1)] rounded-lg py-space-xs min-w-[280px] z-50"><a class="px-space-md py-space-sm text-on-surface-variant hover:text-primary hover:bg-surface-container-low transition-colors font-body-sm text-body-sm" data-path="green-biometry-tools-environmental-resources" href="#">Tools &amp; Environmental Resources</a><a class="px-space-md py-space-sm text-on-surface-variant hover:text-primary hover:bg-surface-container-low transition-colors font-body-sm text-body-sm" data-path="green-biometry-science-innovation-technologies" href="#">Science, Innovation &amp; Technologies</a><a class="px-space-md py-space-sm text-on-surface-variant hover:text-primary hover:bg-surface-container-low transition-colors font-body-sm text-body-sm" data-path="green-biometry-protocoles-biometriques" href="#">Protocoles Biométriques</a><a class="px-space-md py-space-sm text-on-surface-variant hover:text-primary hover:bg-surface-container-low transition-colors font-body-sm text-body-sm" data-path="green-biometry-teledetection-sig" href="#">Télédétection &amp; SIG</a><a class="px-space-md py-space-sm text-on-surface-variant hover:text-primary hover:bg-surface-container-low transition-colors font-body-sm text-body-sm" data-path="green-biometry-specifications-api" href="#">Spécifications API</a></div></div><div class="relative group"><a class="flex items-center px-space-md py-space-sm text-on-surface-variant hover:text-on-surface transition-colors font-body-md text-body-md rounded-lg" data-path="green-biometry-communaute-contribution" href="#">COMMUNAUTÉ</a><div class="absolute top-full left-0 hidden group-hover:flex flex-col bg-surface-container-lowest shadow-[0_8px_24px_-4px_rgba(21,62,43,0.1)] rounded-lg py-space-xs min-w-[240px] z-50"><a class="px-space-md py-space-sm text-on-surface-variant hover:text-primary hover:bg-surface-container-low transition-colors font-body-sm text-body-sm" data-path="green-biometry-communaute-contribution" href="#">Portail Communauté</a><a class="px-space-md py-space-sm text-on-surface-variant hover:text-primary hover:bg-surface-container-low transition-colors font-body-sm text-body-sm" data-path="green-biometry-contribuer-aux-donnees" href="#">Contribuer aux données</a><a class="px-space-md py-space-sm text-on-surface-variant hover:text-primary hover:bg-surface-container-low transition-colors font-body-sm text-body-sm" data-path="green-biometry-soumettre-un-projet" href="#">Soumettre un projet</a><a class="px-space-md py-space-sm text-on-surface-variant hover:text-primary hover:bg-surface-container-low transition-colors font-body-sm text-body-sm" data-path="green-biometry-partenaires-academiques" href="#">Partenaires académiques</a></div></div><a aria-current="page" class="flex items-center px-space-md py-space-sm transition-colors bg-primary-container text-primary-fixed font-semibold rounded-lg" data-path="about-green-biometry" href="#">À PROPOS</a></nav><div class="flex items-center gap-space-md shrink-0"><div class="hidden lg:flex items-center bg-surface-container-low rounded-lg px-space-md py-space-xs w-60"><span class="material-symbols-outlined text-[18px] text-outline mr-space-xs">search</span><input class="bg-transparent border-0 outline-none w-full font-body-sm text-body-sm text-on-surface placeholder:text-outline" placeholder="Rechercher taxons, SIG, API..." type="text"/></div><div class="hidden sm:flex items-center p-space-xs bg-surface-container-low rounded-full"><button class="px-space-sm py-0.5 rounded-full bg-surface-container-lowest text-primary font-label-sm text-label-sm shadow-[0_1px_3px_rgba(0,0,0,0.05)]" type="button">FR</button><button class="px-space-sm py-0.5 rounded-full text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm" type="button">EN</button></div><a class="hidden md:flex items-center gap-space-xs px-space-md py-space-sm rounded-lg bg-primary-container text-primary-fixed font-body-md text-body-md hover:bg-primary hover:text-on-primary shadow-[0_2px_6px_rgba(21,62,43,0.15)] transition-all" data-path="green-biometry-espace-chercheur" href="#"><span class="material-symbols-outlined text-[18px]">verified_user</span><span>Espace Chercheur</span></a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-20 bg-surface min-h-[calc(100vh-5rem)]"><div class="flex flex-col w-full">
+<!-- Top Progress / Geo-indicator Bar -->
+<div class="w-full bg-surface-container-low px-margin py-space-xs flex items-center justify-between text-on-surface-variant font-data-mono text-data-mono">
+<div class="flex items-center gap-space-sm">
+<span class="inline-block w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+<span class="tracking-widest uppercase font-label-sm text-label-sm text-primary">INSTITUTIONAL PERSPECTIVE • OPEN SCIENCE &amp; BIOSPHERE DATA • ARCHITECTURE OVERVIEW</span>
+</div>
+<div class="hidden md:flex items-center gap-space-md text-on-surface-variant">
+<span>INITIATIVE STAGE: METHODOLOGICAL DRAFTING</span>
+<span>•</span>
+<span>FAIR DATA FRAMEWORK</span>
+</div>
+</div>
+<!-- Breadcrumb Section -->
+<div class="w-full px-margin pt-space-lg pb-space-sm">
+<nav class="flex items-center gap-space-xs font-label-md text-label-md text-on-surface-variant">
+<a class="hover:text-primary transition-colors flex items-center gap-1" href="#">
+<span class="material-symbols-outlined text-[16px]">home</span>
+<span>Accueil</span>
+</a>
+<span class="text-outline-variant">/</span>
+<span class="text-primary font-semibold">À propos de Green Biometry</span>
+</nav>
+</div>
+<!-- Hero Section -->
+<section class="w-full px-margin py-space-md">
+<div class="relative w-full rounded-2xl overflow-hidden bg-primary shadow-xl">
+<!-- Background Image with Gradient Scrim -->
+<div class="absolute inset-0 w-full h-full bg-cover bg-center opacity-40 mix-blend-luminosity scale-105 transition-transform duration-1000 ease-out hover:scale-100" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB9jK5ffn8OaLy-q2EwXHspeT8Xy-tQAz2aMkmwOPBG4KClDpjxo1SK_xmoMUrnHcPjX_1BEaNJFGuYiwBDE3-8U0rByHMkOr2fyAJdJvdY3CYkezrePaX8lLLfIbGQXX8VJYq_YKWEPT37BrrE8DTXQSFHwzWHhF0DLHVK6RRhuJJEMd1IR29twVoNLhVTzBGJakKntOGLHc07tHRySngu7tz8HHxwbdXFSsHxzSZLsxAtVJi71pN9');">
+</div>
+<div class="absolute inset-0 bg-gradient-to-r from-primary via-primary/85 to-transparent"></div>
+<!-- Hero Content -->
+<div class="relative z-10 p-space-lg sm:p-space-xl lg:p-16 max-w-4xl flex flex-col items-start gap-space-md text-on-primary">
+<div class="inline-flex items-center gap-space-xs px-space-md py-space-xs rounded-full bg-surface-container-lowest/15 backdrop-blur-md text-tertiary-fixed font-label-sm text-label-sm tracking-wider uppercase">
+<span class="material-symbols-outlined text-[14px]">science</span>
+<span>Concept &amp; Architecture en Développement • Open Science Framework</span>
+</div>
+<h1 class="font-headline-xl text-headline-xl text-on-primary tracking-tight">
+          À propos de Green Biometry
+        </h1>
+<p class="font-headline-sm text-headline-sm text-tertiary-fixed font-light leading-relaxed">
+          Relier le savoir écologique, les données géospatiales et l'action de conservation.
+        </p>
+<p class="font-body-lg text-body-lg text-surface-container-low max-w-3xl leading-relaxed">
+          Green Biometry est une plateforme internationale dédiée aux sciences de l'environnement, conçue pour structurer l'information biosphérique, les inventaires de biodiversité, les relevés de télédétection et les protocoles de restauration. Notre objectif fondamental est d'éclairer la prise de décision publique et scientifique par l'accès à des données rigoureuses et vérifiables.
+        </p>
+<div class="flex flex-wrap items-center gap-space-md pt-space-sm font-data-mono text-data-mono text-tertiary-fixed-dim">
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[16px]">travel_explore</span> Couverture Globale &amp; Focus Panafricain</span>
+<span>•</span>
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[16px]">menu_book</span> Répertoire Méthodologique Ouvert</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 3: Our Story ('Why Green Biometry?') -->
+<section class="w-full px-margin py-space-xl">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-center">
+<!-- Left Editorial Column -->
+<div class="lg:col-span-6 flex flex-col gap-space-md">
+<div class="flex items-center gap-space-xs text-on-tertiary-container font-label-md text-label-md uppercase tracking-wider">
+<span class="material-symbols-outlined text-[16px]">history_edu</span>
+<span>LA GENÈSE DU PROJET</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-primary leading-tight">
+          Pourquoi Green Biometry ?
+        </h2>
+<div class="space-y-space-md text-body-md text-on-surface-variant leading-relaxed">
+<p class="first-letter:text-4xl first-letter:font-headline-lg first-letter:font-bold first-letter:text-primary first-letter:float-left first-letter:mr-3">
+            L'information environnementale n'a jamais été aussi abondante, générée quotidiennement par les constellations satellitaires, les stations météorologiques terrestres et les campagnes de terrain. Pourtant, ces corpus précieux restent fragmentés entre dépôts institutionnels hétérogènes, publications universitaires sous embargo et bases de données locales isolées.
+          </p>
+<p>
+            Retrouver, croiser, standardiser et convertir ces relevés en indicateurs écologiques exploitables représente aujourd'hui une entrave majeure pour les scientifiques, les conservateurs d'espaces protégés et les décideurs publics.
+          </p>
+<p>
+<strong class="text-on-surface font-semibold">Green Biometry répond à cette rupture systémique</strong> en concevant un écosystème numérique unifié, transparent et interdisciplinaire, où les connaissances biophysiques sont documentées et restituées sans artifice technique.
+          </p>
+</div>
+<!-- Subtle status disclaimer -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex items-start gap-space-sm mt-space-xs">
+<span class="material-symbols-outlined text-secondary text-[22px] shrink-0 mt-0.5">info</span>
+<div class="flex flex-col gap-0.5">
+<span class="font-label-md text-label-md text-primary uppercase">Statut Méthodologique</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Actuellement conçu sous forme d'architecture ouverte, le projet progresse par consultations collégiales et intégration progressive de standards ouverts (STAC, OGC, Darwin Core).</span>
+</div>
+</div>
+</div>
+<!-- Right Column: Visual and Scientific Telemetry -->
+<div class="lg:col-span-6 flex flex-col gap-space-sm">
+<div class="relative rounded-2xl overflow-hidden shadow-lg bg-surface-container">
+<img alt="Ingénieure environnementale analysant des couches de télédétection et des cartes de biomasse sur écran haute résolution" class="w-full h-[420px] object-cover hover:scale-102 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA9-M6lfkseyiYp4RGRTGZXadX_zPZ2xnft1BmApJWmIor5ouINuhbwT-Ds0tlKvBMytFeE6eEjdhTTO8Lbn-uuxfc5GFNiOOgOa5KOV_8I9KCIWeCVxfwsILsPWcETU8qbqBuoNQYF3x7v7X5TAq_OF8JgXpVfWKEHwNTSChplgGUs3lNZl7TrBuUiVehojH6ZGjFO4Y12WVe0btvN4y0HftjcISHNgajZSgrwR8VZWR3qfi7gItiU"/>
+<div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-primary/90 via-primary/50 to-transparent p-space-md text-on-primary">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-tertiary-fixed">Observation Géospatiale &amp; Terrain</span>
+<p class="font-body-sm text-body-sm text-surface-container-low mt-0.5">
+              Articuler la modélisation satellitaire haute résolution avec les mesures biométriques collectées in situ.
+            </p>
+</div>
+</div>
+<div class="flex items-center justify-between px-space-xs font-data-mono text-data-mono text-outline">
+<span>SPEC-GRID // MULTISPECTRAL CANOPY</span>
+<span>ISO-19115 / FAIR ALIGNED</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 4: Mission & Vision -->
+<section class="w-full px-margin py-space-xl bg-surface-container-low/60">
+<div class="max-w-6xl mx-auto flex flex-col gap-space-xl">
+<div class="text-center max-w-2xl mx-auto space-y-space-xs">
+<span class="font-label-md text-label-md text-secondary uppercase tracking-widest">CADRE DIRECTEUR</span>
+<h2 class="font-headline-lg text-headline-lg text-primary">Notre Mission &amp; Notre Vision</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Les deux piliers conceptuels qui guident la construction de notre infrastructure numérique et nos arbitrages scientifiques.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-lg">
+<!-- Mission Card -->
+<div class="rounded-2xl p-space-xl bg-surface-container-lowest shadow-md flex flex-col justify-between transition-all duration-300 hover:shadow-xl">
+<div class="space-y-space-md">
+<div class="w-12 h-12 rounded-xl bg-primary-container text-tertiary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-[28px]">explore</span>
+</div>
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant tracking-wider uppercase">Engagement Opérationnel</span>
+<h3 class="font-headline-md text-headline-md text-primary mt-1">Notre Mission</h3>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+              Faciliter l'accès, la structuration, l'analyse comparative et la visualisation spatiale des informations environnementales, afin d'armer concrètement le suivi de la biodiversité, la préservation des réservoirs de carbone et la planification de la restauration écologique.
+            </p>
+<div class="space-y-space-xs pt-space-sm">
+<div class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[20px] shrink-0 mt-0.5">check_circle</span>
+<span class="font-body-sm text-body-sm text-on-surface">Application rigoureuse des principes FAIR (Facile à trouver, Accessible, Interopérable, Réutilisable).</span>
+</div>
+<div class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[20px] shrink-0 mt-0.5">check_circle</span>
+<span class="font-body-sm text-body-sm text-on-surface">Interopérabilité multi-sources : rasters optiques, flux radar Sentinel, relevés pédologiques et herbiers.</span>
+</div>
+<div class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[20px] shrink-0 mt-0.5">check_circle</span>
+<span class="font-body-sm text-body-sm text-on-surface">Mise à disposition ouverte des protocoles biométriques de terrain documentés.</span>
+</div>
+</div>
+</div>
+<div class="mt-space-lg pt-space-md flex items-center justify-between text-outline text-data-mono font-data-mono">
+<span>OBJ: DATA ACCESSIBILITY</span>
+<span>LEVEL 1 SPEC</span>
+</div>
+</div>
+<!-- Vision Card -->
+<div class="rounded-2xl p-space-xl bg-surface-container-lowest shadow-md flex flex-col justify-between transition-all duration-300 hover:shadow-xl">
+<div class="space-y-space-md">
+<div class="w-12 h-12 rounded-xl bg-primary-container text-tertiary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-[28px]">visibility</span>
+</div>
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant tracking-wider uppercase">Horizon Stratégique</span>
+<h3 class="font-headline-md text-headline-md text-primary mt-1">Notre Vision</h3>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+              Contribuer à l'avènement d'une société planétaire où le patrimoine naturel est monitoré avec une transparence totale, où la preuve scientifique guide l'élaboration des politiques territoriales et où la protection des écosystèmes vitaux repose sur des bilans indiscutables.
+            </p>
+<div class="space-y-space-xs pt-space-sm">
+<div class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-tertiary text-[20px] shrink-0 mt-0.5">verified</span>
+<span class="font-body-sm text-body-sm text-on-surface">Gouvernance environnementale fondée sur des matrices de faits empiriques documentés.</span>
+</div>
+<div class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-tertiary text-[20px] shrink-0 mt-0.5">verified</span>
+<span class="font-body-sm text-body-sm text-on-surface">Reconnaissance élargie des dynamiques de régénération naturelle assistée.</span>
+</div>
+<div class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-tertiary text-[20px] shrink-0 mt-0.5">verified</span>
+<span class="font-body-sm text-body-sm text-on-surface">Solidarité technique transfrontalière et partage asymétrique des outils d'analyse biophysique.</span>
+</div>
+</div>
+</div>
+<div class="mt-space-lg pt-space-md flex items-center justify-between text-outline text-data-mono font-data-mono">
+<span>HORIZON: BIOSPHERE INTEGRITY</span>
+<span>OPEN ACCREDITATION</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 5: Our Guiding Principles (5 Core Principles) -->
+<section class="w-full px-margin py-space-xl">
+<div class="flex flex-col gap-space-lg">
+<div class="flex flex-col gap-space-xs max-w-2xl">
+<span class="font-label-md text-label-md text-on-tertiary-container uppercase tracking-wider">VALEURS FONDATRICES</span>
+<h2 class="font-headline-lg text-headline-lg text-primary">Les Principes Directeurs de l'Architecture</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Chaque protocole d'ingestion de données et chaque composant applicatif adhèrent strictement à ces cinq engagements déontologiques.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-space-md">
+<!-- Principle 1 -->
+<div class="rounded-xl p-space-md bg-surface-container-low hover:bg-surface-container transition-colors flex flex-col justify-between h-full">
+<div class="space-y-space-sm">
+<span class="font-data-mono text-data-mono text-secondary font-bold">01 / VÉRIFIABILITÉ</span>
+<div class="w-9 h-9 rounded-lg bg-surface-container-lowest text-primary flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-[20px]">biotech</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary">Rigueur Scientifique</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Privilégier une information environnementale traçable, reproductible et documentée, ancrée dans des méthodes méthodologiquement éprouvées par les pairs.
+            </p>
+</div>
+<div class="mt-space-md text-[10px] font-data-mono text-outline tracking-wider uppercase">Provenance garantie</div>
+</div>
+<!-- Principle 2 -->
+<div class="rounded-xl p-space-md bg-surface-container-low hover:bg-surface-container transition-colors flex flex-col justify-between h-full">
+<div class="space-y-space-sm">
+<span class="font-data-mono text-data-mono text-secondary font-bold">02 / CLARTÉ</span>
+<div class="w-9 h-9 rounded-lg bg-surface-container-lowest text-primary flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-[20px]">filter_center_focus</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary">Transparence Totale</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Rendre explicites les sources brutes, les hypothèses de traitement, les marges d'incertitude et le niveau de validation de chaque strate de données.
+            </p>
+</div>
+<div class="mt-space-md text-[10px] font-data-mono text-outline tracking-wider uppercase">Métadonnées ISO</div>
+</div>
+<!-- Principle 3 -->
+<div class="rounded-xl p-space-md bg-surface-container-low hover:bg-surface-container transition-colors flex flex-col justify-between h-full">
+<div class="space-y-space-sm">
+<span class="font-data-mono text-data-mono text-secondary font-bold">03 / INCLUSION</span>
+<div class="w-9 h-9 rounded-lg bg-surface-container-lowest text-primary flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-[20px]">lock_open</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary">Accessibilité &amp; Open</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Garantir un accès universel sans barrières technologiques fermées via des formats non propriétaires et des API conformes aux protocoles ouverts du Web.
+            </p>
+</div>
+<div class="mt-space-md text-[10px] font-data-mono text-outline tracking-wider uppercase">Formats Non-Propriétaires</div>
+</div>
+<!-- Principle 4 -->
+<div class="rounded-xl p-space-md bg-surface-container-low hover:bg-surface-container transition-colors flex flex-col justify-between h-full">
+<div class="space-y-space-sm">
+<span class="font-data-mono text-data-mono text-secondary font-bold">04 / RÉSEAU</span>
+<div class="w-9 h-9 rounded-lg bg-surface-container-lowest text-primary flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-[20px]">groups</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary">Collaboration Collégiale</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Favoriser des passerelles transversales entre universités, instituts de recherche, associations de conservation et acteurs de terrain.
+            </p>
+</div>
+<div class="mt-space-md text-[10px] font-data-mono text-outline tracking-wider uppercase">Interdisciplinarité</div>
+</div>
+<!-- Principle 5 -->
+<div class="rounded-xl p-space-md bg-surface-container-low hover:bg-surface-container transition-colors flex flex-col justify-between h-full">
+<div class="space-y-space-sm">
+<span class="font-data-mono text-data-mono text-secondary font-bold">05 / ÉTHIQUE</span>
+<div class="w-9 h-9 rounded-lg bg-surface-container-lowest text-primary flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-[20px]">nature_people</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary">Responsabilité Écologique</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Soutenir des interventions écologiques sincères, scientifiquement éprouvées, et résolument affranchies des démarches de compensation artificielle ou d'éco-blanchiment.
+            </p>
+</div>
+<div class="mt-space-md text-[10px] font-data-mono text-outline tracking-wider uppercase">Neutralité Opératoire</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 6: A Global Perspective with Focus on African Ecosystems -->
+<section class="w-full px-margin py-space-xl">
+<div class="relative rounded-3xl overflow-hidden bg-primary-container text-on-primary">
+<div class="absolute inset-0 w-full h-full bg-cover bg-center opacity-30 mix-blend-overlay" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC644Xc97KhW1Hj6HvYMS5Go3A9lPFuTy8f-qGwjafxhdADazeDC2lxsuNuUKKxhl8eGI0H9pKGZzSzp3mSkGZD95AaCEmQKEyj6NhIzs0TqRyET4h7WT9kW2iXHH604Bsj1VmaZbRW9P0IAX5b9LdZRxF9kO4LNGxxLH3MoUpYC7iIPDAYJyHWb2ctbvFAtoq6Fq8Q6V22olS5_8N4ENMortAGAhOCk_mSKWngKtfkmAitZv3PQ1_3');">
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-primary-container via-primary-container/80 to-transparent"></div>
+<div class="relative z-10 p-space-lg sm:p-space-xl lg:p-20 flex flex-col gap-space-lg">
+<div class="flex flex-col gap-space-xs max-w-3xl">
+<span class="font-label-md text-label-md text-tertiary-fixed uppercase tracking-wider flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">public</span>
+<span>ÉCHELLE GLOBALE ET ANCRAGE BIOGÉOGRAPHIQUE</span>
+</span>
+<h2 class="font-headline-xl text-headline-xl text-surface-container-lowest leading-tight">
+            Une Perspective Mondiale, avec une Attention Particulière aux Écosystèmes Africains
+          </h2>
+<p class="font-body-lg text-body-lg text-surface-container-low leading-relaxed mt-space-xs">
+            Si la biosphère obéit à des mécanismes géophysiques universels, la résilience écologique globale dépend de réservoirs biologiques critiques. Green Biometry a été conçu pour un usage mondial tout en allouant une priorité analytique aux biomes africains, souvent sous-documentés dans les répertoires internationaux malgré leur rôle régulateur inestimable.
+          </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md pt-space-md">
+<!-- Focus 1 -->
+<div class="rounded-xl p-space-lg bg-surface-container-lowest/10 backdrop-blur-md flex flex-col justify-between gap-space-md">
+<div>
+<div class="flex items-center justify-between text-tertiary-fixed font-data-mono text-data-mono mb-2">
+<span>BIOME // 01</span>
+<span class="material-symbols-outlined text-[20px]">forest</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-primary mb-1">Massifs Forestiers &amp; Grands Bassins Fluviaux</h3>
+<p class="font-body-sm text-body-sm text-surface-container-low leading-relaxed">
+                Documentation des dynamiques de canopée, des gradients d'évapotranspiration et du stock de biomasse sur le Bassin du Congo et la dorsale du Rift Albertin.
+              </p>
+</div>
+<span class="font-data-mono text-[11px] text-tertiary-fixed-dim uppercase tracking-wider">Télédétection radar &amp; canopée dense</span>
+</div>
+<!-- Focus 2 -->
+<div class="rounded-xl p-space-lg bg-surface-container-lowest/10 backdrop-blur-md flex flex-col justify-between gap-space-md">
+<div>
+<div class="flex items-center justify-between text-tertiary-fixed font-data-mono text-data-mono mb-2">
+<span>BIOME // 02</span>
+<span class="material-symbols-outlined text-[20px]">waves</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-primary mb-1">Mangroves &amp; Estuaires Côtiers</h3>
+<p class="font-body-sm text-body-sm text-surface-container-low leading-relaxed">
+                Surveillance de la sédimentation, de l'intrusion saline et de la biodiversité benthique dans les deltas ouest-africains (Saloum, Casamance, Rivières du Sud).
+              </p>
+</div>
+<span class="font-data-mono text-[11px] text-tertiary-fixed-dim uppercase tracking-wider">Suivi bathymétrique &amp; palétuviers</span>
+</div>
+<!-- Focus 3 -->
+<div class="rounded-xl p-space-lg bg-surface-container-lowest/10 backdrop-blur-md flex flex-col justify-between gap-space-md">
+<div>
+<div class="flex items-center justify-between text-tertiary-fixed font-data-mono text-data-mono mb-2">
+<span>BIOME // 03</span>
+<span class="material-symbols-outlined text-[20px]">wb_sunny</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-primary mb-1">Savanes, Bandes Sahéliennes &amp; Miombo</h3>
+<p class="font-body-sm text-body-sm text-surface-container-low leading-relaxed">
+                Observation des ceintures vertes, cartographie des ligneux hors-forêt, régénération agroforestière et suivi de l'humidité volumique des sols arides.
+              </p>
+</div>
+<span class="font-data-mono text-[11px] text-tertiary-fixed-dim uppercase tracking-wider">Indices NDVI temporels &amp; hydrologie</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm pt-space-xs text-tertiary-fixed font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-[18px]">hub</span>
+<span>La plateforme vise à relier les flux satellites globaux aux observations écologiques collectées directement sur le terrain par les communautés scientifiques locales.</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 7: Science, Data & Technology (3 Pillars) -->
+<section class="w-full px-margin py-space-xl">
+<div class="flex flex-col gap-space-xl">
+<div class="text-center max-w-2xl mx-auto space-y-space-xs">
+<span class="font-label-md text-label-md text-on-tertiary-container uppercase tracking-widest">ARCHITECTURE DU DISPOSITIF</span>
+<h2 class="font-headline-lg text-headline-lg text-primary">Science, Données &amp; Technologies</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">L'articulation tripartite qui confère à la plateforme sa solidité conceptuelle et sa neutralité opérationnelle.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-lg">
+<!-- Pillar 1 -->
+<div class="rounded-2xl p-space-xl bg-surface-container flex flex-col justify-between transition-transform duration-300 hover:-translate-y-1">
+<div class="space-y-space-md">
+<div class="w-12 h-12 rounded-xl bg-surface-container-lowest text-primary flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-[26px]">database</span>
+</div>
+<div>
+<span class="font-data-mono text-data-mono text-secondary">PILIER 01</span>
+<h3 class="font-headline-md text-headline-md text-primary mt-1">Données Environnementales</h3>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+              Standardisation et documentation rigoureuse des catalogues de rasters, grilles géographiques et relevés taxonomiques in-situ. Recours systématique aux formats pérennes (Cloud-Optimized GeoTIFF, GeoParquet, STAC) pour éliminer la dépendance aux solutions de stockage cloisonnées.
+            </p>
+</div>
+<div class="pt-space-lg flex items-center gap-space-xs text-outline-variant">
+<span class="material-symbols-outlined text-[18px] text-primary">check</span>
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">Standards Open Geospatial Consortium</span>
+</div>
+</div>
+<!-- Pillar 2 -->
+<div class="rounded-2xl p-space-xl bg-surface-container flex flex-col justify-between transition-transform duration-300 hover:-translate-y-1">
+<div class="space-y-space-md">
+<div class="w-12 h-12 rounded-xl bg-surface-container-lowest text-primary flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-[26px]">menu_book</span>
+</div>
+<div>
+<span class="font-data-mono text-data-mono text-secondary">PILIER 02</span>
+<h3 class="font-headline-md text-headline-md text-primary mt-1">Savoirs Scientifiques</h3>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+              Indexation et contextualisation croisée des publications universitaires, protocoles biométriques validés et bases d'occurrences d'espèces. Le projet décloisonne les disciplines : botanique systématique, pédologie, dendrométrie et bioclimatologie.
+            </p>
+</div>
+<div class="pt-space-lg flex items-center gap-space-xs text-outline-variant">
+<span class="material-symbols-outlined text-[18px] text-primary">check</span>
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">Documentation méthodologique ouverte</span>
+</div>
+</div>
+<!-- Pillar 3 -->
+<div class="rounded-2xl p-space-xl bg-surface-container flex flex-col justify-between transition-transform duration-300 hover:-translate-y-1">
+<div class="space-y-space-md">
+<div class="w-12 h-12 rounded-xl bg-surface-container-lowest text-primary flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-[26px]">satellite_alt</span>
+</div>
+<div>
+<span class="font-data-mono text-data-mono text-secondary">PILIER 03</span>
+<h3 class="font-headline-md text-headline-md text-primary mt-1">Technologies Numériques</h3>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+              Déploiement d'interfaces d'exploration cartographique fluide, d'outils de synthèse statistique et de bibliothèques de calcul d'indices de végétation. Les flux de télédétection massifs sont rendus digestes et directement actionnables pour les praticiens.
+            </p>
+</div>
+<div class="pt-space-lg flex items-center gap-space-xs text-outline-variant">
+<span class="material-symbols-outlined text-[18px] text-primary">check</span>
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">Calcul décentralisé &amp; API ouvertes</span>
+</div>
+</div>
+</div>
+<!-- Clarification Box -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col sm:flex-row items-start sm:items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-sm text-on-surface">
+<span class="material-symbols-outlined text-secondary text-[24px]">verified</span>
+<span class="font-body-sm text-body-sm">
+<strong class="font-semibold text-primary">Garantie de transparence :</strong> Les modèles d'intégration et spécifications API font l'objet d'examens techniques réguliers pour garantir leur rigueur et leur indépendance.
+          </span>
+</div>
+<span class="shrink-0 px-space-md py-space-xs rounded-full bg-surface-container-high text-primary font-data-mono text-data-mono">
+          PHASE-DEV: V0.8.4
+        </span>
+</div>
+</div>
+</section>
+<!-- Section 8: Who Can Contribute? ('A platform designed for environmental knowledge sharing') -->
+<section class="w-full px-margin py-space-xl bg-surface-container-low/40">
+<div class="flex flex-col gap-space-lg">
+<div class="flex flex-col gap-space-xs max-w-3xl">
+<span class="font-label-md text-label-md text-on-tertiary-container uppercase tracking-wider">COLLABORATION &amp; ACTEURS</span>
+<h2 class="font-headline-lg text-headline-lg text-primary">
+          Une Plateforme Pensée pour le Partage des Savoirs Écologiques
+        </h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          Green Biometry se veut un carrefour collaboratif neutre réunissant la pluralité des acteurs mobilisés dans la préservation des biomes. Chacun y trouve des ressources adaptées à son échelle de travail.
+        </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-space-md">
+<!-- Target 1 -->
+<div class="rounded-xl p-space-lg bg-surface-container-lowest shadow-sm flex flex-col justify-between gap-space-md transition-all hover:shadow-md">
+<div class="space-y-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider font-semibold">RECHERCHE FONDAMENTALE</span>
+<span class="material-symbols-outlined text-primary text-[22px]">science</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary">Chercheurs &amp; Écologues</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Pour publier des protocoles de mesures standardisés, croiser leurs jeux de données d'échantillonnage avec les séries temporelles satellitaires et valoriser leurs publications.
+            </p>
+</div>
+<div class="pt-space-xs flex items-center gap-1.5 text-outline text-data-mono font-data-mono">
+<span>SIG • R • Biostatistiques</span>
+</div>
+</div>
+<!-- Target 2 -->
+<div class="rounded-xl p-space-lg bg-surface-container-lowest shadow-sm flex flex-col justify-between gap-space-md transition-all hover:shadow-md">
+<div class="space-y-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider font-semibold">ENSEIGNEMENT SUPÉRIEUR</span>
+<span class="material-symbols-outlined text-primary text-[22px]">school</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary">Universités &amp; Étudiants</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Pour s'exercer sur des données géomatiques réelles, consulter des manuels d'inventaire biophysique ouverts et réaliser des mémoires ancrés dans des problématiques locales.
+            </p>
+</div>
+<div class="pt-space-xs flex items-center gap-1.5 text-outline text-data-mono font-data-mono">
+<span>Matériel Pédagogique Ouvert</span>
+</div>
+</div>
+<!-- Target 3 -->
+<div class="rounded-xl p-space-lg bg-surface-container-lowest shadow-sm flex flex-col justify-between gap-space-md transition-all hover:shadow-md">
+<div class="space-y-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider font-semibold">SOCIÉTÉ CIVILE</span>
+<span class="material-symbols-outlined text-primary text-[22px]">volunteer_activism</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary">ONGs &amp; Associations Environnementales</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Pour objectiver les rapports de terrain, documenter l'évolution des habitats dégradés et accéder sans coût d'infrastructure à des outils de monitoring territorial.
+            </p>
+</div>
+<div class="pt-space-xs flex items-center gap-1.5 text-outline text-data-mono font-data-mono">
+<span>Suivi Participatif &amp; Plaidoyer</span>
+</div>
+</div>
+<!-- Target 4 -->
+<div class="rounded-xl p-space-lg bg-surface-container-lowest shadow-sm flex flex-col justify-between gap-space-md transition-all hover:shadow-md">
+<div class="space-y-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider font-semibold">GESTIONNAIRES PUBLICS</span>
+<span class="material-symbols-outlined text-primary text-[22px]">account_balance</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary">Institutions &amp; Parcs Nationaux</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Pour disposer de tableaux de bord d'alerte, cartographier l'avancée des fronts agricoles en périphérie des aires protégées et structurer leurs rapports d'évaluation.
+            </p>
+</div>
+<div class="pt-space-xs flex items-center gap-1.5 text-outline text-data-mono font-data-mono">
+<span>Observatoires Nationaux</span>
+</div>
+</div>
+<!-- Target 5 -->
+<div class="rounded-xl p-space-lg bg-surface-container-lowest shadow-sm flex flex-col justify-between gap-space-md transition-all hover:shadow-md">
+<div class="space-y-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider font-semibold">EXPERTISE TECHNIQUE</span>
+<span class="material-symbols-outlined text-primary text-[22px]">engineering</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary">Professionnels de l'Environnement</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Bureaux d'études, géomaticiens et auditeurs écologiques cherchant des protocoles rigoureux pour consolider des études d'impact environnemental et social (EIES).
+            </p>
+</div>
+<div class="pt-space-xs flex items-center gap-1.5 text-outline text-data-mono font-data-mono">
+<span>Diagnostics Territoriaux</span>
+</div>
+</div>
+<!-- Target 6 -->
+<div class="rounded-xl p-space-lg bg-surface-container-lowest shadow-sm flex flex-col justify-between gap-space-md transition-all hover:shadow-md">
+<div class="space-y-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider font-semibold">ACTIONS IN SITU</span>
+<span class="material-symbols-outlined text-primary text-[22px]">psychiatry</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary">Porteurs de Projets de Restauration</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Initiatives d'agroforesterie communautaire, reboisement en essences locales ou restauration de zones humides désireuses de mesurer objectivement leur taux de reprise.
+            </p>
+</div>
+<div class="pt-space-xs flex items-center gap-1.5 text-outline text-data-mono font-data-mono">
+<span>Régénération Naturelle Assistée</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Photo Strip / Visual Respite -->
+<section class="w-full px-margin py-space-md">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<div class="relative rounded-2xl overflow-hidden h-72 shadow-md">
+<img alt="Vue aérienne d'une forêt tropicale dense traversée par une rivière sinueuse, montrant la richesse de la canopée" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCW9XQSdCqUaYhCXw06LWprUJ_gNyo1w45GZtcirUDLSbUKDsm7UaLzreuk_zGCrII-dmOzpYP5sKxhVX65TWV7swR6nc5H_dWNgEUTaMKCSIwPrD6OZf8NfRHLIXbrP1xs0B6Sq_eNi0b4FZu_jqgfT8VrpbPI7pkT1doLeFGQaOzSWerbXyhYl2lkrxmlKYpVwc-7APm4ppiJxgkyCfgqcdiO5-f8FNLJfLjcna1eXDvUKjcXB_ab"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent flex items-end p-space-md text-on-primary">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-tertiary-fixed uppercase">Télédétection &amp; Biomasse</span>
+<span class="font-headline-sm text-headline-sm">Modéliser les réservoirs écologiques prioritaires</span>
+</div>
+</div>
+</div>
+<div class="relative rounded-2xl overflow-hidden h-72 shadow-md">
+<div class="w-full h-full bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC644Xc97KhW1Hj6HvYMS5Go3A9lPFuTy8f-qGwjafxhdADazeDC2lxsuNuUKKxhl8eGI0H9pKGZzSzp3mSkGZD95AaCEmQKEyj6NhIzs0TqRyET4h7WT9kW2iXHH604Bsj1VmaZbRW9P0IAX5b9LdZRxF9kO4LNGxxLH3MoUpYC7iIPDAYJyHWb2ctbvFAtoq6Fq8Q6V22olS5_8N4ENMortAGAhOCk_mSKWngKtfkmAitZv3PQ1_3');">
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent flex items-end p-space-md text-on-primary">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-tertiary-fixed uppercase">Données Ouvertes</span>
+<span class="font-headline-sm text-headline-sm">Promouvoir un accès universel sans barrières technologiques</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 9: Final Call to Action -->
+<section class="w-full px-margin py-space-xl">
+<div class="relative rounded-3xl bg-primary text-on-primary p-space-lg sm:p-space-xl lg:p-16 flex flex-col md:flex-row items-center justify-between gap-space-xl shadow-xl overflow-hidden">
+<!-- Subtle decorative background rings -->
+<div class="absolute -right-20 -bottom-20 w-96 h-96 rounded-full bg-primary-container/40 blur-3xl pointer-events-none"></div>
+<div class="absolute -left-20 -top-20 w-80 h-80 rounded-full bg-tertiary-fixed-dim/10 blur-3xl pointer-events-none"></div>
+<div class="relative z-10 flex flex-col gap-space-xs max-w-2xl">
+<div class="flex items-center gap-2 text-tertiary-fixed font-label-md text-label-md tracking-wider uppercase">
+<span class="material-symbols-outlined text-[18px]">public</span>
+<span>REJOINDRE L'OBSERVATOIRE BIOMÉTRIQUE</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-primary leading-tight">
+          Explorez les connaissances environnementales. Éclairez les décisions.
+        </h2>
+<p class="font-body-md text-body-md text-surface-container-low leading-relaxed mt-space-xs">
+          Consultez nos catalogues de données, parcourez les visualisations cartographiques, étudiez la dynamique des écosystèmes et suivez l'avancement des protocoles scientifiques de restauration.
+        </p>
+</div>
+<div class="relative z-10 flex flex-col sm:flex-row md:flex-col lg:flex-row items-stretch sm:items-center gap-space-sm shrink-0 w-full sm:w-auto">
+<a class="px-space-lg py-space-md rounded-xl bg-tertiary-fixed text-on-tertiary-fixed font-label-md text-label-md hover:bg-tertiary-fixed-dim transition-all flex items-center justify-center gap-space-xs shadow-md text-center" data-path="green-biometry-environmental-observatory" href="#">
+<span class="material-symbols-outlined text-[20px]">explore</span>
+<span>Explorer la plateforme</span>
+</a>
+<a class="px-space-lg py-space-md rounded-xl bg-surface-container-lowest/15 backdrop-blur-md text-on-primary hover:bg-surface-container-lowest/25 font-label-md text-label-md transition-all flex items-center justify-center gap-space-xs text-center" data-path="green-biometry-tools-environmental-resources" href="#">
+<span class="material-symbols-outlined text-[20px]">library_books</span>
+<span>Découvrir les ressources</span>
+</a>
+</div>
+</div>
+</section>
+</div></main><footer class="w-full bg-surface-container-low shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="w-full px-margin py-space-xl"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-gutter mb-space-xl"><div class="lg:col-span-2 flex flex-col items-start gap-space-md"><div class="flex items-center gap-space-md"><div class="relative flex items-center justify-center w-10 h-10 rounded-lg bg-primary-container text-tertiary-fixed overflow-hidden"><span class="material-symbols-outlined text-[24px] text-primary-fixed">eco</span><div class="absolute bottom-0 right-0 flex items-end gap-[1.5px] p-1"><div class="w-[1.5px] h-2 bg-tertiary-fixed-dim rounded-full"></div><div class="w-[1.5px] h-3.5 bg-tertiary-fixed rounded-full"></div><div class="w-[1.5px] h-1.5 bg-tertiary-fixed-dim rounded-full"></div><div class="w-[1.5px] h-4 bg-tertiary-fixed rounded-full"></div></div></div><div class="flex flex-col"><span class="font-headline-sm text-headline-sm tracking-tight text-primary leading-none uppercase">Green Biometry</span><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider mt-space-xs">Environmental Data &amp; Science</span></div></div><p class="font-body-md text-body-md text-on-surface-variant max-w-sm">Plateforme internationale d'observation biogéographique dédiée à l'acquisition, la normalisation et la valorisation des données environnementales.</p><div class="flex items-center gap-space-sm pt-space-xs"><div class="px-space-md py-space-xs rounded-full bg-surface-container-high text-primary font-label-sm text-label-sm flex items-center gap-1.5"><span class="material-symbols-outlined text-[14px]">public</span><span>Open Science Alliance</span></div><div class="px-space-md py-space-xs rounded-full bg-surface-container-high text-primary font-label-sm text-label-sm flex items-center gap-1.5"><span class="material-symbols-outlined text-[14px]">database</span><span>Global Data Registry</span></div></div></div><div class="flex flex-col gap-space-sm"><span class="font-headline-sm text-headline-sm text-primary mb-space-xs">Plateforme &amp; Données</span><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="green-biometry-environmental-observatory" href="#">Observatoire</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="green-biometry-cartographie-interactive-donnees-geomatiques" href="#">Cartographie interactive</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="green-biometry-environmental-data-catalogue" href="#">Catalogue de données</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="green-biometry-indicateurs-mondiaux" href="#">Indicateurs mondiaux</a></div><div class="flex flex-col gap-space-sm"><span class="font-headline-sm text-headline-sm text-primary mb-space-xs">Science &amp; Outils</span><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="green-biometry-tools-environmental-resources" href="#">Outils &amp; Ressources Environnementales</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="green-biometry-science-innovation-technologies" href="#">Science, Innovation &amp; Tech</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="green-biometry-protocoles-biometriques" href="#">Protocoles biométriques</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="green-biometry-teledetection-sig" href="#">Télédétection &amp; SIG</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="green-biometry-specifications-api" href="#">Spécifications API</a></div><div class="flex flex-col gap-space-sm"><span class="font-headline-sm text-headline-sm text-primary mb-space-xs">Communauté &amp; Projets</span><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="green-biometry-communaute-contribution" href="#">Communauté &amp; Contribution</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="green-biometry-contribuer-aux-donnees" href="#">Contribuer aux données</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="green-biometry-soumettre-un-projet" href="#">Soumettre un projet</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="green-biometry-partenaires-academiques" href="#">Partenaires académiques</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="about-green-biometry" href="#">À propos de Green Biometry</a></div><div class="flex flex-col gap-space-sm"><span class="font-headline-sm text-headline-sm text-primary mb-space-xs">Gouvernance &amp; Légal</span><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="green-biometry-charte-ethique" href="#">Charte éthique des données</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="green-biometry-licence-open-access" href="#">Licence Open Access</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="green-biometry-politique-confidentialite" href="#">Confidentialité</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="green-biometry-mentions-legales" href="#">Mentions légales</a></div></div><div class="p-space-lg rounded-xl bg-surface-container flex flex-col lg:flex-row items-start lg:items-center justify-between gap-space-lg mb-space-xl"><div class="flex flex-col gap-space-xs max-w-xl"><span class="font-headline-sm text-headline-sm text-primary">Revue Scientifique &amp; Télémesures</span><p class="font-body-sm text-body-sm text-on-surface-variant">Recevez la synthèse bimensuelle des protocoles biométriques et synthèses géomatiques internationales.</p></div><form class="flex flex-col sm:flex-row w-full lg:w-auto items-stretch gap-space-sm"><input class="px-space-md py-space-sm rounded-lg bg-surface-container-lowest text-on-surface font-body-sm text-body-sm placeholder:text-outline focus:outline-none min-w-[280px] shadow-[0_1px_3px_rgba(0,0,0,0.02)]" placeholder="adresse.chercheur@institution.org" type="email"/><button class="px-space-lg py-space-sm rounded-lg bg-tertiary-fixed text-on-tertiary-fixed font-label-md text-label-md hover:bg-tertiary-fixed-dim hover:text-on-tertiary-fixed transition-colors flex items-center justify-center gap-space-xs shrink-0" type="button"><span>S'abonner</span><span class="material-symbols-outlined text-[16px]">send</span></button></form></div><div class="flex flex-col sm:flex-row items-center justify-between gap-space-md pt-space-md"><span class="font-body-sm text-body-sm text-on-surface-variant">© 2025 GREEN BIOMETRY. All scientific rights reserved. Luminous &amp; Open Science Edition.</span><div class="flex items-center gap-space-md text-on-surface-variant font-data-mono text-data-mono"><span>GEO-EPSG:4326</span><span>STAC-v1.0.0</span><span>ISO-19115</span></div></div></div></footer></body></html>

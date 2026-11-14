@@ -1,0 +1,25 @@
+# Documents privés : ne jamais publier
+Cahier de charge/
+Rapports/
+Maquette/
+prive/
+
+# Système et éditeur
+Thumbs.db
+desktop.ini
+.DS_Store
+.vscode/
+*.tmp
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# Node (plus tard)
+node_modules/
+.next/
+out/
+.env
+.env.*
+!.env.example
