@@ -9,7 +9,8 @@ on:
       - "messages/**"
       - "design/logo/**"
       - "design/tokens/**"
-      - "scripts/build_site.py"
+      - "donnees/**"
+      - "scripts/**"
       - ".github/workflows/pages.yml"
   workflow_dispatch:
 

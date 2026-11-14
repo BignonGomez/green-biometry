@@ -2,16 +2,17 @@
 
 1. Copie les pages statiques de site/ (styleguide, assets, redirection de langue).
 2. Ajoute le logo (design/logo/) et les tokens (design/tokens/) : sources uniques.
-3. Rend chaque gabarit de gabarits/ dans chaque langue de messages/ :
-     gabarits/accueil.html -> _site/fr/index.html et _site/en/index.html
-     gabarits/<nom>.html   -> _site/<langue>/<nom>/index.html
+3. Rend chaque page dans chaque langue de messages/ :
+     accueil   -> _site/<langue>/index.html
+     catalogue -> _site/<langue>/catalogue/index.html
+     fiche     -> _site/<langue>/catalogue/<slug>/index.html (une par jeu de donnees/jeux-demo.json)
 4. Vérifie le bilinguisme (EF-14) : la construction échoue si une clé manque
    dans une langue ou si une balise {{...}} reste non remplacée.
 
 Syntaxe des gabarits :
     {{commun.contribuer}}   texte traduit (messages/<langue>.json)
     {{> entete}}            inclut gabarits/partiels/entete.html
-    {{@lang}} {{@racine}}   variables de page (langue, chemin vers la racine du site)
+    {{@lang}} {{@racine}}   variables de page (langue, chemin vers la racine du site, données…)
 
 Utilisation (depuis la racine du dépôt) :
     python scripts/build_site.py
@@ -23,11 +24,16 @@ import re
 import shutil
 import sys
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import catalogue as cat  # noqa: E402
+
 RACINE = Path(__file__).resolve().parent.parent
 SORTIE = RACINE / "_site"
 GABARITS = RACINE / "gabarits"
 MESSAGES = RACINE / "messages"
+DONNEES = RACINE / "donnees" / "jeux-demo.json"
 LANGUES = ["fr", "en"]  # la première est la langue de référence
+NAV = ["catalogue", "carte", "indicateurs", "projets", "apropos"]
 
 RE_PARTIEL = re.compile(r"\{\{>\s*([\w-]+)\s*\}\}")
 RE_BALISE = re.compile(r"\{\{\s*(@?[\w.]+)\s*\}\}")
@@ -53,17 +59,33 @@ def charger_messages() -> dict:
     erreurs = []
     for langue in LANGUES[1:]:
         cles = set(messages[langue])
-        for cle in sorted(reference - cles):
-            erreurs.append(f"clé absente en {langue} : {cle}")
-        for cle in sorted(cles - reference):
-            erreurs.append(f"clé absente en {LANGUES[0]} : {cle}")
+        erreurs += [f"clé absente en {langue} : {c}" for c in sorted(reference - cles)]
+        erreurs += [f"clé absente en {LANGUES[0]} : {c}" for c in sorted(cles - reference)]
     for langue in LANGUES:
-        for cle, texte in messages[langue].items():
-            if not texte.strip():
-                erreurs.append(f"texte vide en {langue} : {cle}")
+        erreurs += [f"texte vide en {langue} : {c}" for c, v in messages[langue].items() if not v.strip()]
     if erreurs:
         sys.exit("Traductions incomplètes :\n  " + "\n  ".join(erreurs))
     return messages
+
+
+def verifier_donnees(donnees: dict) -> None:
+    """Chaque texte traduisible des jeux doit exister en FR et en EN."""
+    erreurs = []
+
+    def parcourir(valeur, chemin):
+        if isinstance(valeur, dict):
+            if set(valeur) & set(LANGUES):
+                erreurs.extend(f"{chemin} : langue {l} manquante" for l in LANGUES if not str(valeur.get(l, "")).strip())
+                return
+            for k, v in valeur.items():
+                parcourir(v, f"{chemin}.{k}")
+        elif isinstance(valeur, list):
+            for i, v in enumerate(valeur):
+                parcourir(v, f"{chemin}[{i}]")
+
+    parcourir(donnees["jeux"], "jeux")
+    if erreurs:
+        sys.exit("Données incomplètes :\n  " + "\n  ".join(erreurs))
 
 
 def inclure_partiels(texte: str, profondeur: int = 0) -> str:
@@ -79,13 +101,7 @@ def inclure_partiels(texte: str, profondeur: int = 0) -> str:
     return RE_PARTIEL.sub(remplacer, texte)
 
 
-def rendre(gabarit: Path, langue: str, textes: dict, racine: str) -> str:
-    variables = {
-        "@lang": langue,
-        "@racine": racine,
-        "@courant_fr": 'aria-current="true"' if langue == "fr" else "",
-        "@courant_en": 'aria-current="true"' if langue == "en" else "",
-    }
+def rendre(gabarit: Path, langue: str, textes: dict, variables: dict) -> str:
     source = inclure_partiels(gabarit.read_text(encoding="utf-8"))
     manquantes = set()
 
@@ -104,6 +120,20 @@ def rendre(gabarit: Path, langue: str, textes: dict, racine: str) -> str:
     return html
 
 
+def pages(donnees):
+    """(gabarit, chemin sous /<langue>/, rubrique active, fonction -> variables propres à la page)."""
+    jeux, ref = donnees["jeux"], donnees["referentiels"]
+    yield "accueil.html", "", None, lambda l, M, r: {
+        "@derniers_jeux": cat.derniers_jeux(jeux, ref, l, M, r)}
+    yield "catalogue.html", "catalogue/", "catalogue", lambda l, M, r: {
+        "@liste_jeux": cat.liste_catalogue(jeux, ref, l, M, r),
+        "@facettes": cat.facettes(jeux, ref, l, M),
+        "@nb_jeux": str(len(jeux))}
+    for jeu in jeux:
+        yield "fiche.html", f"catalogue/{jeu['slug']}/", "catalogue", (
+            lambda l, M, r, jeu=jeu: cat.variables_fiche(jeu, ref, l, M, r))
+
+
 def main() -> None:
     if SORTIE.exists():
         shutil.rmtree(SORTIE)
@@ -116,23 +146,34 @@ def main() -> None:
     shutil.copy2(RACINE / "design" / "tokens" / "tokens.css", SORTIE / "assets" / "css" / "tokens.css")
 
     messages = charger_messages()
-    pages = 0
-    for gabarit in sorted(GABARITS.glob("*.html")):
+    donnees = json.loads(DONNEES.read_text(encoding="utf-8"))
+    verifier_donnees(donnees)
+
+    n = 0
+    for gabarit, chemin, rubrique, variables_page in pages(donnees):
         for langue in LANGUES:
-            if gabarit.stem == "accueil":
-                cible, racine = SORTIE / langue / "index.html", "../"
-            else:
-                cible, racine = SORTIE / langue / gabarit.stem / "index.html", "../../"
+            racine = "../" * (1 + chemin.count("/"))
+            variables = {
+                "@lang": langue,
+                "@racine": racine,
+                "@chemin_fr": f"{racine}fr/{chemin}",
+                "@chemin_en": f"{racine}en/{chemin}",
+                "@courant_fr": 'aria-current="true"' if langue == "fr" else "",
+                "@courant_en": 'aria-current="true"' if langue == "en" else "",
+            }
+            for nav in NAV:
+                variables[f"@actif_{nav}"] = 'aria-current="page"' if nav == rubrique else ""
+            variables.update(variables_page(langue, messages[langue], racine))
+            cible = SORTIE / langue / chemin / "index.html"
             cible.parent.mkdir(parents=True, exist_ok=True)
-            cible.write_text(rendre(gabarit, langue, messages[langue], racine), encoding="utf-8")
-            pages += 1
+            cible.write_text(rendre(GABARITS / gabarit, langue, messages[langue], variables), encoding="utf-8")
+            n += 1
 
     (SORTIE / ".nojekyll").touch()
     fichiers = [p for p in SORTIE.rglob("*") if p.is_file()]
     taille = sum(p.stat().st_size for p in fichiers)
-    cles = len(messages[LANGUES[0]])
-    print(f"Site construit dans {SORTIE} : {pages} pages rendues ({cles} textes x {len(LANGUES)} langues), "
-          f"{len(fichiers)} fichiers, {taille / 1024:.0f} Ko")
+    print(f"Site construit dans {SORTIE} : {n} pages ({len(donnees['jeux'])} fiches x {len(LANGUES)} langues incluses), "
+          f"{len(messages[LANGUES[0]])} textes, {len(fichiers)} fichiers, {taille / 1024:.0f} Ko")
 
 
 if __name__ == "__main__":

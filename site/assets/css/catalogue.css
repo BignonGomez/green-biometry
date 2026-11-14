@@ -1,0 +1,93 @@
+/* Green Biometry : catalogue et fiche jeu de données (tokens uniquement) */
+
+/* ---------- En-tête de page commun ---------- */
+.entete-page { background: var(--couleur-fond-alt); border-bottom: 1px solid var(--couleur-bordure); padding-block: var(--esp-5) var(--esp-6); }
+.entete-page .conteneur { display: grid; gap: var(--esp-3); }
+.entete-page__intro { max-width: var(--largeur-texte); }
+.fil ol { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: var(--esp-1) var(--esp-2); font-size: var(--taille-texte-sm); color: var(--couleur-texte-doux); }
+.fil li + li::before { content: "/"; margin-right: var(--esp-2); color: var(--gb-sauge-300); }
+.fil li[aria-current] { color: var(--couleur-texte); font-weight: var(--graisse-moyenne); }
+.recherche--page { max-width: 44rem; border: 1px solid var(--couleur-bordure); box-shadow: var(--ombre-1); }
+
+/* ---------- Catalogue : filtres + résultats ---------- */
+.catalogue__corps { display: grid; gap: var(--esp-5); padding-block: var(--esp-6) var(--esp-8); align-items: start; }
+@media (min-width: 1024px) { .catalogue__corps { grid-template-columns: 17rem minmax(0, 1fr); gap: var(--esp-7); } }
+
+.filtres { background: var(--couleur-surface); border: 1px solid var(--couleur-bordure); border-radius: var(--rayon-lg); }
+.filtres__titre { list-style: none; cursor: pointer; display: flex; align-items: center; gap: var(--esp-2); padding: var(--esp-4) var(--esp-5); font-weight: var(--graisse-forte); min-height: 44px; }
+.filtres__titre::-webkit-details-marker { display: none; }
+.filtres__titre svg { width: 1.125rem; height: 1.125rem; color: var(--gb-vert); }
+.filtres__actifs { margin-left: auto; background: var(--gb-vert); color: var(--gb-blanc); border-radius: var(--rayon-plein); font-size: var(--taille-etiquette); padding: 0 var(--esp-2); line-height: 1.5rem; min-width: 1.5rem; text-align: center; }
+.filtres__contenu { display: grid; gap: var(--esp-5); padding: 0 var(--esp-5) var(--esp-5); border-top: 1px solid var(--gb-sauge-100); padding-top: var(--esp-4); }
+.filtres__contenu .bouton { justify-self: start; }
+@media (min-width: 1024px) { .filtres { position: sticky; top: var(--esp-4); max-height: calc(100vh - 2rem); overflow: auto; } .filtres__titre { cursor: default; pointer-events: none; } }
+.filtre { border: 0; margin: 0; padding: 0; display: grid; gap: var(--esp-2); }
+.filtre__legende { font-size: var(--taille-etiquette); font-weight: var(--graisse-forte); letter-spacing: 0.08em; text-transform: uppercase; color: var(--couleur-texte-doux); margin-bottom: var(--esp-1); padding: 0; }
+.filtre__compte { color: var(--couleur-texte-discret); }
+.filtre__periode { display: grid; grid-template-columns: 1fr 1fr; gap: var(--esp-3); }
+.filtre__periode label { display: grid; gap: var(--esp-1); font-size: var(--taille-texte-sm); }
+.filtre__periode .saisie { min-height: 40px; }
+
+.resultats { display: grid; gap: var(--esp-4); min-width: 0; }
+.resultats__barre { display: flex; flex-wrap: wrap; gap: var(--esp-3); align-items: center; justify-content: space-between; }
+.resultats__compte { font-family: var(--police-texte); font-size: var(--taille-texte-lg); font-weight: var(--graisse-forte); }
+.resultats__tri { display: flex; align-items: center; gap: var(--esp-2); font-size: var(--taille-texte-sm); color: var(--couleur-texte-doux); }
+.resultats__tri .saisie { width: auto; min-height: 40px; }
+.resultats__liste { display: grid; gap: var(--esp-4); grid-template-columns: repeat(auto-fill, minmax(min(100%, 19rem), 1fr)); }
+.resultats__liste .carte[hidden] { display: none; }
+.resultats__note { display: flex; gap: var(--esp-2); align-items: center; }
+.resultats__note svg { width: 1rem; height: 1rem; flex: none; }
+
+/* ---------- Fiche jeu de données ---------- */
+.fiche__titre { max-width: 52rem; }
+.fiche__ids { display: flex; flex-wrap: wrap; gap: var(--esp-2) var(--esp-5); }
+.fiche { display: grid; gap: var(--esp-6); padding-block: var(--esp-6) var(--esp-8); align-items: start; }
+@media (min-width: 1024px) { .fiche { grid-template-columns: minmax(0, 1fr) 20rem; gap: var(--esp-7); } .fiche__lateral { position: sticky; top: var(--esp-4); } }
+.fiche__principal { display: grid; gap: var(--esp-7); min-width: 0; }
+.fiche__bloc { display: grid; gap: var(--esp-3); }
+.fiche__bloc > p { max-width: var(--largeur-texte); }
+.fiche__sous-titre { font-family: var(--police-texte); font-size: var(--taille-texte); font-weight: var(--graisse-forte); margin-top: var(--esp-2); }
+.fiche__lateral { display: grid; gap: var(--esp-4); }
+.fiche__lateral .carte .bouton--primaire { width: 100%; }
+.fiche__liens { display: grid; justify-items: start; }
+
+.metadonnees { margin: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 15rem), 1fr)); border: 1px solid var(--couleur-bordure); border-radius: var(--rayon-lg); background: var(--couleur-surface); overflow: hidden; }
+.metadonnees > div { padding: var(--esp-3) var(--esp-4); border-bottom: 1px solid var(--gb-sauge-100); border-right: 1px solid var(--gb-sauge-100); display: grid; gap: 2px; }
+.metadonnees dt { font-size: var(--taille-etiquette); font-weight: var(--graisse-forte); letter-spacing: 0.06em; text-transform: uppercase; color: var(--couleur-texte-doux); }
+.metadonnees dd { margin: 0; font-weight: var(--graisse-moyenne); overflow-wrap: anywhere; }
+
+.citation { font-size: var(--taille-texte-sm); background: var(--gb-sauge-50); border-left: 3px solid var(--gb-or); padding: var(--esp-3); border-radius: var(--rayon-sm); overflow-wrap: anywhere; }
+.tableau code, .metadonnees code { font-size: 0.8125rem; }
+
+/* Parcours de validation */
+.parcours { list-style: none; margin: 0; padding: 0; display: grid; gap: 0; }
+.parcours__etape { position: relative; display: grid; grid-template-columns: 1.5rem 1fr auto; gap: var(--esp-3); align-items: center; padding-block: var(--esp-2); }
+.parcours__point { width: 0.875rem; height: 0.875rem; border-radius: var(--rayon-plein); background: var(--gb-vert); justify-self: center; z-index: 1; }
+.parcours__etape:not(:last-child)::after { content: ""; position: absolute; left: calc(0.75rem - 1px); top: 50%; height: 100%; width: 2px; background: var(--gb-vert-600); }
+.parcours__libelle { font-weight: var(--graisse-moyenne); }
+.parcours__date { font-size: var(--taille-texte-sm); color: var(--couleur-texte-doux); font-variant-numeric: tabular-nums; }
+.parcours__etape--attente .parcours__point { background: var(--couleur-surface); border: 2px dashed var(--gb-avert); }
+.parcours__etape--attente .parcours__date { color: var(--gb-avert); font-weight: var(--graisse-forte); }
+
+/* Graphique d'aperçu */
+.graphe__cadre { margin: 0; background: var(--couleur-surface); border: 1px solid var(--couleur-bordure); border-radius: var(--rayon-lg); padding: var(--esp-4); display: grid; gap: var(--esp-3); }
+.graphe__cadre figcaption { display: flex; flex-wrap: wrap; gap: var(--esp-2); align-items: center; font-size: var(--taille-texte-sm); }
+.graphe { width: 100%; height: auto; font-family: var(--police-texte); }
+.graphe__grille { stroke: var(--gb-sauge-100); stroke-width: 1; }
+.graphe__axe { fill: var(--couleur-texte-doux); font-size: 12px; font-variant-numeric: tabular-nums; }
+.graphe__unite { fill: var(--couleur-texte-doux); font-size: 12px; font-weight: 600; }
+.graphe__barre { fill: var(--gb-vert-600); }
+.graphe__barre:hover { fill: var(--gb-vert); }
+.graphe__manque { fill: url(#hachures); stroke: var(--gb-avert); stroke-width: 1; stroke-dasharray: 4 3; }
+.graphe__hachure { stroke: var(--gb-avert); stroke-width: 1.5; opacity: 0.45; }
+.graphe__nd { fill: var(--gb-avert); font-size: 12px; font-weight: 600; }
+.graphe__donnees summary { cursor: pointer; font-size: var(--taille-texte-sm); font-weight: var(--graisse-forte); color: var(--couleur-lien); min-height: 32px; display: inline-flex; align-items: center; }
+.graphe__donnees .tableau-defilant { margin-top: var(--esp-2); max-width: 28rem; }
+
+/* Corrections mobiles */
+.entete-page .conteneur, .fiche, .catalogue__corps { grid-template-columns: minmax(0, 1fr); }
+@media (min-width: 1024px) {
+  .catalogue__corps { grid-template-columns: 17rem minmax(0, 1fr); }
+  .fiche { grid-template-columns: minmax(0, 1fr) 20rem; }
+}
+@media (max-width: 1023px) { .fiche__lateral { order: -1; } }

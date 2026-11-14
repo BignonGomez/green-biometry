@@ -1,0 +1,237 @@
+{
+  "_avertissement": "Jeux de DÉMONSTRATION : valeurs, versions et empreintes fictives. Les sources citées existent, mais ces fiches ne décrivent pas leurs vrais fichiers. Ne jamais présenter comme réel (cahier des charges, § 6).",
+  "jeux": [
+    {
+      "slug": "couverture-forestiere-benin",
+      "identifiant": "GB-DS-0001",
+      "titre": {"fr": "Couverture forestière du Bénin, 2001–2023", "en": "Forest cover in Benin, 2001–2023"},
+      "resume": {"fr": "Pertes et gains annuels de couvert arboré à 30 m, agrégés par commune à partir des cartes mondiales de changement forestier.", "en": "Annual tree cover loss and gain at 30 m, aggregated by municipality from global forest change maps."},
+      "theme": "forets", "territoire": "benin",
+      "debut": 2001, "fin": 2023, "maj": "2026-10-03",
+      "formats": ["GeoJSON", "CSV"], "taille": "18,4 Mo",
+      "source": "Global Forest Watch", "source_url": "https://www.globalforestwatch.org/",
+      "producteur": {"fr": "University of Maryland, Hansen et al.", "en": "University of Maryland, Hansen et al."},
+      "licence": "cc-by-4", "statut": "publie", "acces": "public",
+      "methode": {"fr": "Classification d'images Landsat, seuil de couvert arboré de 30 %, agrégation par commune (77 communes).", "en": "Landsat image classification, 30% tree cover threshold, aggregation by municipality (77 municipalities)."},
+      "resolution": "30 m", "crs": "EPSG:4326 (WGS 84)",
+      "emprise": "0,77° E – 3,85° E ; 6,23° N – 12,42° N",
+      "variables": [
+        {"nom": "perte_couvert", "unite": "ha", "description": {"fr": "Surface de couvert arboré perdue dans l'année", "en": "Tree cover area lost during the year"}},
+        {"nom": "gain_couvert", "unite": "ha", "description": {"fr": "Surface de couvert arboré gagnée (2000–2020)", "en": "Tree cover area gained (2000–2020)"}},
+        {"nom": "couvert_2000", "unite": "%", "description": {"fr": "Part de la commune couverte d'arbres en 2000", "en": "Share of the municipality under tree cover in 2000"}}
+      ],
+      "limites": {"fr": "La perte de couvert inclut les coupes de plantations et les feux : elle ne signifie pas toujours déforestation. Précision plus faible dans les savanes arborées.", "en": "Tree cover loss includes plantation harvests and fires: it does not always mean deforestation. Lower accuracy in wooded savannas."},
+      "versions": [
+        {"version": "1.2", "date": "2026-10-03", "note": {"fr": "Ajout de l'année 2023", "en": "Year 2023 added"}, "empreinte": "9f2c41d07ab35e6c18e4f0b2a97d3c5e"},
+        {"version": "1.1", "date": "2025-09-12", "note": {"fr": "Correction des limites communales", "en": "Municipal boundaries corrected"}, "empreinte": "4b7e90a1c2d36f58e0a91b4c7d2e8f13"},
+        {"version": "1.0", "date": "2025-03-20", "note": {"fr": "Première publication", "en": "First publication"}, "empreinte": "c81d2f6a09b4e37d5a2c8e1f40b96d72"}
+      ],
+      "validation": {"soumis": "2025-02-27", "verification": "2025-03-01", "controle": "2025-03-03", "valide": "2025-03-18", "publie": "2025-03-20"},
+      "apercu": {"titre": {"fr": "Perte de couvert arboré par an", "en": "Tree cover loss per year"}, "unite": "ha",
+                 "points": [["2016", 21400], ["2017", 23900], ["2018", 19800], ["2019", 22600], ["2020", 18700], ["2021", 20900], ["2022", 24300], ["2023", 22100]]}
+    },
+    {
+      "slug": "plantations-abomey-calavi",
+      "identifiant": "GB-DS-0002",
+      "titre": {"fr": "Plantations d'alignement, Abomey-Calavi", "en": "Roadside tree planting, Abomey-Calavi"},
+      "resume": {"fr": "Inventaire des arbres plantés le long de 14 tronçons de voie et taux de survie mesuré 12 mois après la plantation.", "en": "Inventory of trees planted along 14 road sections and survival rate measured 12 months after planting."},
+      "theme": "restauration", "territoire": "abomey-calavi",
+      "debut": 2024, "fin": 2025, "maj": "2026-07-15",
+      "formats": ["CSV"], "taille": "0,4 Mo",
+      "source": {"fr": "Relevés de terrain", "en": "Field survey"}, "source_url": "",
+      "producteur": {"fr": "Organisation partenaire (exemple)", "en": "Partner organisation (example)"},
+      "licence": "cc-by-sa-4", "statut": "reserve", "acces": "public",
+      "methode": {"fr": "Comptage exhaustif des plants vivants par tronçon, GPS au mètre près, deux passages (juin 2024 et juin 2025).", "en": "Full count of living seedlings per section, GPS to the metre, two visits (June 2024 and June 2025)."},
+      "resolution": {"fr": "Arbre individuel", "en": "Individual tree"}, "crs": "EPSG:4326 (WGS 84)",
+      "emprise": "2,31° E – 2,40° E ; 6,42° N – 6,51° N",
+      "variables": [
+        {"nom": "troncon", "unite": "—", "description": {"fr": "Identifiant du tronçon de voie", "en": "Road section identifier"}},
+        {"nom": "espece", "unite": "—", "description": {"fr": "Nom scientifique de l'espèce plantée", "en": "Scientific name of the planted species"}},
+        {"nom": "arbres_plantes", "unite": {"fr": "nombre", "en": "count"}, "description": {"fr": "Nombre d'arbres plantés", "en": "Number of trees planted"}},
+        {"nom": "survie_12_mois", "unite": "%", "description": {"fr": "Part des plants vivants après 12 mois", "en": "Share of seedlings alive after 12 months"}}
+      ],
+      "limites": {"fr": "Échantillon limité à 3 quartiers. La revue scientifique n'est pas terminée : le jeu est publié avec réserve.", "en": "Sample limited to 3 neighbourhoods. The scientific review is not finished: the dataset is published with caveats."},
+      "versions": [
+        {"version": "1.0", "date": "2026-07-15", "note": {"fr": "Première publication, avec réserve", "en": "First publication, with caveats"}, "empreinte": "e3a7c9015bd24f86a0c3e7d9b1f45a28"}
+      ],
+      "validation": {"soumis": "2026-06-30", "verification": "2026-07-02", "controle": "2026-07-03", "valide": "", "publie": "2026-07-15"},
+      "apercu": {"titre": {"fr": "Taux de survie à 12 mois par quartier", "en": "12-month survival rate by neighbourhood"}, "unite": "%",
+                 "points": [["Godomey", 81], ["Akassato", 74], ["Zogbadjè", 79]]}
+    },
+    {
+      "slug": "pluviometrie-atlantique",
+      "identifiant": "GB-DS-0003",
+      "titre": {"fr": "Pluviométrie mensuelle, département de l'Atlantique", "en": "Monthly rainfall, Atlantique department"},
+      "resume": {"fr": "Cumuls mensuels de précipitations de 6 stations, avec les lacunes de mesure signalées.", "en": "Monthly rainfall totals from 6 stations, with measurement gaps flagged."},
+      "theme": "eau", "territoire": "atlantique",
+      "debut": 2015, "fin": 2025, "maj": "2026-02-10",
+      "formats": ["CSV"], "taille": "0,2 Mo",
+      "source": {"fr": "Service météorologique (exemple)", "en": "Weather service (example)"}, "source_url": "",
+      "producteur": {"fr": "Service météorologique (exemple)", "en": "Weather service (example)"},
+      "licence": "cc-by-4", "statut": "publie", "acces": "public",
+      "methode": {"fr": "Pluviomètres manuels relevés chaque jour, cumul mensuel. Un mois est déclaré manquant au-delà de 5 jours sans relevé.", "en": "Manual rain gauges read daily, monthly total. A month is flagged missing beyond 5 days without a reading."},
+      "resolution": {"fr": "Station, mensuel", "en": "Station, monthly"}, "crs": "EPSG:4326 (WGS 84)",
+      "emprise": "1,95° E – 2,45° E ; 6,35° N – 6,95° N",
+      "variables": [
+        {"nom": "station", "unite": "—", "description": {"fr": "Code de la station", "en": "Station code"}},
+        {"nom": "mois", "unite": "AAAA-MM", "description": {"fr": "Mois de mesure", "en": "Month of measurement"}},
+        {"nom": "precipitations", "unite": "mm", "description": {"fr": "Cumul mensuel de précipitations", "en": "Monthly rainfall total"}},
+        {"nom": "jours_manquants", "unite": {"fr": "jours", "en": "days"}, "description": {"fr": "Jours sans relevé dans le mois", "en": "Days without a reading in the month"}}
+      ],
+      "limites": {"fr": "Années 2019 et 2020 incomplètes (station principale hors service). Ne pas comparer ces années aux autres.", "en": "Years 2019 and 2020 incomplete (main station out of service). Do not compare these years with the others."},
+      "versions": [
+        {"version": "2.0", "date": "2026-02-10", "note": {"fr": "Ajout de 2025, contrôle des doublons", "en": "2025 added, duplicates checked"}, "empreinte": "71b0d4e29c6a385f1e2d7b4a09c3e86f"},
+        {"version": "1.0", "date": "2024-11-05", "note": {"fr": "Première publication", "en": "First publication"}, "empreinte": "0d93a6f2e17c48b5a3e0f9d2c61b7e45"}
+      ],
+      "validation": {"soumis": "2024-10-14", "verification": "2024-10-16", "controle": "2024-10-17", "valide": "2024-11-01", "publie": "2024-11-05"},
+      "apercu": {"titre": {"fr": "Cumul annuel moyen des stations", "en": "Average annual total across stations"}, "unite": "mm",
+                 "points": [["2015", 1180], ["2016", 1240], ["2017", 1095], ["2018", 1310], ["2019", null], ["2020", null], ["2021", 1205], ["2022", 1150], ["2023", 1275], ["2024", 1190], ["2025", 1230]]}
+    },
+    {
+      "slug": "occupation-sols-benin-2021",
+      "identifiant": "GB-DS-0004",
+      "titre": {"fr": "Occupation des sols du Bénin, 2021", "en": "Land cover of Benin, 2021"},
+      "resume": {"fr": "Carte d'occupation des sols à 10 m en 11 classes (forêt, savane, cultures, zones bâties, eau…), découpée sur le Bénin.", "en": "10 m land cover map in 11 classes (forest, savanna, cropland, built-up, water…), clipped to Benin."},
+      "theme": "sols", "territoire": "benin",
+      "debut": 2021, "fin": 2021, "maj": "2026-05-22",
+      "formats": ["GeoTIFF"], "taille": "46,0 Mo",
+      "source": "ESA WorldCover", "source_url": "https://esa-worldcover.org/",
+      "producteur": {"fr": "Agence spatiale européenne (ESA)", "en": "European Space Agency (ESA)"},
+      "licence": "cc-by-4", "statut": "publie", "acces": "public",
+      "methode": {"fr": "Classification d'images Sentinel-1 et Sentinel-2, découpage sur les limites nationales, sans retraitement.", "en": "Classification of Sentinel-1 and Sentinel-2 images, clipped to national boundaries, no reprocessing."},
+      "resolution": "10 m", "crs": "EPSG:4326 (WGS 84)",
+      "emprise": "0,77° E – 3,85° E ; 6,23° N – 12,42° N",
+      "variables": [
+        {"nom": "classe", "unite": {"fr": "code (10 à 100)", "en": "code (10 to 100)"}, "description": {"fr": "Classe d'occupation des sols", "en": "Land cover class"}}
+      ],
+      "limites": {"fr": "Précision globale annoncée d'environ 75 %. Confusions fréquentes entre savane arborée et cultures.", "en": "Stated overall accuracy of about 75%. Frequent confusion between wooded savanna and cropland."},
+      "versions": [
+        {"version": "1.0", "date": "2026-05-22", "note": {"fr": "Première publication", "en": "First publication"}, "empreinte": "5c2e8b71f0a94d36b8e1c7a2d04f9b63"}
+      ],
+      "validation": {"soumis": "2026-05-04", "verification": "2026-05-05", "controle": "2026-05-06", "valide": "2026-05-20", "publie": "2026-05-22"},
+      "apercu": {"titre": {"fr": "Part du territoire par grande classe", "en": "Share of territory by main class"}, "unite": "%",
+                 "points": [["Savane / Savanna", 46], ["Cultures / Cropland", 31], ["Forêt / Forest", 15], ["Bâti / Built-up", 3], ["Eau / Water", 2], ["Autres / Other", 3]]}
+    },
+    {
+      "slug": "mangroves-togbin",
+      "identifiant": "GB-DS-0005",
+      "titre": {"fr": "Superficie des mangroves de Togbin, 2023", "en": "Mangrove area in Togbin, 2023"},
+      "resume": {"fr": "Contours des peuplements de mangrove numérisés sur images de drone, avec la surface de chaque peuplement.", "en": "Mangrove stand outlines digitised from drone imagery, with the area of each stand."},
+      "theme": "restauration", "territoire": "littoral",
+      "debut": 2023, "fin": 2023, "maj": "2025-12-08",
+      "formats": ["GeoJSON"], "taille": "1,1 Mo",
+      "source": {"fr": "Laboratoire universitaire (exemple)", "en": "University laboratory (example)"}, "source_url": "",
+      "producteur": {"fr": "Laboratoire universitaire (exemple)", "en": "University laboratory (example)"},
+      "licence": "cc-by-sa-4", "statut": "publie", "acces": "public",
+      "methode": {"fr": "Vol de drone à 80 m, orthophoto à 5 cm, numérisation manuelle vérifiée sur le terrain.", "en": "Drone flight at 80 m, 5 cm orthophoto, manual digitisation checked in the field."},
+      "resolution": "5 cm", "crs": "EPSG:32631 (UTM 31N)",
+      "emprise": "2,27° E – 2,33° E ; 6,34° N – 6,37° N",
+      "variables": [
+        {"nom": "peuplement", "unite": "—", "description": {"fr": "Identifiant du peuplement", "en": "Stand identifier"}},
+        {"nom": "surface", "unite": "ha", "description": {"fr": "Surface du peuplement", "en": "Stand area"}},
+        {"nom": "espece_dominante", "unite": "—", "description": {"fr": "Espèce dominante", "en": "Dominant species"}}
+      ],
+      "limites": {"fr": "Une seule date d'observation : le jeu ne permet pas de mesurer une évolution.", "en": "A single observation date: the dataset cannot measure change over time."},
+      "versions": [
+        {"version": "1.0", "date": "2025-12-08", "note": {"fr": "Première publication", "en": "First publication"}, "empreinte": "a4f1e6c08d273b95e2a0c4d7f81b3e56"}
+      ],
+      "validation": {"soumis": "2025-11-10", "verification": "2025-11-12", "controle": "2025-11-13", "valide": "2025-12-05", "publie": "2025-12-08"}
+    },
+    {
+      "slug": "inventaire-forestier-extrait",
+      "identifiant": "GB-DS-0006",
+      "titre": {"fr": "Inventaire forestier national, extrait des forêts classées", "en": "National forest inventory, classified forests extract"},
+      "resume": {"fr": "Placettes d'inventaire des forêts classées : espèces, diamètres et volumes sur pied. Fiche de référence : les fichiers restent chez le producteur.", "en": "Inventory plots in classified forests: species, diameters and standing volumes. Reference record: files remain with the producer."},
+      "theme": "forets", "territoire": "benin",
+      "debut": 2017, "fin": 2019, "maj": "2026-04-02",
+      "formats": ["CSV"], "taille": "—",
+      "source": {"fr": "Administration forestière (exemple)", "en": "Forest administration (example)"}, "source_url": "",
+      "producteur": {"fr": "Administration forestière (exemple)", "en": "Forest administration (example)"},
+      "licence": "conditions-source", "statut": "publie", "acces": "public",
+      "methode": {"fr": "Placettes circulaires de 0,1 ha, mesure de tous les arbres de plus de 10 cm de diamètre.", "en": "Circular 0.1 ha plots, all trees over 10 cm in diameter measured."},
+      "resolution": {"fr": "Placette de 0,1 ha", "en": "0.1 ha plot"}, "crs": "EPSG:4326 (WGS 84)",
+      "emprise": "1,40° E – 3,10° E ; 6,90° N – 11,80° N",
+      "variables": [
+        {"nom": "placette", "unite": "—", "description": {"fr": "Identifiant de la placette", "en": "Plot identifier"}},
+        {"nom": "diametre", "unite": "cm", "description": {"fr": "Diamètre à 1,30 m", "en": "Diameter at breast height"}},
+        {"nom": "volume", "unite": "m³/ha", "description": {"fr": "Volume sur pied", "en": "Standing volume"}}
+      ],
+      "limites": {"fr": "Coordonnées des placettes non diffusées (sites sensibles). Réutilisation soumise à l'accord du producteur.", "en": "Plot coordinates not released (sensitive sites). Reuse requires the producer's agreement."},
+      "versions": [
+        {"version": "1.0", "date": "2026-04-02", "note": {"fr": "Fiche de référence publiée", "en": "Reference record published"}, "empreinte": ""}
+      ],
+      "validation": {"soumis": "2026-03-10", "verification": "2026-03-16", "controle": "2026-03-17", "valide": "2026-03-30", "publie": "2026-04-02"}
+    },
+    {
+      "slug": "zones-humides-oueme",
+      "identifiant": "GB-DS-0007",
+      "titre": {"fr": "Zones humides de la basse vallée de l'Ouémé", "en": "Wetlands of the lower Ouémé valley"},
+      "resume": {"fr": "Limites des zones humides et des plans d'eau de la basse vallée, avec leur type et leur surface en saison des pluies.", "en": "Boundaries of wetlands and water bodies in the lower valley, with their type and rainy-season area."},
+      "theme": "eau", "territoire": "oueme",
+      "debut": 2022, "fin": 2022, "maj": "2026-08-30",
+      "formats": ["GeoJSON", "CSV"], "taille": "6,7 Mo",
+      "source": {"fr": "ONG de conservation (exemple)", "en": "Conservation NGO (example)"}, "source_url": "",
+      "producteur": {"fr": "ONG de conservation (exemple)", "en": "Conservation NGO (example)"},
+      "licence": "cc-by-4", "statut": "reserve", "acces": "public",
+      "methode": {"fr": "Photo-interprétation d'images Sentinel-2 de septembre 2022, contrôle sur 40 points de terrain.", "en": "Photo-interpretation of September 2022 Sentinel-2 images, checked against 40 field points."},
+      "resolution": "10 m", "crs": "EPSG:4326 (WGS 84)",
+      "emprise": "2,40° E – 2,62° E ; 6,45° N – 7,05° N",
+      "variables": [
+        {"nom": "type", "unite": "—", "description": {"fr": "Type de zone humide", "en": "Wetland type"}},
+        {"nom": "surface", "unite": "ha", "description": {"fr": "Surface en saison des pluies", "en": "Rainy-season area"}}
+      ],
+      "limites": {"fr": "Revue scientifique en cours. Limites imprécises dans les zones de prairies inondables.", "en": "Scientific review in progress. Imprecise boundaries in flooded grasslands."},
+      "versions": [
+        {"version": "1.0", "date": "2026-08-30", "note": {"fr": "Première publication, avec réserve", "en": "First publication, with caveats"}, "empreinte": "f09b3d6e2a1c47d8b5e3f0a6c92d1e74"}
+      ],
+      "validation": {"soumis": "2026-08-11", "verification": "2026-08-13", "controle": "2026-08-14", "valide": "", "publie": "2026-08-30"}
+    },
+    {
+      "slug": "temperatures-afrique-ouest",
+      "identifiant": "GB-DS-0008",
+      "titre": {"fr": "Températures maximales mensuelles, Afrique de l'Ouest", "en": "Monthly maximum temperatures, West Africa"},
+      "resume": {"fr": "Moyennes mensuelles des températures maximales, agrégées par pays, issues d'un produit climatique maillé.", "en": "Monthly mean maximum temperatures, aggregated by country, from a gridded climate product."},
+      "theme": "climat", "territoire": "afrique-ouest",
+      "debut": 1991, "fin": 2024, "maj": "2026-03-15",
+      "formats": ["CSV"], "taille": "2,9 Mo",
+      "source": {"fr": "Centre climatique (exemple)", "en": "Climate centre (example)"}, "source_url": "",
+      "producteur": {"fr": "Centre climatique (exemple)", "en": "Climate centre (example)"},
+      "licence": "cc-by-4", "statut": "publie", "acces": "public",
+      "methode": {"fr": "Combinaison de stations et d'observations satellite, grille de 5 km, moyenne pondérée par la surface de chaque pays.", "en": "Station and satellite observations combined, 5 km grid, area-weighted mean per country."},
+      "resolution": {"fr": "Pays, mensuel", "en": "Country, monthly"}, "crs": "EPSG:4326 (WGS 84)",
+      "emprise": "17,6° O – 15,9° E ; 4,3° N – 27,3° N",
+      "variables": [
+        {"nom": "pays", "unite": "ISO 3166", "description": {"fr": "Code du pays", "en": "Country code"}},
+        {"nom": "mois", "unite": "AAAA-MM", "description": {"fr": "Mois", "en": "Month"}},
+        {"nom": "tmax", "unite": "°C", "description": {"fr": "Moyenne mensuelle des températures maximales", "en": "Monthly mean of maximum temperatures"}}
+      ],
+      "limites": {"fr": "Peu de stations au nord du Niger et du Mali : incertitude plus forte sur ces zones.", "en": "Few stations in northern Niger and Mali: higher uncertainty in these areas."},
+      "versions": [
+        {"version": "1.0", "date": "2026-03-15", "note": {"fr": "Première publication", "en": "First publication"}, "empreinte": "2e8d5a0c71f94b36e9a1d4c7b03f6e82"}
+      ],
+      "validation": {"soumis": "2026-02-20", "verification": "2026-02-23", "controle": "2026-02-24", "valide": "2026-03-12", "publie": "2026-03-15"}
+    }
+  ],
+  "referentiels": {
+    "themes": {
+      "forets": {"fr": "Forêts", "en": "Forests"},
+      "restauration": {"fr": "Restauration", "en": "Restoration"},
+      "sols": {"fr": "Occupation des sols", "en": "Land cover"},
+      "eau": {"fr": "Eau", "en": "Water"},
+      "climat": {"fr": "Climat", "en": "Climate"}
+    },
+    "territoires": {
+      "benin": {"fr": "Bénin", "en": "Benin"},
+      "atlantique": {"fr": "Département de l'Atlantique", "en": "Atlantique department"},
+      "abomey-calavi": {"fr": "Abomey-Calavi", "en": "Abomey-Calavi"},
+      "littoral": {"fr": "Littoral (Cotonou)", "en": "Littoral (Cotonou)"},
+      "oueme": {"fr": "Département de l'Ouémé", "en": "Ouémé department"},
+      "afrique-ouest": {"fr": "Afrique de l'Ouest", "en": "West Africa"}
+    },
+    "licences": {
+      "cc-by-4": {"nom": "CC BY 4.0", "url": "https://creativecommons.org/licenses/by/4.0/", "telechargement": true},
+      "cc-by-sa-4": {"nom": "CC BY-SA 4.0", "url": "https://creativecommons.org/licenses/by-sa/4.0/", "telechargement": true},
+      "conditions-source": {"nom": {"fr": "Conditions de la source", "en": "Source terms"}, "url": "", "telechargement": false}
+    }
+  }
+}

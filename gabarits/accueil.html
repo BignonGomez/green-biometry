@@ -6,8 +6,8 @@
 <title>{{accueil.meta_titre}}</title>
 <meta name="description" content="{{accueil.meta_description}}">
 <meta name="robots" content="noindex">
-<link rel="alternate" hreflang="fr" href="{{@racine}}fr/">
-<link rel="alternate" hreflang="en" href="{{@racine}}en/">
+<link rel="alternate" hreflang="fr" href="{{@chemin_fr}}">
+<link rel="alternate" hreflang="en" href="{{@chemin_en}}">
 <link rel="icon" href="{{@racine}}assets/logo/favicon.svg" type="image/svg+xml">
 <link rel="preload" href="{{@racine}}assets/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="{{@racine}}assets/fonts/playfair-display-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
@@ -48,13 +48,13 @@
       <p class="etiquette hero__etiquette">{{accueil.hero_etiquette}}</p>
       <h1 class="titre-xl hero__titre" id="t-hero">{{accueil.hero_titre}}</h1>
       <p class="texte-lg hero__texte">{{accueil.hero_texte}}</p>
-      <form class="recherche" role="search" action="#" onsubmit="return false">
+      <form class="recherche" role="search" action="catalogue/" method="get">
         <label class="sr-only" for="q">{{accueil.recherche_label}}</label>
         <svg class="recherche__icone" aria-hidden="true"><use href="#i-recherche"/></svg>
         <input class="recherche__saisie" id="q" name="q" type="search" placeholder="{{accueil.recherche_placeholder}}" autocomplete="off">
         <button class="bouton bouton--primaire" type="submit">{{accueil.recherche_bouton}}</button>
       </form>
-      <p class="hero__suggestions"><span>{{accueil.suggestions}}</span> <a href="#">{{accueil.sugg_1}}</a> <a href="#">{{accueil.sugg_2}}</a> <a href="#">{{accueil.sugg_3}}</a></p>
+      <p class="hero__suggestions"><span>{{accueil.suggestions}}</span> <a href="catalogue/?q={{accueil.sugg_1}}">{{accueil.sugg_1}}</a> <a href="catalogue/?q={{accueil.sugg_2}}">{{accueil.sugg_2}}</a> <a href="catalogue/?q={{accueil.sugg_3}}">{{accueil.sugg_3}}</a></p>
     </div>
     <p class="hero__credit">{{accueil.credit_hero}} · <a href="#credits-photos">{{commun.credits_lien}}</a></p>
   </section>
@@ -85,11 +85,11 @@
         <h2 class="titre-lg" id="t-themes">{{accueil.themes_titre}}</h2>
       </div>
       <ul class="themes">
-        <li><a class="theme" href="#"><img class="theme__photo" src="{{@racine}}assets/img/theme-forets.webp" alt="" width="560" height="315" loading="lazy" decoding="async"><span class="theme__corps"><span class="theme__icone"><svg aria-hidden="true"><use href="#i-arbre"/></svg></span><span><span class="theme__titre">{{accueil.theme_forets}}</span><span class="theme__texte">{{accueil.theme_forets_texte}}</span></span></span></a></li>
-        <li><a class="theme" href="#"><img class="theme__photo" src="{{@racine}}assets/img/theme-restauration.webp" alt="" width="560" height="315" loading="lazy" decoding="async"><span class="theme__corps"><span class="theme__icone"><svg aria-hidden="true"><use href="#i-pousse"/></svg></span><span><span class="theme__titre">{{accueil.theme_restauration}}</span><span class="theme__texte">{{accueil.theme_restauration_texte}}</span></span></span></a></li>
-        <li><a class="theme" href="#"><img class="theme__photo" src="{{@racine}}assets/img/theme-sols.webp" alt="" width="560" height="315" loading="lazy" decoding="async"><span class="theme__corps"><span class="theme__icone"><svg aria-hidden="true"><use href="#i-couches"/></svg></span><span><span class="theme__titre">{{accueil.theme_sols}}</span><span class="theme__texte">{{accueil.theme_sols_texte}}</span></span></span></a></li>
-        <li><a class="theme" href="#"><img class="theme__photo" src="{{@racine}}assets/img/theme-eau.webp" alt="" width="560" height="315" loading="lazy" decoding="async"><span class="theme__corps"><span class="theme__icone"><svg aria-hidden="true"><use href="#i-goutte"/></svg></span><span><span class="theme__titre">{{accueil.theme_eau}}</span><span class="theme__texte">{{accueil.theme_eau_texte}}</span></span></span></a></li>
-        <li><a class="theme" href="#"><img class="theme__photo" src="{{@racine}}assets/img/theme-climat.webp" alt="" width="560" height="315" loading="lazy" decoding="async"><span class="theme__corps"><span class="theme__icone"><svg aria-hidden="true"><use href="#i-thermo"/></svg></span><span><span class="theme__titre">{{accueil.theme_climat}}</span><span class="theme__texte">{{accueil.theme_climat_texte}}</span></span></span></a></li>
+        <li><a class="theme" href="catalogue/?theme=forets"><img class="theme__photo" src="{{@racine}}assets/img/theme-forets.webp" alt="" width="560" height="315" loading="lazy" decoding="async"><span class="theme__corps"><span class="theme__icone"><svg aria-hidden="true"><use href="#i-arbre"/></svg></span><span><span class="theme__titre">{{accueil.theme_forets}}</span><span class="theme__texte">{{accueil.theme_forets_texte}}</span></span></span></a></li>
+        <li><a class="theme" href="catalogue/?theme=restauration"><img class="theme__photo" src="{{@racine}}assets/img/theme-restauration.webp" alt="" width="560" height="315" loading="lazy" decoding="async"><span class="theme__corps"><span class="theme__icone"><svg aria-hidden="true"><use href="#i-pousse"/></svg></span><span><span class="theme__titre">{{accueil.theme_restauration}}</span><span class="theme__texte">{{accueil.theme_restauration_texte}}</span></span></span></a></li>
+        <li><a class="theme" href="catalogue/?theme=sols"><img class="theme__photo" src="{{@racine}}assets/img/theme-sols.webp" alt="" width="560" height="315" loading="lazy" decoding="async"><span class="theme__corps"><span class="theme__icone"><svg aria-hidden="true"><use href="#i-couches"/></svg></span><span><span class="theme__titre">{{accueil.theme_sols}}</span><span class="theme__texte">{{accueil.theme_sols_texte}}</span></span></span></a></li>
+        <li><a class="theme" href="catalogue/?theme=eau"><img class="theme__photo" src="{{@racine}}assets/img/theme-eau.webp" alt="" width="560" height="315" loading="lazy" decoding="async"><span class="theme__corps"><span class="theme__icone"><svg aria-hidden="true"><use href="#i-goutte"/></svg></span><span><span class="theme__titre">{{accueil.theme_eau}}</span><span class="theme__texte">{{accueil.theme_eau_texte}}</span></span></span></a></li>
+        <li><a class="theme" href="catalogue/?theme=climat"><img class="theme__photo" src="{{@racine}}assets/img/theme-climat.webp" alt="" width="560" height="315" loading="lazy" decoding="async"><span class="theme__corps"><span class="theme__icone"><svg aria-hidden="true"><use href="#i-thermo"/></svg></span><span><span class="theme__titre">{{accueil.theme_climat}}</span><span class="theme__texte">{{accueil.theme_climat_texte}}</span></span></span></a></li>
         <li><div class="theme theme--inactif"><img class="theme__photo" src="{{@racine}}assets/img/theme-biodiversite.webp" alt="" width="560" height="315" loading="lazy" decoding="async"><span class="theme__corps"><span class="theme__icone"><svg aria-hidden="true"><use href="#i-feuille"/></svg></span><span><span class="theme__titre">{{accueil.theme_biodiversite}} <span class="badge badge--theme">{{accueil.prochainement}}</span></span><span class="theme__texte">{{accueil.theme_biodiversite_texte}}</span></span></span></div></li>
       </ul>
     </div>
@@ -103,27 +103,10 @@
           <p class="etiquette">{{accueil.derniers_etiquette}}</p>
           <h2 class="titre-lg" id="t-derniers">{{accueil.derniers_titre}}</h2>
         </div>
-        <a class="bouton bouton--secondaire" href="#">{{accueil.voir_catalogue}}<svg aria-hidden="true"><use href="#i-fleche"/></svg></a>
+        <a class="bouton bouton--secondaire" href="catalogue/">{{accueil.voir_catalogue}}<svg aria-hidden="true"><use href="#i-fleche"/></svg></a>
       </div>
       <div class="grille">
-        <article class="carte carte--lien">
-          <div class="carte__badges"><span class="badge badge--demo">{{commun.demo}}</span><span class="badge badge--publie"><svg aria-hidden="true"><use href="#i-ok"/></svg>{{commun.statut_publie}}</span><span class="badge badge--theme">{{accueil.jeu1_theme}}</span></div>
-          <h3 class="titre-sm carte__titre"><a href="#">{{accueil.jeu1_titre}}</a></h3>
-          <p class="texte-sm texte-doux">{{accueil.jeu1_resume}}</p>
-          <dl class="meta"><dt>{{commun.lbl_source}}</dt><dd>{{accueil.jeu1_source}}</dd><dt>{{commun.lbl_periode}}</dt><dd>2001–2023</dd><dt>{{commun.lbl_format}}</dt><dd>GeoJSON, CSV</dd><dt>{{commun.lbl_licence}}</dt><dd>CC BY 4.0</dd></dl>
-        </article>
-        <article class="carte carte--lien">
-          <div class="carte__badges"><span class="badge badge--demo">{{commun.demo}}</span><span class="badge badge--reserve"><svg aria-hidden="true"><use href="#i-attention"/></svg>{{commun.statut_reserve}}</span><span class="badge badge--theme">{{accueil.jeu2_theme}}</span></div>
-          <h3 class="titre-sm carte__titre"><a href="#">{{accueil.jeu2_titre}}</a></h3>
-          <p class="texte-sm texte-doux">{{accueil.jeu2_resume}}</p>
-          <dl class="meta"><dt>{{commun.lbl_source}}</dt><dd>{{accueil.jeu2_source}}</dd><dt>{{commun.lbl_periode}}</dt><dd>2024–2025</dd><dt>{{commun.lbl_format}}</dt><dd>CSV</dd><dt>{{commun.lbl_licence}}</dt><dd>CC BY-SA 4.0</dd></dl>
-        </article>
-        <article class="carte carte--lien">
-          <div class="carte__badges"><span class="badge badge--demo">{{commun.demo}}</span><span class="badge badge--publie"><svg aria-hidden="true"><use href="#i-ok"/></svg>{{commun.statut_publie}}</span><span class="badge badge--theme">{{accueil.jeu3_theme}}</span></div>
-          <h3 class="titre-sm carte__titre"><a href="#">{{accueil.jeu3_titre}}</a></h3>
-          <p class="texte-sm texte-doux">{{accueil.jeu3_resume}}</p>
-          <dl class="meta"><dt>{{commun.lbl_source}}</dt><dd>{{accueil.jeu3_source}}</dd><dt>{{commun.lbl_periode}}</dt><dd>2015–2025</dd><dt>{{commun.lbl_format}}</dt><dd>CSV</dd><dt>{{commun.lbl_licence}}</dt><dd>CC BY 4.0</dd></dl>
-        </article>
+{{@derniers_jeux}}
       </div>
     </div>
   </section>

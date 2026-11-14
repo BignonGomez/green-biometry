@@ -33,8 +33,10 @@ design/
 gabarits/             Pages bilingues (un gabarit par page) et partiels communs (en-tête, pied)
 messages/fr.json      Textes français (langue de référence)
 messages/en.json      Textes anglais : mêmes clés, sinon la construction échoue
+donnees/jeux-demo.json Jeux de démonstration (DÉMO) : source unique du catalogue, des fiches et de l'accueil
 site/                 Fichiers statiques publiés tels quels (styleguide, CSS, polices)
 scripts/build_site.py Construit _site/ : rend les gabarits dans chaque langue, ajoute logo et tokens
+scripts/catalogue.py  Composants générés à partir des données (cartes, filtres, fiche, graphique)
 docs/
   decisions.md        Registre des décisions (ADR)
 IDEES.md              Idées hors périmètre, relues seulement au bilan du pilote

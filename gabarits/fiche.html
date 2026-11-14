@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="{{@lang}}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{@jeu_titre}} · Green Biometry</title>
+<meta name="description" content="{{@meta_description}}">
+<meta name="robots" content="noindex">
+<link rel="alternate" hreflang="fr" href="{{@chemin_fr}}">
+<link rel="alternate" hreflang="en" href="{{@chemin_en}}">
+<link rel="icon" href="{{@racine}}assets/logo/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="{{@racine}}assets/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="{{@racine}}assets/css/tokens.css">
+<link rel="stylesheet" href="{{@racine}}assets/css/composants.css">
+<link rel="stylesheet" href="{{@racine}}assets/css/accueil.css">
+<link rel="stylesheet" href="{{@racine}}assets/css/catalogue.css">
+<script src="{{@racine}}assets/js/fiche.js" defer></script>
+</head>
+<body>
+{{> icones}}
+<a class="lien-evitement" href="#contenu">{{commun.aller_contenu}}</a>
+<div class="bandeau-demo" role="note">
+  <div class="conteneur"><span class="badge badge--demo">{{commun.demo}}</span><span>{{commun.bandeau_demo}}</span></div>
+</div>
+{{> entete}}
+
+<main id="contenu">
+  <div class="entete-page">
+    <div class="conteneur">
+      <nav class="fil" aria-label="{{commun.fil_label}}"><ol><li><a href="{{@racine}}{{@lang}}/">{{commun.fil_accueil}}</a></li><li><a href="{{@racine}}{{@lang}}/catalogue/">{{catalogue.titre}}</a></li><li aria-current="page">{{@jeu_titre}}</li></ol></nav>
+      <div class="carte__badges">{{@jeu_badges}}</div>
+      <h1 class="titre-lg fiche__titre">{{@jeu_titre}}</h1>
+      <p class="texte-lg texte-doux entete-page__intro">{{@jeu_resume}}</p>
+      <p class="fiche__ids texte-sm texte-doux"><span>{{fiche.identifiant}}{{commun.deux_points}}<strong>{{@jeu_identifiant}}</strong></span><span>{{fiche.m_maj}}{{commun.deux_points}}{{@jeu_maj}}</span><span>{{fiche.m_licence}}{{commun.deux_points}}{{@jeu_licence}}</span></p>
+    </div>
+  </div>
+
+  <div class="conteneur fiche">
+    <div class="fiche__principal">
+      {{@jeu_reserve}}
+
+      <section class="fiche__bloc" aria-labelledby="t-desc">
+        <h2 class="titre-md" id="t-desc">{{fiche.sec_description}}</h2>
+        <p>{{@jeu_resume}}</p>
+        <h3 class="fiche__sous-titre">{{fiche.m_methode}}</h3>
+        <p>{{@jeu_methode}}</p>
+      </section>
+
+      <section class="fiche__bloc" aria-labelledby="t-meta">
+        <h2 class="titre-md" id="t-meta">{{fiche.sec_metadonnees}}</h2>
+        <dl class="metadonnees">
+          <div><dt>{{fiche.m_producteur}}</dt><dd>{{@jeu_producteur}}</dd></div>
+          <div><dt>{{fiche.m_source}}</dt><dd>{{@jeu_source}}</dd></div>
+          <div><dt>{{fiche.m_theme}}</dt><dd>{{@jeu_theme}}</dd></div>
+          <div><dt>{{fiche.m_periode}}</dt><dd>{{@jeu_periode}}</dd></div>
+          <div><dt>{{fiche.m_maj}}</dt><dd>{{@jeu_maj}}</dd></div>
+          <div><dt>{{fiche.m_territoire}}</dt><dd>{{@jeu_territoire}}</dd></div>
+          <div><dt>{{fiche.m_emprise}}</dt><dd>{{@jeu_emprise}}</dd></div>
+          <div><dt>{{fiche.m_resolution}}</dt><dd>{{@jeu_resolution}}</dd></div>
+          <div><dt>{{fiche.m_crs}}</dt><dd>{{@jeu_crs}}</dd></div>
+          <div><dt>{{fiche.m_format}}</dt><dd>{{@jeu_formats}}</dd></div>
+          <div><dt>{{fiche.m_licence}}</dt><dd>{{@jeu_licence}}</dd></div>
+          <div><dt>{{fiche.m_acces}}</dt><dd>{{@jeu_acces}}</dd></div>
+        </dl>
+      </section>
+
+      <section class="fiche__bloc" aria-labelledby="t-var">
+        <h2 class="titre-md" id="t-var">{{fiche.sec_variables}}</h2>
+        {{@jeu_variables}}
+      </section>
+
+      <section class="fiche__bloc" aria-labelledby="t-lim">
+        <h2 class="titre-md" id="t-lim">{{fiche.sec_limites}}</h2>
+        <div class="alerte alerte--avert" role="note"><svg aria-hidden="true"><use href="#i-attention"/></svg><p>{{@jeu_limites}}</p></div>
+      </section>
+
+      {{@jeu_apercu}}
+
+      <section class="fiche__bloc" aria-labelledby="t-ver">
+        <h2 class="titre-md" id="t-ver">{{fiche.sec_versions}}</h2>
+        <p class="texte-sm texte-doux">{{fiche.versions_intro}}</p>
+        {{@jeu_versions}}
+      </section>
+
+      <section class="fiche__bloc" aria-labelledby="t-val">
+        <h2 class="titre-md" id="t-val">{{fiche.sec_validation}}</h2>
+        <p class="texte-sm texte-doux">{{fiche.validation_intro}}</p>
+        {{@jeu_validation}}
+      </section>
+    </div>
+
+    <aside class="fiche__lateral" aria-label="{{fiche.actions_label}}">
+      <section class="carte" aria-labelledby="t-dl">
+        <h2 class="titre-sm" id="t-dl">{{fiche.telechargement_titre}}</h2>
+        {{@jeu_telechargement}}
+      </section>
+      <section class="carte" aria-labelledby="t-cit">
+        <h2 class="titre-sm" id="t-cit">{{fiche.citation_titre}}</h2>
+        <p class="citation" id="citation">{{@jeu_citation}}</p>
+        <button class="bouton bouton--secondaire bouton--petit" type="button" data-copier="citation" data-copie-ok="{{fiche.copie_ok}}"><svg aria-hidden="true"><use href="#i-copier"/></svg><span aria-live="polite">{{fiche.copier}}</span></button>
+      </section>
+      <div class="fiche__liens">
+        <a class="bouton bouton--discret" href="#"><svg aria-hidden="true"><use href="#i-carte"/></svg>{{fiche.voir_carte}}</a>
+        <a class="bouton bouton--discret" href="#"><svg aria-hidden="true"><use href="#i-drapeau"/></svg>{{fiche.signaler}}</a>
+        <a class="bouton bouton--discret" href="{{@racine}}{{@lang}}/catalogue/"><svg aria-hidden="true"><use href="#i-retour"/></svg>{{fiche.retour}}</a>
+      </div>
+    </aside>
+  </div>
+</main>
+
+{{> pied}}
+</body>
+</html>

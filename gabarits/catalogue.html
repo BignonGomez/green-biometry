@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="{{@lang}}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{catalogue.meta_titre}}</title>
+<meta name="description" content="{{catalogue.meta_description}}">
+<meta name="robots" content="noindex">
+<link rel="alternate" hreflang="fr" href="{{@chemin_fr}}">
+<link rel="alternate" hreflang="en" href="{{@chemin_en}}">
+<link rel="icon" href="{{@racine}}assets/logo/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="{{@racine}}assets/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="{{@racine}}assets/css/tokens.css">
+<link rel="stylesheet" href="{{@racine}}assets/css/composants.css">
+<link rel="stylesheet" href="{{@racine}}assets/css/accueil.css">
+<link rel="stylesheet" href="{{@racine}}assets/css/catalogue.css">
+<script src="{{@racine}}assets/js/catalogue.js" defer></script>
+</head>
+<body>
+{{> icones}}
+<a class="lien-evitement" href="#contenu">{{commun.aller_contenu}}</a>
+<div class="bandeau-demo" role="note">
+  <div class="conteneur"><span class="badge badge--demo">{{commun.demo}}</span><span>{{commun.bandeau_demo}}</span></div>
+</div>
+{{> entete}}
+
+<main id="contenu">
+  <form id="catalogue" class="catalogue" method="get" action="" role="search" aria-label="{{catalogue.titre}}">
+
+    <div class="entete-page">
+      <div class="conteneur">
+        <nav class="fil" aria-label="{{commun.fil_label}}"><ol><li><a href="{{@racine}}{{@lang}}/">{{commun.fil_accueil}}</a></li><li aria-current="page">{{catalogue.titre}}</li></ol></nav>
+        <h1 class="titre-lg">{{catalogue.titre}}</h1>
+        <p class="texte-doux entete-page__intro">{{catalogue.intro}}</p>
+        <div class="recherche recherche--page">
+          <label class="sr-only" for="q">{{catalogue.recherche_label}}</label>
+          <svg class="recherche__icone" aria-hidden="true"><use href="#i-recherche"/></svg>
+          <input class="recherche__saisie" id="q" name="q" type="search" placeholder="{{catalogue.recherche_placeholder}}" autocomplete="off">
+          <button class="bouton bouton--primaire" type="submit">{{catalogue.recherche_bouton}}</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="conteneur catalogue__corps">
+      <details class="filtres" open>
+        <summary class="filtres__titre"><svg aria-hidden="true"><use href="#i-filtre"/></svg>{{catalogue.filtres}}<span class="filtres__actifs" data-filtres-actifs hidden></span></summary>
+        <div class="filtres__contenu">
+          {{@facettes}}
+          <button class="bouton bouton--secondaire bouton--petit" type="reset" data-reinitialiser>{{catalogue.reinitialiser}}</button>
+        </div>
+      </details>
+
+      <section class="resultats" aria-labelledby="t-resultats">
+        <div class="resultats__barre">
+          <h2 class="resultats__compte" id="t-resultats"><span data-compte aria-live="polite" data-un="{{catalogue.resultats_un}}" data-plusieurs="{{catalogue.resultats_plusieurs}}">{{@nb_jeux}} {{catalogue.jeux}}</span></h2>
+          <label class="resultats__tri"><span>{{catalogue.trier}}</span>
+            <select class="saisie" name="tri">
+              <option value="pertinence">{{catalogue.tri_pertinence}}</option>
+              <option value="maj">{{catalogue.tri_maj}}</option>
+              <option value="titre">{{catalogue.tri_titre}}</option>
+            </select>
+          </label>
+        </div>
+        <div class="resultats__liste" data-liste>
+{{@liste_jeux}}
+        </div>
+        <div class="etat-vide" data-vide hidden>
+          <svg aria-hidden="true"><use href="#i-recherche"/></svg>
+          <p class="titre-sm">{{catalogue.vide_titre}}</p>
+          <p class="texte-sm texte-doux" style="margin: var(--esp-2) 0 var(--esp-4)">{{catalogue.vide_texte}}</p>
+          <button class="bouton bouton--secondaire" type="reset" data-reinitialiser>{{catalogue.reinitialiser}}</button>
+        </div>
+        <p class="texte-sm texte-doux resultats__note"><svg aria-hidden="true"><use href="#i-cadenas"/></svg>{{catalogue.note_restreint}}</p>
+      </section>
+    </div>
+  </form>
+</main>
+
+{{> pied}}
+</body>
+</html>

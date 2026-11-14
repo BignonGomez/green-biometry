@@ -5,17 +5,17 @@
     </a>
     <nav class="entete__nav" aria-label="{{commun.nav_label}}">
       <ul class="entete__liens">
-        <li><a href="#">{{commun.nav_catalogue}}</a></li>
-        <li><a href="#">{{commun.nav_carte}}</a></li>
-        <li><a href="#">{{commun.nav_indicateurs}}</a></li>
-        <li><a href="#">{{commun.nav_projets}}</a></li>
-        <li><a href="#">{{commun.nav_apropos}}</a></li>
+        <li><a href="{{@racine}}{{@lang}}/catalogue/" {{@actif_catalogue}}>{{commun.nav_catalogue}}</a></li>
+        <li><a href="#" {{@actif_carte}}>{{commun.nav_carte}}</a></li>
+        <li><a href="#" {{@actif_indicateurs}}>{{commun.nav_indicateurs}}</a></li>
+        <li><a href="#" {{@actif_projets}}>{{commun.nav_projets}}</a></li>
+        <li><a href="#" {{@actif_apropos}}>{{commun.nav_apropos}}</a></li>
       </ul>
     </nav>
     <div class="entete__actions">
       <div class="langue" role="group" aria-label="{{commun.langue}}">
-        <a href="{{@racine}}fr/" lang="fr" hreflang="fr" {{@courant_fr}}>FR</a>
-        <a href="{{@racine}}en/" lang="en" hreflang="en" {{@courant_en}}>EN</a>
+        <a href="{{@chemin_fr}}" lang="fr" hreflang="fr" {{@courant_fr}}>FR</a>
+        <a href="{{@chemin_en}}" lang="en" hreflang="en" {{@courant_en}}>EN</a>
       </div>
       <a class="bouton bouton--discret" href="#">{{commun.se_connecter}}</a>
       <a class="bouton bouton--primaire" href="#"><svg aria-hidden="true"><use href="#i-depot"/></svg>{{commun.contribuer}}</a>
@@ -24,7 +24,7 @@
       <summary><svg aria-hidden="true"><use href="#i-menu"/></svg>{{commun.menu}}</summary>
       <div class="menu-mobile__panneau">
         <ul>
-          <li><a href="#">{{commun.nav_catalogue}}</a></li>
+          <li><a href="{{@racine}}{{@lang}}/catalogue/" {{@actif_catalogue}}>{{commun.nav_catalogue}}</a></li>
           <li><a href="#">{{commun.nav_carte}}</a></li>
           <li><a href="#">{{commun.nav_indicateurs}}</a></li>
           <li><a href="#">{{commun.nav_projets}}</a></li>
@@ -34,8 +34,8 @@
           <a class="bouton bouton--primaire" href="#"><svg aria-hidden="true"><use href="#i-depot"/></svg>{{commun.contribuer}}</a>
           <a class="bouton bouton--secondaire" href="#">{{commun.se_connecter}}</a>
           <div class="langue" role="group" aria-label="{{commun.langue}}">
-            <a href="{{@racine}}fr/" lang="fr" hreflang="fr" {{@courant_fr}}>FR</a>
-            <a href="{{@racine}}en/" lang="en" hreflang="en" {{@courant_en}}>EN</a>
+            <a href="{{@chemin_fr}}" lang="fr" hreflang="fr" {{@courant_fr}}>FR</a>
+            <a href="{{@chemin_en}}" lang="en" hreflang="en" {{@courant_en}}>EN</a>
           </div>
         </div>
       </div>
