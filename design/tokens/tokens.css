@@ -1,0 +1,120 @@
+/*
+ * Green Biometry : tokens de design (source unique)
+ * ---------------------------------------------------
+ * Toutes les couleurs, polices, tailles, espacements, rayons et ombres du projet.
+ * Les écrans n'utilisent jamais de valeur codée en dur : ils utilisent ces variables.
+ * Plus tard, Tailwind (Next.js) lira ces mêmes variables via @theme.
+ *
+ * Contrastes vérifiés (WCAG 2.1) : voir docs/decisions.md, ADR-08 et ADR-09.
+ * Thème clair seulement au MVP.
+ */
+
+:root {
+  /* ---------- Marque (logo) ---------- */
+  --gb-vert: #0A4D18;          /* vert du logo : actions, liens, titres forts. 9,6:1 sur ivoire */
+  --gb-vert-fonce: #083D13;    /* survol et état actif des actions */
+  --gb-vert-600: #1F6B2E;      /* variante plus claire, icônes et graphiques. 6,2:1 sur ivoire */
+  --gb-or: #F2AC00;            /* or du logo : ACCENT seulement, jamais en texte sur fond clair */
+  --gb-or-texte: #7A5600;      /* or lisible sur fond clair. 6,3:1 sur ivoire */
+
+  /* ---------- Fonds sombres (maquette) ---------- */
+  --gb-foret: #153E2B;         /* grands fonds sombres : pied de page, bandeaux */
+  --gb-foret-profond: #0E2A1D; /* superpositions sur photos */
+
+  /* ---------- Neutres ---------- */
+  --gb-ivoire: #FBF9F5;        /* fond de page */
+  --gb-parchemin: #F4F1EA;     /* sections alternées */
+  --gb-blanc: #FFFFFF;         /* cartes, champs */
+  --gb-sauge-50: #F1F4F0;      /* surfaces secondaires (vert grisâtre du cahier § 14) */
+  --gb-sauge-100: #E6EBE5;
+  --gb-sauge-300: #C3CCC4;     /* bordures, séparateurs ; texte discret sur fond forêt */
+  --gb-sauge-600: #5E7366;     /* texte très discret (légendes). 4,9:1 sur ivoire */
+  --gb-encre: #17241C;         /* texte principal. 15,3:1 sur ivoire */
+  --gb-encre-douce: #4A5A50;   /* texte secondaire. 7,0:1 sur ivoire */
+
+  /* ---------- Sémantique ---------- */
+  --gb-succes: #0A4D18;   --gb-succes-fond: #E3F0E2;
+  --gb-info: #1D5B8C;     --gb-info-fond: #E3EEF7;
+  --gb-avert: #8A5300;    --gb-avert-fond: #FFF1CC;
+  --gb-erreur: #B3261E;   --gb-erreur-fond: #FCE8E6;
+  --gb-restreint: #5B3A8C; --gb-restreint-fond: #EEE8F6;
+  --gb-neutre: #4A5A50;   --gb-neutre-fond: #ECEFEA;
+
+  /* ---------- Rôles (à utiliser dans les composants) ---------- */
+  --couleur-fond: var(--gb-ivoire);
+  --couleur-fond-alt: var(--gb-parchemin);
+  --couleur-surface: var(--gb-blanc);
+  --couleur-texte: var(--gb-encre);
+  --couleur-texte-doux: var(--gb-encre-douce);
+  --couleur-texte-discret: var(--gb-sauge-600);
+  --couleur-bordure: var(--gb-sauge-300);
+  --couleur-bordure-forte: var(--gb-sauge-600);
+  --couleur-action: var(--gb-vert);
+  --couleur-action-survol: var(--gb-vert-fonce);
+  --couleur-sur-action: var(--gb-blanc);
+  --couleur-lien: var(--gb-vert);
+  --couleur-focus: var(--gb-or);
+  --couleur-sombre: var(--gb-foret);
+  --couleur-sur-sombre: var(--gb-blanc);
+  --couleur-sur-sombre-doux: var(--gb-sauge-300);
+
+  /* ---------- Typographie ---------- */
+  --police-titre: "Playfair Display", Georgia, "Times New Roman", serif;
+  --police-texte: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+
+  /* Tailles mobiles d'abord ; agrandies à partir de 768 px (voir plus bas) */
+  --taille-titre-xl: 2rem;       --ligne-titre-xl: 2.5rem;    /* 32/40 */
+  --taille-titre-lg: 1.625rem;   --ligne-titre-lg: 2.125rem;  /* 26/34 */
+  --taille-titre-md: 1.375rem;   --ligne-titre-md: 1.875rem;  /* 22/30 */
+  --taille-titre-sm: 1.25rem;    --ligne-titre-sm: 1.75rem;   /* 20/28 */
+  --taille-texte-lg: 1.125rem;   --ligne-texte-lg: 1.75rem;   /* 18/28 */
+  --taille-texte: 1rem;          --ligne-texte: 1.5rem;       /* 16/24 : jamais moins pour le texte courant */
+  --taille-texte-sm: 0.875rem;   --ligne-texte-sm: 1.25rem;   /* 14/20 */
+  --taille-etiquette: 0.75rem;   --ligne-etiquette: 1rem;     /* 12/16, majuscules espacées */
+  --graisse-normale: 400;
+  --graisse-moyenne: 500;
+  --graisse-forte: 600;
+  --graisse-titre: 700;
+
+  /* ---------- Espacements (pas de 4 px) ---------- */
+  --esp-1: 0.25rem;  /* 4 */
+  --esp-2: 0.5rem;   /* 8 */
+  --esp-3: 0.75rem;  /* 12 */
+  --esp-4: 1rem;     /* 16 */
+  --esp-5: 1.5rem;   /* 24 */
+  --esp-6: 2rem;     /* 32 */
+  --esp-7: 2.5rem;   /* 40 */
+  --esp-8: 3rem;     /* 48 */
+  --esp-9: 4rem;     /* 64 */
+  --marge-page: 1rem;            /* 16 px sur mobile, 32 px sur ordinateur */
+  --largeur-max: 76rem;          /* 1 216 px */
+  --largeur-texte: 42rem;        /* lignes de texte lisibles (environ 70 caractères) */
+
+  /* ---------- Rayons ---------- */
+  --rayon-sm: 0.25rem;
+  --rayon-md: 0.5rem;
+  --rayon-lg: 0.75rem;
+  --rayon-xl: 1rem;
+  --rayon-plein: 9999px;
+
+  /* ---------- Ombres (discrètes) ---------- */
+  --ombre-1: 0 1px 2px rgb(23 36 28 / 0.06), 0 1px 3px rgb(23 36 28 / 0.08);
+  --ombre-2: 0 4px 12px rgb(23 36 28 / 0.08);
+
+  /* ---------- Mouvement ---------- */
+  --duree-rapide: 120ms;
+  --duree: 200ms;
+}
+
+@media (min-width: 768px) {
+  :root {
+    --taille-titre-xl: 3rem;     --ligne-titre-xl: 3.5rem;    /* 48/56 */
+    --taille-titre-lg: 2.25rem;  --ligne-titre-lg: 2.75rem;   /* 36/44 */
+    --taille-titre-md: 1.5rem;   --ligne-titre-md: 2rem;      /* 24/32 */
+    --marge-page: 2rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root { --duree-rapide: 0ms; --duree: 0ms; }
+}
