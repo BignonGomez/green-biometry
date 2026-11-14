@@ -5,6 +5,8 @@ on:
     branches: [main]
     paths:
       - "site/**"
+      - "gabarits/**"
+      - "messages/**"
       - "design/logo/**"
       - "design/tokens/**"
       - "scripts/build_site.py"
