@@ -29,6 +29,9 @@
 
   <!-- 1. Présentation et recherche -->
   <section class="hero" aria-labelledby="t-hero">
+    <img class="hero__photo" src="{{@racine}}assets/img/accueil-pendjari-960.webp"
+         srcset="{{@racine}}assets/img/accueil-pendjari-960.webp 960w, {{@racine}}assets/img/accueil-pendjari-1600.webp 1600w"
+         sizes="100vw" alt="" width="1600" height="900" fetchpriority="high" decoding="async">
     <svg class="hero__motif" viewBox="0 0 1200 560" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false">
       <g fill="none" stroke-width="1.5">
         <path class="hero__courbe-or" d="M760 80c120-40 260 10 300 110s-30 210-150 240-250-20-290-120 20-200 140-230z"/>
@@ -53,6 +56,7 @@
       </form>
       <p class="hero__suggestions"><span>{{accueil.suggestions}}</span> <a href="#">{{accueil.sugg_1}}</a> <a href="#">{{accueil.sugg_2}}</a> <a href="#">{{accueil.sugg_3}}</a></p>
     </div>
+    <p class="hero__credit">{{accueil.credit_hero}} · <a href="#credits-photos">{{commun.credits_lien}}</a></p>
   </section>
 
   <!-- 2. Le circuit de validation -->
@@ -81,12 +85,12 @@
         <h2 class="titre-lg" id="t-themes">{{accueil.themes_titre}}</h2>
       </div>
       <ul class="themes">
-        <li><a class="theme" href="#"><span class="theme__icone"><svg aria-hidden="true"><use href="#i-arbre"/></svg></span><span><span class="theme__titre">{{accueil.theme_forets}}</span><span class="theme__texte">{{accueil.theme_forets_texte}}</span></span></a></li>
-        <li><a class="theme" href="#"><span class="theme__icone"><svg aria-hidden="true"><use href="#i-pousse"/></svg></span><span><span class="theme__titre">{{accueil.theme_restauration}}</span><span class="theme__texte">{{accueil.theme_restauration_texte}}</span></span></a></li>
-        <li><a class="theme" href="#"><span class="theme__icone"><svg aria-hidden="true"><use href="#i-couches"/></svg></span><span><span class="theme__titre">{{accueil.theme_sols}}</span><span class="theme__texte">{{accueil.theme_sols_texte}}</span></span></a></li>
-        <li><a class="theme" href="#"><span class="theme__icone"><svg aria-hidden="true"><use href="#i-goutte"/></svg></span><span><span class="theme__titre">{{accueil.theme_eau}}</span><span class="theme__texte">{{accueil.theme_eau_texte}}</span></span></a></li>
-        <li><a class="theme" href="#"><span class="theme__icone"><svg aria-hidden="true"><use href="#i-thermo"/></svg></span><span><span class="theme__titre">{{accueil.theme_climat}}</span><span class="theme__texte">{{accueil.theme_climat_texte}}</span></span></a></li>
-        <li><div class="theme theme--inactif"><span class="theme__icone"><svg aria-hidden="true"><use href="#i-feuille"/></svg></span><span><span class="theme__titre">{{accueil.theme_biodiversite}} <span class="badge badge--theme">{{accueil.prochainement}}</span></span><span class="theme__texte">{{accueil.theme_biodiversite_texte}}</span></span></div></li>
+        <li><a class="theme" href="#"><img class="theme__photo" src="{{@racine}}assets/img/theme-forets.webp" alt="" width="560" height="315" loading="lazy" decoding="async"><span class="theme__corps"><span class="theme__icone"><svg aria-hidden="true"><use href="#i-arbre"/></svg></span><span><span class="theme__titre">{{accueil.theme_forets}}</span><span class="theme__texte">{{accueil.theme_forets_texte}}</span></span></span></a></li>
+        <li><a class="theme" href="#"><img class="theme__photo" src="{{@racine}}assets/img/theme-restauration.webp" alt="" width="560" height="315" loading="lazy" decoding="async"><span class="theme__corps"><span class="theme__icone"><svg aria-hidden="true"><use href="#i-pousse"/></svg></span><span><span class="theme__titre">{{accueil.theme_restauration}}</span><span class="theme__texte">{{accueil.theme_restauration_texte}}</span></span></span></a></li>
+        <li><a class="theme" href="#"><img class="theme__photo" src="{{@racine}}assets/img/theme-sols.webp" alt="" width="560" height="315" loading="lazy" decoding="async"><span class="theme__corps"><span class="theme__icone"><svg aria-hidden="true"><use href="#i-couches"/></svg></span><span><span class="theme__titre">{{accueil.theme_sols}}</span><span class="theme__texte">{{accueil.theme_sols_texte}}</span></span></span></a></li>
+        <li><a class="theme" href="#"><img class="theme__photo" src="{{@racine}}assets/img/theme-eau.webp" alt="" width="560" height="315" loading="lazy" decoding="async"><span class="theme__corps"><span class="theme__icone"><svg aria-hidden="true"><use href="#i-goutte"/></svg></span><span><span class="theme__titre">{{accueil.theme_eau}}</span><span class="theme__texte">{{accueil.theme_eau_texte}}</span></span></span></a></li>
+        <li><a class="theme" href="#"><img class="theme__photo" src="{{@racine}}assets/img/theme-climat.webp" alt="" width="560" height="315" loading="lazy" decoding="async"><span class="theme__corps"><span class="theme__icone"><svg aria-hidden="true"><use href="#i-thermo"/></svg></span><span><span class="theme__titre">{{accueil.theme_climat}}</span><span class="theme__texte">{{accueil.theme_climat_texte}}</span></span></span></a></li>
+        <li><div class="theme theme--inactif"><img class="theme__photo" src="{{@racine}}assets/img/theme-biodiversite.webp" alt="" width="560" height="315" loading="lazy" decoding="async"><span class="theme__corps"><span class="theme__icone"><svg aria-hidden="true"><use href="#i-feuille"/></svg></span><span><span class="theme__titre">{{accueil.theme_biodiversite}} <span class="badge badge--theme">{{accueil.prochainement}}</span></span><span class="theme__texte">{{accueil.theme_biodiversite_texte}}</span></span></span></div></li>
       </ul>
     </div>
   </section>
@@ -178,6 +182,25 @@
         <a class="bouton bouton--accent" href="#"><svg aria-hidden="true"><use href="#i-depot"/></svg>{{accueil.cta_contribuer}}</a>
         <a class="bouton bouton--sur-sombre" href="#">{{accueil.cta_evaluateur}}</a>
       </div>
+    </div>
+  </section>
+
+  <!-- Crédits des photos (obligatoires pour les licences CC BY et CC BY-SA) -->
+  <section class="credits" id="credits-photos" aria-labelledby="t-credits">
+    <div class="conteneur">
+      <details>
+        <summary><h2 class="credits__titre" id="t-credits">{{commun.credits_titre}}</h2></summary>
+        <p class="texte-sm texte-doux">{{commun.credits_intro}}</p>
+        <ul class="credits__liste">
+          <li><strong>{{accueil.credits_bandeau}}</strong> · <a href="https://commons.wikimedia.org/wiki/File:Parc_National_de_la_Pendjari,_vu_du_ciel.jpg">Parc National de la Pendjari, vu du ciel</a> · Marie-Michaire LIMA · <a href="https://creativecommons.org/licenses/by-sa/4.0/" rel="license">CC BY-SA 4.0</a></li>
+          <li><strong>{{accueil.theme_forets}}</strong> · <a href="https://commons.wikimedia.org/wiki/File:Sacred_Forest_Ouidah_Benin_Jan_2018.jpg">Sacred Forest Ouidah Benin</a> · Kulttuurinavigaattori · <a href="https://creativecommons.org/licenses/by-sa/4.0/" rel="license">CC BY-SA 4.0</a></li>
+          <li><strong>{{accueil.theme_restauration}}</strong> · <a href="https://commons.wikimedia.org/wiki/File:Racine_et_de_ut_de_germination_d%27une_mangrove_au_B%C3%A9nin.jpg">Racine et début de germination d'une mangrove au Bénin</a> · Kijoe · <a href="https://creativecommons.org/licenses/by-sa/4.0/" rel="license">CC BY-SA 4.0</a></li>
+          <li><strong>{{accueil.theme_sols}}</strong> · <a href="https://commons.wikimedia.org/wiki/File:Fires_and_burn_scars_in_Burkina_Faso,_Niger_and_Benin_(MODIS_2019-11-27).jpg">Fires and burn scars in Burkina Faso, Niger and Benin</a> · NASA GSFC, MODIS Land Rapid Response Team · {{commun.domaine_public}}</li>
+          <li><strong>{{accueil.theme_eau}}</strong> · <a href="https://commons.wikimedia.org/wiki/File:Ganvie,_Lake_Village,_Lake_Nokou%C3%A9,_Benin_02.jpg">Ganvie, Lake Village, Lake Nokoué, Benin</a> · Asabiyya · <a href="https://creativecommons.org/licenses/by-sa/4.0/" rel="license">CC BY-SA 4.0</a></li>
+          <li><strong>{{accueil.theme_climat}}</strong> · <a href="https://commons.wikimedia.org/wiki/File:Fires_in_Western_Africa_(14297).jpg">Fires in Western Africa</a> · NASA Earth Observatory, Jesse Allen · {{commun.domaine_public}}</li>
+          <li><strong>{{accueil.theme_biodiversite}}</strong> · <a href="https://commons.wikimedia.org/wiki/File:Waterbuck_ou_Cobe_defassa_au_Parc_National_de_la_Pendjari.jpg">Waterbuck ou Cobe defassa au Parc National de la Pendjari</a> · Farid AMADOU BAHLEMAN · <a href="https://creativecommons.org/licenses/by-sa/4.0/" rel="license">CC BY-SA 4.0</a></li>
+        </ul>
+      </details>
     </div>
   </section>
 

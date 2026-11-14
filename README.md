@@ -28,6 +28,7 @@ design/
   logo/               Logo vectoriel (SVG) et ses déclinaisons
     source/           Script de génération du logo et licence de la police
   tokens/tokens.css   Couleurs, polices, espacements : source unique
+  photos/REGISTRE.md  Source, auteur et licence de chaque photo publiée
   maquette-stitch/    Maquette d'origine (export Google Stitch), un dossier par écran
 gabarits/             Pages bilingues (un gabarit par page) et partiels communs (en-tête, pied)
 messages/fr.json      Textes français (langue de référence)

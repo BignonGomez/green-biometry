@@ -37,7 +37,11 @@
     "pied_conditions": "Conditions d'utilisation",
     "pied_confidentialite": "Confidentialité",
     "pied_styleguide": "Styleguide",
-    "pied_bas": "Green Biometry · nom de travail · phase de conception"
+    "pied_bas": "Green Biometry · nom de travail · phase de conception",
+    "credits_titre": "Crédits photos",
+    "credits_lien": "Crédits photos",
+    "credits_intro": "Photos issues de Wikimedia Commons, recadrées et compressées pour le web. Les images sous licence CC BY-SA restent sous cette licence.",
+    "domaine_public": "Domaine public"
   },
   "accueil": {
     "meta_titre": "Green Biometry : données environnementales fiables et partagées",
@@ -124,6 +128,8 @@
     "cta_titre": "Vous détenez des données environnementales ?",
     "cta_texte": "ONG, laboratoires, universités, institutions : partagez vos jeux de données dans un cadre clair. Vous en gardez la propriété ; la plateforme les documente, les contrôle et les rend visibles.",
     "cta_contribuer": "Partager des données",
-    "cta_evaluateur": "Devenir évaluateur"
+    "cta_evaluateur": "Devenir évaluateur",
+    "credit_hero": "Photo : Parc national de la Pendjari vu du ciel, Marie-Michaire LIMA, CC BY-SA 4.0",
+    "credits_bandeau": "Bandeau"
   }
 }

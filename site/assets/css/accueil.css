@@ -79,3 +79,40 @@ a.theme:hover .theme__titre { color: var(--couleur-action); text-decoration: und
 .bouton--sur-sombre { background: transparent; color: var(--couleur-sur-sombre); border-color: rgb(255 255 255 / 0.6); }
 .bouton--sur-sombre:hover { background: rgb(255 255 255 / 0.1); color: var(--couleur-sur-sombre); border-color: var(--gb-blanc); }
 @media (max-width: 479px) { .recherche .bouton { padding-inline: var(--esp-4); } }
+
+/* ---------- Photos (v0.2) ---------- */
+/* Bandeau : photo + voile vert forêt pour garder le texte lisible (contraste vérifié) */
+.hero__photo { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.hero::before { content: ""; position: absolute; inset: 0; z-index: 0;
+  background: linear-gradient(90deg, rgb(14 42 29 / 0.94) 0%, rgb(14 42 29 / 0.84) 45%, rgb(14 42 29 / 0.55) 100%); }
+@media (max-width: 767px) { .hero::before { background: rgb(14 42 29 / 0.86); } }
+.hero__motif { z-index: 0; }
+.hero__courbe { opacity: 0.12; }
+.hero__courbe-or { opacity: 0.3; }
+.hero__contenu { z-index: 1; }
+.hero__credit { position: relative; z-index: 1; margin: 0; padding: 0 var(--marge-page) var(--esp-3); text-align: right;
+  font-size: var(--taille-etiquette); color: var(--couleur-sur-sombre-doux); }
+.hero__credit a { color: var(--couleur-sur-sombre-doux); }
+.hero__credit a:hover { color: var(--gb-or); }
+
+/* Thèmes : vignette photo au-dessus du texte */
+.theme { flex-direction: column; gap: 0; padding: 0; overflow: hidden; }
+.theme__photo { width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; background: var(--gb-sauge-100); }
+.theme__corps { display: flex; gap: var(--esp-4); align-items: flex-start; padding: var(--esp-4) var(--esp-5) var(--esp-5); }
+.theme__icone { width: 2.5rem; height: 2.5rem; }
+.theme__icone svg { width: 1.25rem; height: 1.25rem; }
+a.theme:hover .theme__photo { filter: saturate(1.1); }
+.theme--inactif .theme__photo { filter: grayscale(0.7); opacity: 0.75; }
+
+/* Crédits photos */
+.credits { padding-block: var(--esp-5); border-top: 1px solid var(--couleur-bordure); background: var(--couleur-fond); }
+.credits summary { cursor: pointer; display: inline-flex; align-items: center; gap: var(--esp-2); }
+.credits summary::marker, .credits summary::-webkit-details-marker { color: var(--couleur-texte-doux); }
+.credits__titre { display: inline; font-family: var(--police-texte); font-size: var(--taille-texte-sm); font-weight: var(--graisse-forte); color: var(--couleur-texte-doux); }
+.credits details[open] .texte-sm { margin: var(--esp-3) 0; }
+.credits__liste { margin: 0; padding-left: var(--esp-5); display: grid; gap: var(--esp-1); font-size: var(--taille-texte-sm); color: var(--couleur-texte-doux); }
+/* Ordre des couches du bandeau : photo < voile < motif < contenu */
+.hero__photo { z-index: 0; }
+.hero::before { z-index: 1; }
+.hero__motif { z-index: 1; }
+.hero__contenu, .hero__credit { z-index: 2; }
