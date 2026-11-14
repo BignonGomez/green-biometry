@@ -18,13 +18,18 @@ La maquette n'est pas un produit opérationnel, et ses chiffres sont fictifs.
 | MVP (parcours complet soumission → validation → publication) | mars 2028 |
 | Pilote en ligne | juillet 2028 |
 
+**Styleguide en ligne :** https://bignongomez.github.io/green-biometry/
+
 ## Contenu du dépôt
 
 ```
 design/
   logo/               Logo vectoriel (SVG) et ses déclinaisons
     source/           Script de génération du logo et licence de la police
+  tokens/tokens.css   Couleurs, polices, espacements : source unique
   maquette-stitch/    Maquette d'origine (export Google Stitch), un dossier par écran
+site/                 Pages publiées sur GitHub Pages (styleguide)
+scripts/build_site.py Construit _site/ à partir de site/, du logo et des tokens
 docs/
   decisions.md        Registre des décisions (ADR)
 IDEES.md              Idées hors périmètre, relues seulement au bilan du pilote
