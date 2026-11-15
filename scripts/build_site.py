@@ -9,6 +9,8 @@
      indicateurs -> _site/<langue>/indicateurs/index.html, plus une fiche par indicateur
      projets   -> _site/<langue>/projets/index.html, plus une fiche par projet
      apropos   -> _site/<langue>/a-propos/index.html
+     contact   -> _site/<langue>/contact/index.html
+     texte     -> _site/<langue>/conditions/ et /confidentialite/ (sections lues dans les messages)
      fiche     -> _site/<langue>/catalogue/<slug>/index.html (une par jeu de donnees/jeux-demo.json)
 4. Vérifie le bilinguisme (EF-14) : la construction échoue si une clé manque
    dans une langue ou si une balise {{...}} reste non remplacée.
@@ -33,6 +35,7 @@ import catalogue as cat  # noqa: E402
 import carte  # noqa: E402
 import indicateurs as ind  # noqa: E402
 import projets as prj  # noqa: E402
+import pages_texte  # noqa: E402
 
 RACINE = Path(__file__).resolve().parent.parent
 SORTIE = RACINE / "_site"
@@ -147,6 +150,9 @@ def pages(donnees):
         yield "indicateur.html", f"indicateurs/{i['slug']}/", "indicateurs", (
             lambda l, M, r, i=i: ind.variables_fiche(i, jeux, ref, l, M, r))
     yield "apropos.html", "a-propos/", "apropos", lambda l, M, r: {}
+    yield "contact.html", "contact/", None, lambda l, M, r: {}
+    for page in ("conditions", "confidentialite"):
+        yield "texte.html", f"{page}/", None, lambda l, M, r, page=page: pages_texte.variables(page, M)
     prjs = donnees["projets"]
     yield "projets.html", "projets/", "projets", lambda l, M, r: prj.variables_liste(prjs, ref, l, M, r)
     for p in prjs:

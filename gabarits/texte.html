@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="{{@lang}}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{@page_titre}} · Green Biometry</title>
+<meta name="description" content="{{@page_intro_meta}}">
+<meta name="robots" content="noindex">
+<link rel="alternate" hreflang="fr" href="{{@chemin_fr}}">
+<link rel="alternate" hreflang="en" href="{{@chemin_en}}">
+<link rel="icon" href="{{@racine}}assets/logo/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="{{@racine}}assets/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="{{@racine}}assets/css/tokens.css">
+<link rel="stylesheet" href="{{@racine}}assets/css/composants.css">
+<link rel="stylesheet" href="{{@racine}}assets/css/accueil.css">
+<link rel="stylesheet" href="{{@racine}}assets/css/catalogue.css">
+<link rel="stylesheet" href="{{@racine}}assets/css/contact.css">
+</head>
+<body>
+{{> icones}}
+<a class="lien-evitement" href="#contenu">{{commun.aller_contenu}}</a>
+<div class="bandeau-demo" role="note">
+  <div class="conteneur"><span class="badge badge--demo">{{commun.demo}}</span><span>{{commun.bandeau_demo}}</span></div>
+</div>
+{{> entete}}
+
+<main id="contenu">
+  <div class="entete-page">
+    <div class="conteneur">
+      <nav class="fil" aria-label="{{commun.fil_label}}"><ol><li><a href="{{@racine}}{{@lang}}/">{{commun.fil_accueil}}</a></li><li aria-current="page">{{@page_titre}}</li></ol></nav>
+      <div class="carte__badges"><span class="badge badge--demo">{{commun.demo}}</span></div>
+      <h1 class="titre-lg">{{@page_titre}}</h1>
+      <p class="texte-lg texte-doux entete-page__intro">{{@page_intro}}</p>
+    </div>
+  </div>
+
+  <div class="conteneur texte-page">
+    <nav class="texte-page__sommaire" aria-labelledby="t-sommaire">
+      <p class="etiquette" id="t-sommaire">{{legal.sommaire}}</p>
+      <ol>{{@sommaire}}</ol>
+    </nav>
+    <div class="texte-page__corps">
+      <div class="alerte alerte--avert" role="note"><svg aria-hidden="true"><use href="#i-attention"/></svg><div>
+        <p class="alerte__titre">{{legal.provisoire_titre}}</p>
+        <p class="texte-sm">{{legal.provisoire_texte}}</p>
+      </div></div>
+{{@sections}}
+      <p class="texte-page__maj">{{legal.maj}}</p>
+    </div>
+  </div>
+</main>
+
+{{> pied}}
+</body>
+</html>

@@ -18,7 +18,8 @@ La maquette n'est pas un produit opérationnel, et ses chiffres sont fictifs.
 | MVP (parcours complet soumission → validation → publication) | mars 2028 |
 | Pilote en ligne | juillet 2028 |
 
-**En ligne :** accueil https://bignongomez.github.io/green-biometry/ (FR et EN) ·
+**En ligne :** https://bignongomez.github.io/green-biometry/ (FR et EN) : accueil, catalogue et fiches,
+carte, indicateurs, projets, à propos, contact, conditions d'utilisation, confidentialité ·
 styleguide https://bignongomez.github.io/green-biometry/styleguide/
 
 ## Contenu du dépôt
@@ -34,9 +35,11 @@ gabarits/             Pages bilingues (un gabarit par page) et partiels communs 
 messages/fr.json      Textes français (langue de référence)
 messages/en.json      Textes anglais : mêmes clés, sinon la construction échoue
 donnees/jeux-demo.json Jeux de démonstration (DÉMO) : source unique du catalogue, des fiches et de l'accueil
+donnees/indicateurs-demo.json, donnees/projets-demo.json  Indicateurs et projets de démonstration (DÉMO)
 site/                 Fichiers statiques publiés tels quels (styleguide, CSS, polices)
 scripts/build_site.py Construit _site/ : rend les gabarits dans chaque langue, ajoute logo et tokens
 scripts/catalogue.py  Composants générés à partir des données (cartes, filtres, fiche, graphique)
+scripts/carte.py, indicateurs.py, projets.py, pages_texte.py  Pages Carte, Indicateurs, Projets, textes légaux
 docs/
   decisions.md        Registre des décisions (ADR)
 IDEES.md              Idées hors périmètre, relues seulement au bilan du pilote

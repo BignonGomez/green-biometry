@@ -60,6 +60,9 @@ a:hover { color: var(--couleur-action-survol); }
 }
 .lien-evitement:focus { top: var(--esp-2); color: var(--couleur-sur-action); }
 
+/* L attribut hidden l emporte toujours sur les display des composants (alertes, formulaires). */
+[hidden] { display: none !important; }
+
 /* ---------- Typographie ---------- */
 .titre-xl, .titre-lg, .titre-md, .titre-sm { font-family: var(--police-titre); font-weight: var(--graisse-titre); letter-spacing: -0.01em; }
 .titre-xl { font-size: var(--taille-titre-xl); line-height: var(--ligne-titre-xl); }

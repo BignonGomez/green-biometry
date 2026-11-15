@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="{{@lang}}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{contact.meta_titre}}</title>
+<meta name="description" content="{{contact.meta_description}}">
+<meta name="robots" content="noindex">
+<link rel="alternate" hreflang="fr" href="{{@chemin_fr}}">
+<link rel="alternate" hreflang="en" href="{{@chemin_en}}">
+<link rel="icon" href="{{@racine}}assets/logo/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="{{@racine}}assets/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="{{@racine}}assets/css/tokens.css">
+<link rel="stylesheet" href="{{@racine}}assets/css/composants.css">
+<link rel="stylesheet" href="{{@racine}}assets/css/accueil.css">
+<link rel="stylesheet" href="{{@racine}}assets/css/catalogue.css">
+<link rel="stylesheet" href="{{@racine}}assets/css/contact.css">
+<script src="{{@racine}}assets/js/contact.js" defer></script>
+</head>
+<body>
+{{> icones}}
+<a class="lien-evitement" href="#contenu">{{commun.aller_contenu}}</a>
+<div class="bandeau-demo" role="note">
+  <div class="conteneur"><span class="badge badge--demo">{{commun.demo}}</span><span>{{commun.bandeau_demo}}</span></div>
+</div>
+{{> entete}}
+
+<main id="contenu">
+  <div class="entete-page">
+    <div class="conteneur">
+      <nav class="fil" aria-label="{{commun.fil_label}}"><ol><li><a href="{{@racine}}{{@lang}}/">{{commun.fil_accueil}}</a></li><li aria-current="page">{{contact.titre}}</li></ol></nav>
+      <h1 class="titre-lg">{{contact.titre}}</h1>
+      <p class="texte-lg texte-doux entete-page__intro">{{contact.intro}}</p>
+    </div>
+  </div>
+
+  <div class="conteneur contact">
+    <section class="contact__formulaire" aria-labelledby="t-form">
+      <h2 class="titre-md" id="t-form">{{contact.form_titre}}</h2>
+      <div class="alerte alerte--info" role="note"><svg aria-hidden="true"><use href="#i-attention"/></svg><div>
+        <p class="alerte__titre">{{contact.demo_titre}}</p>
+        <p class="texte-sm">{{contact.demo_texte}}</p>
+      </div></div>
+
+      <form class="pile" id="form-contact" novalidate data-msg-requis="{{contact.err_requis}}" data-msg-email="{{contact.err_email}}" data-msg-court="{{contact.err_court}}" data-msg-accord="{{contact.err_accord}}" data-msg-resume="{{contact.err_resume}}">
+        <div class="alerte alerte--erreur" role="alert" tabindex="-1" data-resume hidden><svg aria-hidden="true"><use href="#i-erreur"/></svg><div><p class="alerte__titre" data-resume-titre></p><ul class="texte-sm" data-resume-liste></ul></div></div>
+        <p class="texte-sm texte-doux">{{contact.obligatoires}}</p>
+
+        <div class="contact__ligne">
+          <div class="champ">
+            <label class="champ__libelle" for="c-nom">{{contact.f_nom}} <span class="champ__obligatoire" aria-hidden="true">*</span></label>
+            <input class="saisie" id="c-nom" name="nom" type="text" autocomplete="name" required>
+          </div>
+          <div class="champ">
+            <label class="champ__libelle" for="c-email">{{contact.f_email}} <span class="champ__obligatoire" aria-hidden="true">*</span></label>
+            <span class="champ__aide" id="c-email-aide">{{contact.f_email_aide}}</span>
+            <input class="saisie" id="c-email" name="email" type="email" autocomplete="email" inputmode="email" aria-describedby="c-email-aide" required>
+          </div>
+        </div>
+
+        <div class="champ">
+          <label class="champ__libelle" for="c-orga">{{contact.f_orga}}</label>
+          <input class="saisie" id="c-orga" name="organisation" type="text" autocomplete="organization">
+        </div>
+
+        <div class="champ">
+          <label class="champ__libelle" for="c-sujet">{{contact.f_sujet}} <span class="champ__obligatoire" aria-hidden="true">*</span></label>
+          <select class="saisie" id="c-sujet" name="sujet" required>
+            <option value="">{{contact.sujet_choisir}}</option>
+            <option value="question">{{contact.sujet_question}}</option>
+            <option value="donnees">{{contact.sujet_donnees}}</option>
+            <option value="partenariat">{{contact.sujet_partenariat}}</option>
+            <option value="evaluateur">{{contact.sujet_evaluateur}}</option>
+            <option value="erreur">{{contact.sujet_erreur}}</option>
+            <option value="autre">{{contact.sujet_autre}}</option>
+          </select>
+        </div>
+
+        <div class="champ">
+          <label class="champ__libelle" for="c-message">{{contact.f_message}} <span class="champ__obligatoire" aria-hidden="true">*</span></label>
+          <span class="champ__aide" id="c-message-aide">{{contact.f_message_aide}}</span>
+          <textarea class="saisie" id="c-message" name="message" rows="6" minlength="20" aria-describedby="c-message-aide" required></textarea>
+        </div>
+
+        <label class="case"><input type="checkbox" name="accord" id="c-accord" required> <span>{{contact.f_accord}} <a href="{{@racine}}{{@lang}}/confidentialite/">{{contact.f_accord_lien}}</a>. <span class="champ__obligatoire" aria-hidden="true">*</span></span></label>
+
+        <div class="rangee">
+          <button class="bouton bouton--primaire" type="submit"><svg aria-hidden="true"><use href="#i-fleche"/></svg>{{contact.envoyer}}</button>
+        </div>
+      </form>
+
+      <div class="alerte alerte--succes contact__confirmation" role="status" tabindex="-1" data-confirmation hidden><svg aria-hidden="true"><use href="#i-ok"/></svg><div>
+        <p class="alerte__titre">{{contact.confirm_titre}}</p>
+        <p class="texte-sm">{{contact.confirm_texte}}</p>
+        <button class="bouton bouton--secondaire bouton--petit" type="button" data-recommencer>{{contact.recommencer}}</button>
+      </div></div>
+    </section>
+
+    <aside class="contact__lateral pile" aria-label="{{contact.autres_label}}">
+      <section class="carte pile" aria-labelledby="t-ecrire">
+        <h2 class="titre-sm" id="t-ecrire">{{contact.ecrire_titre}} <span class="badge badge--demo">{{commun.demo}}</span></h2>
+        <p class="contact__email">contact@example.org</p>
+        <p class="texte-sm texte-doux">{{contact.ecrire_texte}}</p>
+      </section>
+      <section class="carte pile" aria-labelledby="t-delai">
+        <h2 class="titre-sm" id="t-delai">{{contact.delai_titre}}</h2>
+        <p class="texte-sm texte-doux">{{contact.delai_texte}}</p>
+      </section>
+      <section class="carte pile" aria-labelledby="t-code">
+        <h2 class="titre-sm" id="t-code">{{contact.code_titre}}</h2>
+        <p class="texte-sm texte-doux">{{contact.code_texte}}</p>
+        <a class="bouton bouton--secondaire bouton--petit" href="https://github.com/BignonGomez/green-biometry/issues">{{contact.code_lien}}<svg aria-hidden="true"><use href="#i-fleche"/></svg></a>
+      </section>
+    </aside>
+  </div>
+</main>
+
+{{> pied}}
+</body>
+</html>
