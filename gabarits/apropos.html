@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="{{@lang}}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{apropos.meta_titre}}</title>
+<meta name="description" content="{{apropos.meta_description}}">
+<meta name="robots" content="noindex">
+<link rel="alternate" hreflang="fr" href="{{@chemin_fr}}">
+<link rel="alternate" hreflang="en" href="{{@chemin_en}}">
+<link rel="icon" href="{{@racine}}assets/logo/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="{{@racine}}assets/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="{{@racine}}assets/css/tokens.css">
+<link rel="stylesheet" href="{{@racine}}assets/css/composants.css">
+<link rel="stylesheet" href="{{@racine}}assets/css/accueil.css">
+<link rel="stylesheet" href="{{@racine}}assets/css/catalogue.css">
+<link rel="stylesheet" href="{{@racine}}assets/css/apropos.css">
+</head>
+<body>
+{{> icones}}
+<a class="lien-evitement" href="#contenu">{{commun.aller_contenu}}</a>
+<div class="bandeau-demo" role="note">
+  <div class="conteneur"><span class="badge badge--demo">{{commun.demo}}</span><span>{{commun.bandeau_demo}}</span></div>
+</div>
+{{> entete}}
+
+<main id="contenu">
+  <div class="entete-page">
+    <div class="conteneur">
+      <nav class="fil" aria-label="{{commun.fil_label}}"><ol><li><a href="{{@racine}}{{@lang}}/">{{commun.fil_accueil}}</a></li><li aria-current="page">{{apropos.titre}}</li></ol></nav>
+      <h1 class="titre-lg">{{apropos.titre}}</h1>
+      <p class="texte-lg texte-doux entete-page__intro">{{apropos.intro}}</p>
+    </div>
+  </div>
+
+  <!-- Mission et vision -->
+  <section class="ap-section" aria-labelledby="t-mission">
+    <div class="conteneur ap-mission">
+      <div class="pile">
+        <p class="etiquette">{{apropos.mission_etiquette}}</p>
+        <h2 class="titre-lg" id="t-mission">{{apropos.mission_titre}}</h2>
+        <p class="texte-lg">{{apropos.mission_texte}}</p>
+        <p>{{apropos.vision_texte}}</p>
+        <p class="ap-devise">{{apropos.devise}}</p>
+      </div>
+      <figure class="ap-photo">
+        <img src="{{@racine}}assets/img/monde-afrique.webp" alt="{{apropos.photo_alt}}" width="720" height="720" loading="lazy">
+        <figcaption class="texte-sm texte-doux">{{apropos.photo_credit}} <a href="https://commons.wikimedia.org/wiki/File:Africa_from_low_orbiting_satellite_Suomi_NPP.jpg">Wikimedia Commons</a></figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- Le constat -->
+  <section class="ap-section ap-section--alt" aria-labelledby="t-constat">
+    <div class="conteneur pile-lg">
+      <div class="pile ap-entete">
+        <p class="etiquette">{{apropos.constat_etiquette}}</p>
+        <h2 class="titre-lg" id="t-constat">{{apropos.constat_titre}}</h2>
+      </div>
+      <ol class="ap-constats">
+        <li><span class="ap-constats__num" aria-hidden="true">1</span><h3 class="titre-sm">{{apropos.constat1_titre}}</h3><p class="texte-doux">{{apropos.constat1_texte}}</p></li>
+        <li><span class="ap-constats__num" aria-hidden="true">2</span><h3 class="titre-sm">{{apropos.constat2_titre}}</h3><p class="texte-doux">{{apropos.constat2_texte}}</p></li>
+        <li><span class="ap-constats__num" aria-hidden="true">3</span><h3 class="titre-sm">{{apropos.constat3_titre}}</h3><p class="texte-doux">{{apropos.constat3_texte}}</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- Ce que fait la plateforme -->
+  <section class="ap-section" aria-labelledby="t-plateforme">
+    <div class="conteneur pile-lg">
+      <div class="pile ap-entete">
+        <p class="etiquette">{{apropos.plateforme_etiquette}}</p>
+        <h2 class="titre-lg" id="t-plateforme">{{apropos.plateforme_titre}}</h2>
+        <p class="texte-doux">{{apropos.plateforme_intro}}</p>
+      </div>
+      <div class="grille ap-briques">
+        <a class="carte carte--lien ap-brique" href="{{@racine}}{{@lang}}/catalogue/"><svg aria-hidden="true"><use href="#i-loupe-doc"/></svg><h3 class="titre-sm">{{commun.nav_catalogue}}</h3><p class="texte-sm texte-doux">{{apropos.brique_catalogue}}</p></a>
+        <a class="carte carte--lien ap-brique" href="{{@racine}}{{@lang}}/carte/"><svg aria-hidden="true"><use href="#i-carte"/></svg><h3 class="titre-sm">{{commun.nav_carte}}</h3><p class="texte-sm texte-doux">{{apropos.brique_carte}}</p></a>
+        <a class="carte carte--lien ap-brique" href="{{@racine}}{{@lang}}/indicateurs/"><svg aria-hidden="true"><use href="#i-courbe"/></svg><h3 class="titre-sm">{{commun.nav_indicateurs}}</h3><p class="texte-sm texte-doux">{{apropos.brique_indicateurs}}</p></a>
+        <a class="carte carte--lien ap-brique" href="{{@racine}}{{@lang}}/projets/"><svg aria-hidden="true"><use href="#i-pousse"/></svg><h3 class="titre-sm">{{commun.nav_projets}}</h3><p class="texte-sm texte-doux">{{apropos.brique_projets}}</p></a>
+        <div class="carte ap-brique ap-brique--prevue"><svg aria-hidden="true"><use href="#i-depot"/></svg><h3 class="titre-sm">{{commun.contribuer}} <span class="badge badge--soumis">{{apropos.prevu}}</span></h3><p class="texte-sm texte-doux">{{apropos.brique_contribuer}}</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Principes -->
+  <section class="ap-section ap-section--alt" aria-labelledby="t-principes">
+    <div class="conteneur pile-lg">
+      <div class="pile ap-entete">
+        <p class="etiquette">{{apropos.principes_etiquette}}</p>
+        <h2 class="titre-lg" id="t-principes">{{apropos.principes_titre}}</h2>
+      </div>
+      <dl class="ap-principes">
+        <div><dt><svg aria-hidden="true"><use href="#i-empreinte"/></svg>{{apropos.p1_titre}}</dt><dd>{{apropos.p1_texte}}</dd></div>
+        <div><dt><svg aria-hidden="true"><use href="#i-oeil"/></svg>{{apropos.p2_titre}}</dt><dd>{{apropos.p2_texte}}</dd></div>
+        <div><dt><svg aria-hidden="true"><use href="#i-loupe-doc"/></svg>{{apropos.p3_titre}}</dt><dd>{{apropos.p3_texte}}</dd></div>
+        <div><dt><svg aria-hidden="true"><use href="#i-couches"/></svg>{{apropos.p4_titre}}</dt><dd>{{apropos.p4_texte}}</dd></div>
+        <div><dt><svg aria-hidden="true"><use href="#i-bouclier"/></svg>{{apropos.p5_titre}}</dt><dd>{{apropos.p5_texte}}</dd></div>
+        <div><dt><svg aria-hidden="true"><use href="#i-feuille"/></svg>{{apropos.p6_titre}}</dt><dd>{{apropos.p6_texte}}</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- Maturité réelle -->
+  <section class="ap-section" aria-labelledby="t-etat">
+    <div class="conteneur pile-lg">
+      <div class="pile ap-entete">
+        <p class="etiquette">{{apropos.etat_etiquette}}</p>
+        <h2 class="titre-lg" id="t-etat">{{apropos.etat_titre}}</h2>
+        <p class="texte-doux">{{apropos.etat_intro}}</p>
+      </div>
+      <div class="ap-etat">
+        <div class="carte pile">
+          <h3 class="titre-sm"><svg class="ap-etat__icone ap-etat__icone--ok" aria-hidden="true"><use href="#i-ok"/></svg>{{apropos.existe_titre}}</h3>
+          <ul class="liste-coches"><li>{{apropos.existe_1}}</li><li>{{apropos.existe_2}}</li><li>{{apropos.existe_3}}</li><li>{{apropos.existe_4}}</li></ul>
+        </div>
+        <div class="carte pile">
+          <h3 class="titre-sm"><svg class="ap-etat__icone" aria-hidden="true"><use href="#i-horloge"/></svg>{{apropos.prevu_titre}}</h3>
+          <ul class="liste-coches liste-coches--attente"><li>{{apropos.prevu_1}}</li><li>{{apropos.prevu_2}}</li><li>{{apropos.prevu_3}}</li><li>{{apropos.prevu_4}}</li></ul>
+        </div>
+      </div>
+      <div class="pile">
+        <h3 class="titre-sm">{{apropos.jalons_titre}} <span class="badge badge--reserve">{{apropos.jalons_badge}}</span></h3>
+        <ol class="ap-jalons">
+          <li class="ap-jalons__etape ap-jalons__etape--actuelle"><span class="ap-jalons__point" aria-hidden="true"></span><strong>{{apropos.jalon0_titre}}</strong><span class="texte-sm texte-doux">{{apropos.jalon0_date}}</span></li>
+          <li class="ap-jalons__etape"><span class="ap-jalons__point" aria-hidden="true"></span><strong>{{apropos.jalon1_titre}}</strong><span class="texte-sm texte-doux">{{apropos.jalon1_date}}</span></li>
+          <li class="ap-jalons__etape"><span class="ap-jalons__point" aria-hidden="true"></span><strong>{{apropos.jalon2_titre}}</strong><span class="texte-sm texte-doux">{{apropos.jalon2_date}}</span></li>
+          <li class="ap-jalons__etape"><span class="ap-jalons__point" aria-hidden="true"></span><strong>{{apropos.jalon3_titre}}</strong><span class="texte-sm texte-doux">{{apropos.jalon3_date}}</span></li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- Qui porte le projet : textes provisoires -->
+  <section class="ap-section ap-section--alt" aria-labelledby="t-equipe">
+    <div class="conteneur pile-lg">
+      <div class="pile ap-entete">
+        <p class="etiquette">{{apropos.equipe_etiquette}}</p>
+        <h2 class="titre-lg" id="t-equipe">{{apropos.equipe_titre}} <span class="badge badge--demo">{{commun.demo}}</span></h2>
+        <p class="texte-doux">{{apropos.equipe_intro}}</p>
+      </div>
+      <div class="grille ap-equipe">
+        <div class="carte pile"><p class="etiquette">{{apropos.porteur_etiquette}}</p><p class="titre-sm">{{apropos.porteur_nom}}</p><p class="texte-sm texte-doux">{{apropos.porteur_texte}}</p></div>
+        <div class="carte pile"><p class="etiquette">{{apropos.gouvernance_etiquette}}</p><p class="titre-sm">{{apropos.gouvernance_nom}}</p><p class="texte-sm texte-doux">{{apropos.gouvernance_texte}}</p></div>
+        <div class="carte pile"><p class="etiquette">{{apropos.partenaires_etiquette}}</p><p class="titre-sm">{{apropos.partenaires_nom}}</p><p class="texte-sm texte-doux">{{apropos.partenaires_texte}}</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Appel -->
+  <section class="appel" aria-labelledby="t-appel">
+    <div class="conteneur ap-appel">
+      <div class="pile">
+        <h2 class="titre-lg" id="t-appel">{{apropos.appel_titre}}</h2>
+        <p>{{apropos.appel_texte}}</p>
+      </div>
+      <div class="rangee">
+        <a class="bouton bouton--accent" href="{{@racine}}{{@lang}}/catalogue/"><svg aria-hidden="true"><use href="#i-loupe-doc"/></svg>{{apropos.appel_catalogue}}</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+{{> pied}}
+</body>
+</html>

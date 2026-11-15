@@ -1,0 +1,54 @@
+/* Page À propos */
+.ap-section { padding-block: var(--esp-8); }
+.ap-section--alt { background: var(--couleur-fond-alt); border-block: 1px solid var(--couleur-bordure); }
+.ap-entete { max-width: var(--largeur-texte); }
+.etiquette { color: var(--gb-ciel-texte); }
+
+.ap-mission { display: grid; gap: var(--esp-7); align-items: center; }
+.ap-mission .pile { max-width: var(--largeur-texte); }
+@media (min-width: 900px) { .ap-mission { grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); } }
+.ap-devise { font-family: var(--police-titre); font-style: italic; font-size: var(--taille-titre-sm); color: var(--gb-bleu); border-left: 3px solid var(--gb-ciel); padding-left: var(--esp-4); }
+.ap-photo { margin: 0; display: grid; gap: var(--esp-2); }
+.ap-photo img { width: 100%; height: auto; border-radius: var(--rayon-xl); background: var(--gb-marine); box-shadow: var(--ombre-2); }
+
+.ap-constats { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--esp-5); grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr)); }
+.ap-constats li { display: grid; gap: var(--esp-2); align-content: start; }
+.ap-constats__num { width: 2.25rem; height: 2.25rem; border-radius: var(--rayon-plein); display: grid; place-items: center; background: var(--gb-marine); color: var(--gb-ciel); font-weight: var(--graisse-titre); }
+
+.ap-briques { grid-template-columns: repeat(auto-fill, minmax(min(100%, 13rem), 1fr)); }
+.ap-brique { display: grid; gap: var(--esp-2); align-content: start; text-decoration: none; color: inherit; }
+a.ap-brique:hover h3 { color: var(--couleur-action); text-decoration: underline; }
+.ap-brique > svg { width: 1.75rem; height: 1.75rem; color: var(--gb-bleu); }
+.ap-brique--prevue { border-style: dashed; background: transparent; }
+.ap-brique h3 { display: flex; flex-wrap: wrap; gap: var(--esp-2); align-items: center; }
+
+.ap-principes { display: grid; gap: var(--esp-5); grid-template-columns: repeat(auto-fit, minmax(min(100%, 20rem), 1fr)); margin: 0; }
+.ap-principes > div { display: grid; gap: var(--esp-2); align-content: start; }
+.ap-principes dt { display: flex; gap: var(--esp-2); align-items: center; font-weight: var(--graisse-forte); }
+.ap-principes dt svg { width: 1.25rem; height: 1.25rem; color: var(--gb-bleu); flex: none; }
+.ap-principes dd { margin: 0; color: var(--couleur-texte-doux); }
+
+.ap-etat { display: grid; gap: var(--esp-5); grid-template-columns: repeat(auto-fit, minmax(min(100%, 22rem), 1fr)); }
+.ap-etat h3 { display: flex; gap: var(--esp-2); align-items: center; }
+.ap-etat__icone { width: 1.25rem; height: 1.25rem; color: var(--gb-avert); }
+.ap-etat__icone--ok { color: var(--gb-succes); }
+.liste-coches { margin: 0; padding-left: 1.2rem; display: grid; gap: var(--esp-2); }
+.liste-coches li::marker { color: var(--gb-succes); }
+.liste-coches--attente li::marker { color: var(--gb-avert); }
+
+.ap-jalons { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--esp-4); grid-template-columns: repeat(auto-fit, minmax(min(100%, 12rem), 1fr)); }
+.ap-jalons__etape { position: relative; display: grid; gap: var(--esp-1); padding-top: var(--esp-5); border-top: 2px solid var(--gb-ardoise-300); }
+.ap-jalons__point { position: absolute; top: -0.5rem; left: 0; width: 0.875rem; height: 0.875rem; border-radius: 50%; background: var(--couleur-fond); border: 2px solid var(--gb-ardoise-600); }
+.ap-jalons__etape--actuelle { border-top-color: var(--gb-bleu); }
+.ap-jalons__etape--actuelle .ap-jalons__point { background: var(--gb-bleu); border-color: var(--gb-bleu); box-shadow: 0 0 0 4px var(--gb-succes-fond); }
+
+.ap-equipe .carte { border-style: dashed; }
+
+.ap-appel { display: grid; gap: var(--esp-5); align-items: center; }
+@media (min-width: 900px) { .ap-appel { grid-template-columns: minmax(0, 1fr) auto; } }
+.ap-appel p { color: var(--couleur-sur-sombre-doux); max-width: var(--largeur-texte); }
+
+/* Corrections : titre lisible sur fond sombre, badges en police de texte, espace avant la frise */
+.appel .titre-lg { color: var(--couleur-sur-sombre); }
+.ap-section h2 .badge, .ap-section h3 .badge { font-family: var(--police-texte); font-size: var(--taille-etiquette); vertical-align: middle; }
+.pile > .ap-jalons { margin-top: var(--esp-6); }

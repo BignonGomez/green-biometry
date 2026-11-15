@@ -8,6 +8,7 @@
      carte     -> _site/<langue>/carte/index.html
      indicateurs -> _site/<langue>/indicateurs/index.html, plus une fiche par indicateur
      projets   -> _site/<langue>/projets/index.html, plus une fiche par projet
+     apropos   -> _site/<langue>/a-propos/index.html
      fiche     -> _site/<langue>/catalogue/<slug>/index.html (une par jeu de donnees/jeux-demo.json)
 4. Vérifie le bilinguisme (EF-14) : la construction échoue si une clé manque
    dans une langue ou si une balise {{...}} reste non remplacée.
@@ -145,6 +146,7 @@ def pages(donnees):
     for i in inds:
         yield "indicateur.html", f"indicateurs/{i['slug']}/", "indicateurs", (
             lambda l, M, r, i=i: ind.variables_fiche(i, jeux, ref, l, M, r))
+    yield "apropos.html", "a-propos/", "apropos", lambda l, M, r: {}
     prjs = donnees["projets"]
     yield "projets.html", "projets/", "projets", lambda l, M, r: prj.variables_liste(prjs, ref, l, M, r)
     for p in prjs:
