@@ -211,5 +211,23 @@
     "voir_carte": "Voir sur la carte",
     "signaler": "Signaler une erreur",
     "retour": "Retour au catalogue"
+  },
+  "carte": {
+    "meta_titre": "Carte des données — Green Biometry",
+    "meta_description": "Carte des zones couvertes par les jeux de données environnementales de Green Biometry : forêts, restauration, occupation des sols, eau, climat.",
+    "titre": "Carte des données",
+    "intro": "Chaque cadre montre la zone couverte par un jeu de données. Cliquez sur la carte pour voir les jeux disponibles en un point, ou choisissez un jeu dans la liste.",
+    "region_label": "Carte interactive des zones couvertes par les jeux de données",
+    "sans_js": "La carte a besoin de JavaScript. La liste des jeux, à côté, reste utilisable.",
+    "note_emprise": "Les cadres sont des emprises : le rectangle qui englobe la zone étudiée, pas son contour exact. Les jeux affichés sont des exemples de démonstration.",
+    "legende": "Thèmes affichés",
+    "compte_un": "jeu sur la carte",
+    "compte_plusieurs": "jeux sur la carte",
+    "localiser": "Voir sur la carte",
+    "vers_catalogue": "Ouvrir le catalogue",
+    "popup_un": "1 jeu couvre ce point",
+    "popup_plusieurs": "{n} jeux couvrent ce point",
+    "popup_aucun": "Aucun jeu affiché ne couvre ce point.",
+    "attribution": "© <a href=\"https://www.openstreetmap.org/copyright\">contributeurs OpenStreetMap</a>"
   }
 }

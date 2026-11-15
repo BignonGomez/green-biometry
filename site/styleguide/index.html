@@ -22,7 +22,7 @@
   .sg-sous-titre { font-family: var(--police-texte); font-size: var(--taille-texte-lg); font-weight: var(--graisse-forte); margin: var(--esp-6) 0 var(--esp-3); }
   .sg-panneau { background: var(--couleur-surface); border: 1px solid var(--couleur-bordure); border-radius: var(--rayon-lg); padding: var(--esp-5); }
   .sg-panneau--sombre { background: var(--couleur-sombre); border-color: var(--couleur-sombre); }
-  .sg-panneau--ivoire { background: var(--couleur-fond); }
+  .sg-panneau--clair { background: var(--couleur-fond); }
   .sg-logos { display: grid; gap: var(--esp-5); grid-template-columns: repeat(auto-fit, minmax(min(100%, 17rem), 1fr)); }
   .sg-logos figure { margin: 0; display: grid; gap: var(--esp-3); }
   .sg-logos figcaption { font-size: var(--taille-texte-sm); color: var(--couleur-texte-doux); }
@@ -35,13 +35,13 @@
   .sg-couleur__infos code { font-size: 0.8125rem; color: var(--couleur-texte-doux); }
   .sg-contraste { font-size: var(--taille-etiquette); font-weight: var(--graisse-forte); }
   .sg-typo { display: grid; gap: var(--esp-5); }
-  .sg-typo__ligne { display: grid; gap: var(--esp-1); padding-bottom: var(--esp-4); border-bottom: 1px solid var(--gb-sauge-100); }
+  .sg-typo__ligne { display: grid; gap: var(--esp-1); padding-bottom: var(--esp-4); border-bottom: 1px solid var(--gb-ardoise-100); }
   .sg-typo__ligne code { font-size: 0.8125rem; color: var(--couleur-texte-discret); }
   .sg-espaces { display: grid; gap: var(--esp-2); }
   .sg-espace { display: grid; grid-template-columns: 5rem 1fr; align-items: center; gap: var(--esp-3); font-size: var(--taille-texte-sm); }
-  .sg-espace span:last-child { height: 0.75rem; background: var(--gb-vert-600); border-radius: 2px; }
+  .sg-espace span:last-child { height: 0.75rem; background: var(--gb-bleu-600); border-radius: 2px; }
   .sg-rayons { display: flex; flex-wrap: wrap; gap: var(--esp-4); }
-  .sg-rayons div { width: 6rem; height: 4rem; background: var(--gb-sauge-100); border: 1px solid var(--couleur-bordure); display: grid; place-items: center; font-size: var(--taille-texte-sm); }
+  .sg-rayons div { width: 6rem; height: 4rem; background: var(--gb-ardoise-100); border: 1px solid var(--couleur-bordure); display: grid; place-items: center; font-size: var(--taille-texte-sm); }
   .sg-interdits { display: grid; gap: var(--esp-3); grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr)); padding: 0; list-style: none; margin: 0; }
   .sg-interdits li { display: flex; gap: var(--esp-2); font-size: var(--taille-texte-sm); }
   .sg-interdits svg { width: 1.125rem; height: 1.125rem; color: var(--gb-erreur); flex: none; margin-top: 2px; }
@@ -146,15 +146,15 @@
       <h2 class="titre-lg" id="t-logo">Logo</h2>
       <p class="texte-doux">La feuille, la règle graduée et la pousse disent « mesurer le vivant ». Le logo existe en vectoriel ; le fichier PNG d'origine n'est plus utilisé.</p>
       <div class="sg-logos">
-        <figure><div class="sg-panneau sg-panneau--ivoire"><img src="../assets/logo/logo-horizontal.svg" alt="Logo Green Biometry, version principale" width="220" height="71"></div><figcaption><strong>Principal</strong> · fond clair · <code>logo-horizontal.svg</code></figcaption></figure>
+        <figure><div class="sg-panneau sg-panneau--clair"><img src="../assets/logo/logo-horizontal.svg" alt="Logo Green Biometry, version principale" width="220" height="71"></div><figcaption><strong>Principal</strong> · fond clair · <code>logo-horizontal.svg</code></figcaption></figure>
         <figure><div class="sg-panneau sg-panneau--sombre"><img src="../assets/logo/logo-horizontal-blanc.svg" alt="Logo Green Biometry, version blanche" width="220" height="71"></div><figcaption><strong>Blanc</strong> · fond sombre · <code>logo-horizontal-blanc.svg</code></figcaption></figure>
         <figure><div class="sg-panneau"><img src="../assets/logo/logo-horizontal-mono.svg" alt="Logo Green Biometry, une couleur" width="220" height="71"></div><figcaption><strong>Monochrome</strong> · impression · <code>logo-horizontal-mono.svg</code></figcaption></figure>
-        <figure><div class="sg-panneau sg-panneau--ivoire"><div class="rangee" style="gap: var(--esp-5)"><img src="../assets/logo/symbole.svg" alt="Symbole Green Biometry" width="68" height="82"><img src="../assets/logo/favicon.svg" alt="Icône d'application Green Biometry" width="56" height="56"><img src="../assets/logo/favicon.svg" alt="" width="32" height="32"><img src="../assets/logo/favicon.svg" alt="" width="16" height="16"></div></div><figcaption><strong>Symbole et icône</strong> · mobile, onglet · <code>symbole.svg</code>, <code>favicon.svg</code></figcaption></figure>
+        <figure><div class="sg-panneau sg-panneau--clair"><div class="rangee" style="gap: var(--esp-5)"><img src="../assets/logo/symbole.svg" alt="Symbole Green Biometry" width="68" height="82"><img src="../assets/logo/favicon.svg" alt="Icône d'application Green Biometry" width="56" height="56"><img src="../assets/logo/favicon.svg" alt="" width="32" height="32"><img src="../assets/logo/favicon.svg" alt="" width="16" height="16"></div></div><figcaption><strong>Symbole et icône</strong> · mobile, onglet · <code>symbole.svg</code>, <code>favicon.svg</code></figcaption></figure>
       </div>
       <h3 class="sg-sous-titre">Règles</h3>
       <ul class="sg-interdits">
         <li><svg aria-hidden="true"><use href="#i-erreur"/></svg>Ne pas déformer, pivoter ni recolorer le logo.</li>
-        <li><svg aria-hidden="true"><use href="#i-erreur"/></svg>Ne pas poser la version verte sur un fond vert ou une photo chargée.</li>
+        <li><svg aria-hidden="true"><use href="#i-erreur"/></svg>Ne pas poser la version bleue sur un fond bleu ou une photo chargée.</li>
         <li><svg aria-hidden="true"><use href="#i-erreur"/></svg>Sous 120 px de large, utiliser le symbole seul.</li>
         <li><svg aria-hidden="true"><use href="#i-erreur"/></svg>Garder autour un espace vide au moins égal à la hauteur du « e ».</li>
       </ul>
@@ -165,27 +165,27 @@
   <section class="sg-section" id="couleurs" aria-labelledby="t-couleurs">
     <div class="conteneur">
       <h2 class="titre-lg" id="t-couleurs">Couleurs</h2>
-      <p class="texte-doux">Le vert et l'or viennent du logo ; le vert forêt et l'ivoire viennent de la maquette. Le contraste est calculé en direct sur l'ivoire (seuil WCAG AA : 4,5:1 pour le texte, 3:1 pour les grands titres et les éléments graphiques).</p>
+      <p class="texte-doux">Palette « Eau claire » : le bleu de l'eau et le bleu clair viennent du logo, le marine sert aux fonds sombres, les gris sont légèrement bleutés. Le contraste est calculé en direct sur le fond de page (brume) (seuil WCAG AA : 4,5:1 pour le texte, 3:1 pour les grands titres et les éléments graphiques).</p>
 
       <h3 class="sg-sous-titre">Marque</h3>
       <div class="sg-nuancier">
-        <div class="sg-couleur" data-var="--gb-vert"><div class="sg-couleur__echantillon" style="background:var(--gb-vert);color:#fff">Vert</div><div class="sg-couleur__infos"><strong>Actions, liens, titres</strong><code>--gb-vert</code><span class="sg-contraste"></span></div></div>
-        <div class="sg-couleur" data-var="--gb-vert-fonce"><div class="sg-couleur__echantillon" style="background:var(--gb-vert-fonce);color:#fff">Vert foncé</div><div class="sg-couleur__infos"><strong>Survol des actions</strong><code>--gb-vert-fonce</code><span class="sg-contraste"></span></div></div>
-        <div class="sg-couleur" data-var="--gb-vert-600"><div class="sg-couleur__echantillon" style="background:var(--gb-vert-600);color:#fff">Vert 600</div><div class="sg-couleur__infos"><strong>Icônes, graphiques</strong><code>--gb-vert-600</code><span class="sg-contraste"></span></div></div>
-        <div class="sg-couleur" data-var="--gb-or"><div class="sg-couleur__echantillon" style="background:var(--gb-or);color:var(--gb-encre)">Or</div><div class="sg-couleur__infos"><strong>Accent seulement</strong><code>--gb-or</code><span class="sg-contraste"></span></div></div>
-        <div class="sg-couleur" data-var="--gb-or-texte"><div class="sg-couleur__echantillon" style="background:var(--gb-or-texte);color:#fff">Or texte</div><div class="sg-couleur__infos"><strong>Or lisible sur fond clair</strong><code>--gb-or-texte</code><span class="sg-contraste"></span></div></div>
-        <div class="sg-couleur" data-var="--gb-foret"><div class="sg-couleur__echantillon" style="background:var(--gb-foret);color:#fff">Forêt</div><div class="sg-couleur__infos"><strong>Grands fonds sombres</strong><code>--gb-foret</code><span class="sg-contraste"></span></div></div>
+        <div class="sg-couleur" data-var="--gb-bleu"><div class="sg-couleur__echantillon" style="background:var(--gb-bleu);color:#fff">Bleu</div><div class="sg-couleur__infos"><strong>Actions, liens, titres</strong><code>--gb-bleu</code><span class="sg-contraste"></span></div></div>
+        <div class="sg-couleur" data-var="--gb-bleu-fonce"><div class="sg-couleur__echantillon" style="background:var(--gb-bleu-fonce);color:#fff">Bleu foncé</div><div class="sg-couleur__infos"><strong>Survol des actions</strong><code>--gb-bleu-fonce</code><span class="sg-contraste"></span></div></div>
+        <div class="sg-couleur" data-var="--gb-bleu-600"><div class="sg-couleur__echantillon" style="background:var(--gb-bleu-600);color:#fff">Bleu 600</div><div class="sg-couleur__infos"><strong>Icônes, graphiques</strong><code>--gb-bleu-600</code><span class="sg-contraste"></span></div></div>
+        <div class="sg-couleur" data-var="--gb-ciel"><div class="sg-couleur__echantillon" style="background:var(--gb-ciel);color:var(--gb-encre)">Bleu clair</div><div class="sg-couleur__infos"><strong>Accent seulement</strong><code>--gb-ciel</code><span class="sg-contraste"></span></div></div>
+        <div class="sg-couleur" data-var="--gb-ciel-texte"><div class="sg-couleur__echantillon" style="background:var(--gb-ciel-texte);color:#fff">Bleu clair texte</div><div class="sg-couleur__infos"><strong>Bleu clair lisible sur fond clair</strong><code>--gb-ciel-texte</code><span class="sg-contraste"></span></div></div>
+        <div class="sg-couleur" data-var="--gb-marine"><div class="sg-couleur__echantillon" style="background:var(--gb-marine);color:#fff">Marine</div><div class="sg-couleur__infos"><strong>Grands fonds sombres</strong><code>--gb-marine</code><span class="sg-contraste"></span></div></div>
       </div>
 
       <h3 class="sg-sous-titre">Neutres</h3>
       <div class="sg-nuancier">
         <div class="sg-couleur" data-var="--gb-encre"><div class="sg-couleur__echantillon" style="background:var(--gb-encre);color:#fff">Encre</div><div class="sg-couleur__infos"><strong>Texte principal</strong><code>--gb-encre</code><span class="sg-contraste"></span></div></div>
         <div class="sg-couleur" data-var="--gb-encre-douce"><div class="sg-couleur__echantillon" style="background:var(--gb-encre-douce);color:#fff">Encre douce</div><div class="sg-couleur__infos"><strong>Texte secondaire</strong><code>--gb-encre-douce</code><span class="sg-contraste"></span></div></div>
-        <div class="sg-couleur" data-var="--gb-sauge-600"><div class="sg-couleur__echantillon" style="background:var(--gb-sauge-600);color:#fff">Sauge 600</div><div class="sg-couleur__infos"><strong>Légendes discrètes</strong><code>--gb-sauge-600</code><span class="sg-contraste"></span></div></div>
-        <div class="sg-couleur" data-var="--gb-sauge-300"><div class="sg-couleur__echantillon" style="background:var(--gb-sauge-300)">Sauge 300</div><div class="sg-couleur__infos"><strong>Bordures</strong><code>--gb-sauge-300</code><span class="sg-contraste"></span></div></div>
-        <div class="sg-couleur" data-var="--gb-sauge-100"><div class="sg-couleur__echantillon" style="background:var(--gb-sauge-100)">Sauge 100</div><div class="sg-couleur__infos"><strong>Surfaces secondaires</strong><code>--gb-sauge-100</code><span class="sg-contraste"></span></div></div>
-        <div class="sg-couleur" data-var="--gb-parchemin"><div class="sg-couleur__echantillon" style="background:var(--gb-parchemin)">Parchemin</div><div class="sg-couleur__infos"><strong>Sections alternées</strong><code>--gb-parchemin</code><span class="sg-contraste"></span></div></div>
-        <div class="sg-couleur" data-var="--gb-ivoire"><div class="sg-couleur__echantillon" style="background:var(--gb-ivoire)">Ivoire</div><div class="sg-couleur__infos"><strong>Fond de page</strong><code>--gb-ivoire</code><span class="sg-contraste"></span></div></div>
+        <div class="sg-couleur" data-var="--gb-ardoise-600"><div class="sg-couleur__echantillon" style="background:var(--gb-ardoise-600);color:#fff">Ardoise 600</div><div class="sg-couleur__infos"><strong>Légendes discrètes</strong><code>--gb-ardoise-600</code><span class="sg-contraste"></span></div></div>
+        <div class="sg-couleur" data-var="--gb-ardoise-300"><div class="sg-couleur__echantillon" style="background:var(--gb-ardoise-300)">Ardoise 300</div><div class="sg-couleur__infos"><strong>Bordures</strong><code>--gb-ardoise-300</code><span class="sg-contraste"></span></div></div>
+        <div class="sg-couleur" data-var="--gb-ardoise-100"><div class="sg-couleur__echantillon" style="background:var(--gb-ardoise-100)">Ardoise 100</div><div class="sg-couleur__infos"><strong>Surfaces secondaires</strong><code>--gb-ardoise-100</code><span class="sg-contraste"></span></div></div>
+        <div class="sg-couleur" data-var="--gb-brume-alt"><div class="sg-couleur__echantillon" style="background:var(--gb-brume-alt)">Brume alternée</div><div class="sg-couleur__infos"><strong>Sections alternées</strong><code>--gb-brume-alt</code><span class="sg-contraste"></span></div></div>
+        <div class="sg-couleur" data-var="--gb-brume"><div class="sg-couleur__echantillon" style="background:var(--gb-brume)">Brume</div><div class="sg-couleur__infos"><strong>Fond de page</strong><code>--gb-brume</code><span class="sg-contraste"></span></div></div>
         <div class="sg-couleur" data-var="--gb-blanc"><div class="sg-couleur__echantillon" style="background:var(--gb-blanc)">Blanc</div><div class="sg-couleur__infos"><strong>Cartes, champs</strong><code>--gb-blanc</code><span class="sg-contraste"></span></div></div>
       </div>
 
@@ -264,7 +264,7 @@
       </div>
       <div class="sg-panneau sg-panneau--sombre rangee" style="margin-top: var(--esp-4)">
         <button class="bouton bouton--accent" type="button">Devenir partenaire</button>
-        <span class="texte-sm" style="color: var(--couleur-sur-sombre-doux)">Le bouton or est réservé aux fonds sombres.</span>
+        <span class="texte-sm" style="color: var(--couleur-sur-sombre-doux)">Le bouton bleu clair est réservé aux fonds sombres.</span>
       </div>
     </div>
   </section>
@@ -438,19 +438,19 @@
 </footer>
 
 <script>
-  // Calcule le contraste de chaque couleur sur le fond ivoire (WCAG 2.1).
+  // Calcule le contraste de chaque couleur sur le fond de page (WCAG 2.1).
   (function () {
     var racine = getComputedStyle(document.documentElement);
     function rvb(hex) { hex = hex.trim().replace('#', ''); return [0, 2, 4].map(function (i) { return parseInt(hex.substr(i, 2), 16) / 255; }); }
     function lum(hex) { var c = rvb(hex).map(function (v) { return v <= 0.03928 ? v / 12.92 : Math.pow((v + 0.055) / 1.055, 2.4); }); return 0.2126 * c[0] + 0.7152 * c[1] + 0.0722 * c[2]; }
     function ratio(a, b) { var x = lum(a), y = lum(b); return (Math.max(x, y) + 0.05) / (Math.min(x, y) + 0.05); }
-    var fond = racine.getPropertyValue('--gb-ivoire');
+    var fond = racine.getPropertyValue('--gb-brume');
     document.querySelectorAll('.sg-couleur').forEach(function (el) {
       var valeur = racine.getPropertyValue(el.dataset.var).trim();
       var r = ratio(valeur, fond);
       var verdict = r >= 4.5 ? 'texte OK' : r >= 3 ? 'grand titre, graphique' : 'décor seulement';
       el.querySelector('code').textContent = el.dataset.var + ' · ' + valeur.toUpperCase();
-      el.querySelector('.sg-contraste').textContent = r.toFixed(1).replace('.', ',') + ':1 sur ivoire · ' + verdict;
+      el.querySelector('.sg-contraste').textContent = r.toFixed(1).replace('.', ',') + ':1 sur le fond · ' + verdict;
     });
   })();
 </script>

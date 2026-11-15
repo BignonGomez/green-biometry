@@ -5,6 +5,7 @@
 3. Rend chaque page dans chaque langue de messages/ :
      accueil   -> _site/<langue>/index.html
      catalogue -> _site/<langue>/catalogue/index.html
+     carte     -> _site/<langue>/carte/index.html
      fiche     -> _site/<langue>/catalogue/<slug>/index.html (une par jeu de donnees/jeux-demo.json)
 4. Vérifie le bilinguisme (EF-14) : la construction échoue si une clé manque
    dans une langue ou si une balise {{...}} reste non remplacée.
@@ -26,6 +27,7 @@ import sys
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import catalogue as cat  # noqa: E402
+import carte  # noqa: E402
 
 RACINE = Path(__file__).resolve().parent.parent
 SORTIE = RACINE / "_site"
@@ -129,6 +131,7 @@ def pages(donnees):
         "@liste_jeux": cat.liste_catalogue(jeux, ref, l, M, r),
         "@facettes": cat.facettes(jeux, ref, l, M),
         "@nb_jeux": str(len(jeux))}
+    yield "carte.html", "carte/", "carte", lambda l, M, r: carte.variables_carte(jeux, ref, l, M, r)
     for jeu in jeux:
         yield "fiche.html", f"catalogue/{jeu['slug']}/", "catalogue", (
             lambda l, M, r, jeu=jeu: cat.variables_fiche(jeu, ref, l, M, r))

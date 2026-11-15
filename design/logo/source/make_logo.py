@@ -6,7 +6,8 @@ from fontTools.pens.transformPen import TransformPen
 font_path, out = sys.argv[1], sys.argv[2]
 f = instancer.instantiateVariableFont(TTFont(font_path), {"wght": 700})
 gs = f.getGlyphSet(); cmap = f.getBestCmap(); hm = f['hmtx']
-GREEN, GOLD, WHITE = "#0A4D18", "#F2AC00", "#FFFFFF"
+# Palette « Eau claire » (ADR-11) : bleu de l'eau + bleu clair
+GREEN, GOLD, WHITE = "#0E6BA8", "#7CC6EE", "#FFFFFF"
 SIZE = 212; k = SIZE/1000
 
 def text_path(txt, x0, base):
@@ -53,10 +54,10 @@ def symbol(main, gold, uid, title):
             f'<title id="t-{uid}">{title}</title>{mark(main, gold, uid)}</svg>\n')
 
 def favicon():
-    # symbole blanc + or sur carre vert arrondi, lisible en 32 px
+    # symbole blanc + bleu clair sur carre bleu arrondi, lisible en 32 px
     inner = mark(WHITE, GOLD, "fav")
     return ('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Green Biometry">'
-            '<rect width="512" height="512" rx="96" fill="#0A4D18"/>'
+            f'<rect width="512" height="512" rx="96" fill="{GREEN}"/>'
             f'<g transform="translate(256 256) scale(0.98) translate(-325 -418)">{inner}</g></svg>\n')
 
 os.makedirs(out, exist_ok=True)

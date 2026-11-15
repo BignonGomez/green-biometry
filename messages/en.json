@@ -211,5 +211,23 @@
     "voir_carte": "View on the map",
     "signaler": "Report an error",
     "retour": "Back to catalogue"
+  },
+  "carte": {
+    "meta_titre": "Data map — Green Biometry",
+    "meta_description": "Map of the areas covered by Green Biometry's environmental datasets: forests, restoration, land cover, water, climate.",
+    "titre": "Data map",
+    "intro": "Each frame shows the area covered by a dataset. Click the map to see the datasets available at a point, or pick a dataset from the list.",
+    "region_label": "Interactive map of the areas covered by the datasets",
+    "sans_js": "The map needs JavaScript. The dataset list next to it still works.",
+    "note_emprise": "Frames are extents: the rectangle enclosing the study area, not its exact outline. The datasets shown are demonstration examples.",
+    "legende": "Themes shown",
+    "compte_un": "dataset on the map",
+    "compte_plusieurs": "datasets on the map",
+    "localiser": "Show on map",
+    "vers_catalogue": "Open the catalogue",
+    "popup_un": "1 dataset covers this point",
+    "popup_plusieurs": "{n} datasets cover this point",
+    "popup_aucun": "No dataset shown covers this point.",
+    "attribution": "© <a href=\"https://www.openstreetmap.org/copyright\">OpenStreetMap contributors</a>"
   }
 }

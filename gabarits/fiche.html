@@ -100,7 +100,7 @@
         <button class="bouton bouton--secondaire bouton--petit" type="button" data-copier="citation" data-copie-ok="{{fiche.copie_ok}}"><svg aria-hidden="true"><use href="#i-copier"/></svg><span aria-live="polite">{{fiche.copier}}</span></button>
       </section>
       <div class="fiche__liens">
-        <a class="bouton bouton--discret" href="#"><svg aria-hidden="true"><use href="#i-carte"/></svg>{{fiche.voir_carte}}</a>
+        <a class="bouton bouton--discret" href="{{@racine}}{{@lang}}/carte/?jeu={{@jeu_slug}}"><svg aria-hidden="true"><use href="#i-carte"/></svg>{{fiche.voir_carte}}</a>
         <a class="bouton bouton--discret" href="#"><svg aria-hidden="true"><use href="#i-drapeau"/></svg>{{fiche.signaler}}</a>
         <a class="bouton bouton--discret" href="{{@racine}}{{@lang}}/catalogue/"><svg aria-hidden="true"><use href="#i-retour"/></svg>{{fiche.retour}}</a>
       </div>

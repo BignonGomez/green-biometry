@@ -285,6 +285,7 @@ def variables_fiche(jeu, ref, lang, M, racine):
         "@jeu_titre": e(jeu["titre"], lang),
         "@jeu_resume": e(jeu["resume"], lang),
         "@jeu_identifiant": jeu["identifiant"],
+        "@jeu_slug": jeu["slug"],
         "@jeu_badges": badge_demo(M) + badge_statut(jeu["statut"], M)
                        + f'<span class="badge badge--theme">{escape(t(ref["themes"][jeu["theme"]], lang))}</span>',
         "@jeu_methode": e(jeu["methode"], lang),

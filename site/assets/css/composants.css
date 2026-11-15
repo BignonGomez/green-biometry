@@ -66,14 +66,14 @@ a:hover { color: var(--couleur-action-survol); }
 .titre-lg { font-size: var(--taille-titre-lg); line-height: var(--ligne-titre-lg); }
 .titre-md { font-size: var(--taille-titre-md); line-height: var(--ligne-titre-md); font-weight: var(--graisse-forte); }
 .titre-sm { font-size: var(--taille-titre-sm); line-height: var(--ligne-titre-sm); font-weight: var(--graisse-forte); }
-.titre-xl em, .titre-lg em { font-style: italic; color: var(--gb-vert); }
+.titre-xl em, .titre-lg em { font-style: italic; color: var(--gb-bleu); }
 .texte-lg { font-size: var(--taille-texte-lg); line-height: var(--ligne-texte-lg); }
 .texte-sm { font-size: var(--taille-texte-sm); line-height: var(--ligne-texte-sm); }
 .texte-doux { color: var(--couleur-texte-doux); }
 .etiquette {
   font-size: var(--taille-etiquette); line-height: var(--ligne-etiquette);
   font-weight: var(--graisse-forte); letter-spacing: 0.08em; text-transform: uppercase;
-  color: var(--gb-or-texte);
+  color: var(--gb-ciel-texte);
 }
 .chiffre { font-variant-numeric: tabular-nums; }
 
@@ -99,14 +99,14 @@ a:hover { color: var(--couleur-action-survol); }
 .bouton--secondaire { background: transparent; color: var(--couleur-action); border-color: var(--couleur-action); }
 .bouton--secondaire:hover { background: var(--gb-succes-fond); color: var(--couleur-action-survol); }
 .bouton--discret { background: transparent; color: var(--couleur-action); padding-inline: var(--esp-3); }
-.bouton--discret:hover { background: var(--gb-sauge-100); }
+.bouton--discret:hover { background: var(--gb-ardoise-100); }
 .bouton--danger { background: var(--gb-erreur); color: var(--gb-blanc); }
 .bouton--danger:hover { background: #8C1D17; color: var(--gb-blanc); }
-.bouton--accent { background: var(--gb-or); color: var(--gb-encre); }
-.bouton--accent:hover { background: #D99A00; color: var(--gb-encre); }
+.bouton--accent { background: var(--gb-ciel); color: var(--gb-encre); }
+.bouton--accent:hover { background: #5AB4E6; color: var(--gb-encre); }
 .bouton--petit { min-height: 36px; padding: var(--esp-1) var(--esp-3); }
 .bouton:disabled, .bouton[aria-disabled="true"] {
-  background: var(--gb-sauge-100); color: var(--gb-sauge-600); border-color: transparent; cursor: not-allowed;
+  background: var(--gb-ardoise-100); color: var(--gb-ardoise-600); border-color: transparent; cursor: not-allowed;
 }
 
 /* ---------- Badges de statut (vocabulaire du cahier des charges § 10) ---------- */
@@ -121,16 +121,16 @@ a:hover { color: var(--couleur-action-survol); }
 .badge--verification{ background: var(--gb-info-fond);      color: var(--gb-info); }
 .badge--controle    { background: var(--gb-info-fond);      color: var(--gb-info); }
 .badge--valide      { background: var(--gb-succes-fond);    color: var(--gb-succes); }
-.badge--publie      { background: var(--gb-vert);           color: var(--gb-blanc); }
+.badge--publie      { background: var(--gb-bleu);           color: var(--gb-blanc); }
 .badge--reserve     { background: var(--gb-avert-fond);     color: var(--gb-avert); }
 .badge--restreint   { background: var(--gb-restreint-fond); color: var(--gb-restreint); }
 .badge--archive     { background: transparent; color: var(--gb-neutre); border-color: var(--couleur-bordure); }
 .badge--refuse      { background: var(--gb-erreur-fond);    color: var(--gb-erreur); }
 .badge--demo {
-  background: var(--gb-or); color: var(--gb-encre); letter-spacing: 0.08em;
+  background: var(--gb-ciel); color: var(--gb-encre); letter-spacing: 0.08em;
   border-radius: var(--rayon-sm);
 }
-.badge--theme { background: var(--gb-sauge-100); color: var(--gb-encre-douce); font-weight: var(--graisse-moyenne); }
+.badge--theme { background: var(--gb-ardoise-100); color: var(--gb-encre-douce); font-weight: var(--graisse-moyenne); }
 
 /* ---------- Alertes ---------- */
 .alerte {
@@ -163,7 +163,7 @@ a:hover { color: var(--couleur-action-survol); }
 .saisie:hover { border-color: var(--gb-encre-douce); }
 .saisie:focus-visible { outline: 3px solid var(--couleur-focus); outline-offset: 0; border-color: var(--couleur-action); }
 .saisie[aria-invalid="true"] { border: 2px solid var(--gb-erreur); }
-.saisie:disabled { background: var(--gb-sauge-50); color: var(--gb-sauge-600); }
+.saisie:disabled { background: var(--gb-ardoise-50); color: var(--gb-ardoise-600); }
 textarea.saisie { min-height: 6rem; resize: vertical; }
 select.saisie { appearance: none; padding-right: var(--esp-7);
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%234A5A50' stroke-width='2'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
@@ -178,7 +178,7 @@ select.saisie { appearance: none; padding-right: var(--esp-7);
   border-radius: var(--rayon-lg); padding: var(--esp-5); box-shadow: var(--ombre-1);
 }
 .carte--lien { position: relative; transition: box-shadow var(--duree), border-color var(--duree); }
-.carte--lien:hover { box-shadow: var(--ombre-2); border-color: var(--gb-vert-600); }
+.carte--lien:hover { box-shadow: var(--ombre-2); border-color: var(--gb-bleu-600); }
 .carte__titre a { color: var(--couleur-texte); text-decoration: none; }
 .carte__titre a::after { content: ""; position: absolute; inset: 0; border-radius: inherit; }
 .carte__titre a:hover { color: var(--couleur-action); text-decoration: underline; }
@@ -186,21 +186,21 @@ select.saisie { appearance: none; padding-right: var(--esp-7);
 .meta { display: grid; grid-template-columns: max-content 1fr; gap: var(--esp-1) var(--esp-3); font-size: var(--taille-texte-sm); margin: 0; }
 .meta dt { color: var(--couleur-texte-doux); }
 .meta dd { margin: 0; font-weight: var(--graisse-moyenne); }
-.indicateur__valeur { font-family: var(--police-titre); font-size: 2.25rem; line-height: 1; font-weight: var(--graisse-titre); color: var(--gb-vert); }
+.indicateur__valeur { font-family: var(--police-titre); font-size: 2.25rem; line-height: 1; font-weight: var(--graisse-titre); color: var(--gb-bleu); }
 .indicateur__unite { font-size: var(--taille-texte); font-family: var(--police-texte); color: var(--couleur-texte-doux); font-weight: var(--graisse-moyenne); }
 
 /* ---------- Tableau ---------- */
 .tableau-defilant { overflow-x: auto; border: 1px solid var(--couleur-bordure); border-radius: var(--rayon-lg); background: var(--couleur-surface); }
 .tableau { width: 100%; border-collapse: collapse; font-size: var(--taille-texte-sm); }
 .tableau caption { text-align: left; padding: var(--esp-3) var(--esp-4); font-weight: var(--graisse-forte); }
-.tableau th, .tableau td { padding: var(--esp-3) var(--esp-4); text-align: left; border-top: 1px solid var(--gb-sauge-100); vertical-align: top; }
-.tableau thead th { background: var(--gb-sauge-50); font-weight: var(--graisse-forte); color: var(--couleur-texte-doux); border-top: 0; white-space: nowrap; }
+.tableau th, .tableau td { padding: var(--esp-3) var(--esp-4); text-align: left; border-top: 1px solid var(--gb-ardoise-100); vertical-align: top; }
+.tableau thead th { background: var(--gb-ardoise-50); font-weight: var(--graisse-forte); color: var(--couleur-texte-doux); border-top: 0; white-space: nowrap; }
 .tableau td.nombre, .tableau th.nombre { text-align: right; font-variant-numeric: tabular-nums; }
 
 /* ---------- États : vide, chargement ---------- */
 .etat-vide { text-align: center; padding: var(--esp-7) var(--esp-5); border: 2px dashed var(--couleur-bordure); border-radius: var(--rayon-lg); background: var(--couleur-surface); }
-.etat-vide svg { width: 2.5rem; height: 2.5rem; margin: 0 auto var(--esp-3); color: var(--gb-sauge-600); }
-.squelette { background: linear-gradient(90deg, var(--gb-sauge-100) 25%, var(--gb-sauge-50) 50%, var(--gb-sauge-100) 75%); background-size: 200% 100%; animation: miroiter 1.4s infinite; border-radius: var(--rayon-sm); }
+.etat-vide svg { width: 2.5rem; height: 2.5rem; margin: 0 auto var(--esp-3); color: var(--gb-ardoise-600); }
+.squelette { background: linear-gradient(90deg, var(--gb-ardoise-100) 25%, var(--gb-ardoise-50) 50%, var(--gb-ardoise-100) 75%); background-size: 200% 100%; animation: miroiter 1.4s infinite; border-radius: var(--rayon-sm); }
 @keyframes miroiter { from { background-position: 200% 0; } to { background-position: -200% 0; } }
 @media (prefers-reduced-motion: reduce) { .squelette { animation: none; } }
 
@@ -212,8 +212,8 @@ select.saisie { appearance: none; padding-right: var(--esp-7);
 .entete__nav { margin-left: auto; }
 .entete__liens { display: none; list-style: none; margin: 0; padding: 0; gap: var(--esp-1); }
 .entete__liens a { display: block; padding: var(--esp-2) var(--esp-3); border-radius: var(--rayon-md); color: var(--couleur-texte); text-decoration: none; font-weight: var(--graisse-moyenne); font-size: var(--taille-texte-sm); }
-.entete__liens a:hover { background: var(--gb-sauge-100); color: var(--couleur-action); }
-.entete__liens a[aria-current="page"] { color: var(--couleur-action); box-shadow: inset 0 -2px 0 var(--gb-or); border-radius: 0; }
+.entete__liens a:hover { background: var(--gb-ardoise-100); color: var(--couleur-action); }
+.entete__liens a[aria-current="page"] { color: var(--couleur-action); box-shadow: inset 0 -2px 0 var(--gb-ciel); border-radius: 0; }
 .entete__actions { display: none; align-items: center; gap: var(--esp-2); }
 .langue { display: inline-flex; border: 1px solid var(--couleur-bordure); border-radius: var(--rayon-plein); padding: 2px; }
 .langue a { padding: 0.25rem 0.625rem; border-radius: var(--rayon-plein); font-size: var(--taille-etiquette); font-weight: var(--graisse-forte); text-decoration: none; color: var(--couleur-texte-doux); min-width: 2.25rem; text-align: center; }
@@ -224,7 +224,7 @@ select.saisie { appearance: none; padding-right: var(--esp-7);
 .menu-mobile > summary svg { width: 1.25rem; height: 1.25rem; }
 .menu-mobile__panneau { position: absolute; left: 0; right: 0; top: 4rem; z-index: 20; background: var(--couleur-surface); border-bottom: 1px solid var(--couleur-bordure); box-shadow: var(--ombre-2); padding: var(--esp-4) var(--marge-page) var(--esp-5); }
 .menu-mobile__panneau ul { list-style: none; margin: 0 0 var(--esp-4); padding: 0; }
-.menu-mobile__panneau li a { display: block; padding: var(--esp-3) 0; border-bottom: 1px solid var(--gb-sauge-100); color: var(--couleur-texte); text-decoration: none; font-weight: var(--graisse-moyenne); }
+.menu-mobile__panneau li a { display: block; padding: var(--esp-3) 0; border-bottom: 1px solid var(--gb-ardoise-100); color: var(--couleur-texte); text-decoration: none; font-weight: var(--graisse-moyenne); }
 .entete { position: relative; }
 @media (min-width: 1024px) {
   .entete__liens, .entete__actions { display: flex; }
@@ -234,9 +234,12 @@ select.saisie { appearance: none; padding-right: var(--esp-7);
 /* ---------- Pied de page ---------- */
 .pied { background: var(--couleur-sombre); color: var(--couleur-sur-sombre); padding-block: var(--esp-8) var(--esp-6); }
 .pied a { color: var(--couleur-sur-sombre); text-decoration: none; }
-.pied a:hover { color: var(--gb-or); text-decoration: underline; }
+.pied a:hover { color: var(--gb-ciel); text-decoration: underline; }
 .pied__grille { display: grid; gap: var(--esp-6); grid-template-columns: repeat(auto-fit, minmax(min(100%, 12rem), 1fr)); }
-.pied__titre { font-size: var(--taille-etiquette); letter-spacing: 0.08em; text-transform: uppercase; font-weight: var(--graisse-forte); color: var(--gb-or); margin-bottom: var(--esp-3); }
+.pied__titre { font-size: var(--taille-etiquette); letter-spacing: 0.08em; text-transform: uppercase; font-weight: var(--graisse-forte); color: var(--gb-ciel); margin-bottom: var(--esp-3); }
 .pied ul { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--esp-2); font-size: var(--taille-texte-sm); }
 .pied__bas { margin-top: var(--esp-7); padding-top: var(--esp-4); border-top: 1px solid rgb(255 255 255 / 0.15); font-size: var(--taille-texte-sm); color: var(--couleur-sur-sombre-doux); display: flex; flex-wrap: wrap; gap: var(--esp-3); justify-content: space-between; }
 .pied__texte { color: var(--couleur-sur-sombre-doux); font-size: var(--taille-texte-sm); max-width: 22rem; }
+
+/* Focus visible sur les fonds sombres (hero, bandeau d appel, pied de page) */
+.hero, .appel, .pied { --couleur-focus: var(--gb-ciel); }

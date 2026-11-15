@@ -12,5 +12,7 @@ Statuts : Proposé, Décidé, Remplacé.
 | ADR-05 | 2026-11-11 | Collecte terrain via un outil existant (KoboToolbox, ODK) | Proposé | Format d'import à standardiser |
 | ADR-06 | 2026-11-14 | Stack : Next.js (TypeScript) + Supabase ; plan B Django | Proposé | À confirmer avant le 29 nov. 2026 selon le niveau en React |
 | ADR-07 | 2026-11-14 | Hébergement gratuit : GitHub (code), GitHub Pages (maquette), Vercel et Supabase (application) | Proposé | Limites des offres gratuites, usage non commercial de Vercel Hobby |
-| ADR-08 | 2026-11-14 | Logo redessiné en SVG ; couleurs de marque #0A4D18 (vert) et #F2AC00 (or, accent seulement) | Proposé | Harmoniser la palette de la maquette avec ces couleurs |
-| ADR-09 | 2026-11-14 | Thème clair seulement au MVP, fond ivoire #FBF9F5, titres Playfair Display, texte Inter | Proposé | Thème sombre reporté en V2 |
+| ADR-08 | 2026-11-14 | Logo redessiné en SVG ; couleurs de marque #0A4D18 (vert) et #F2AC00 (or, accent seulement) | Remplacé par ADR-11 (couleurs) | Harmoniser la palette de la maquette avec ces couleurs |
+| ADR-09 | 2026-11-14 | Thème clair seulement au MVP, fond ivoire #FBF9F5, titres Playfair Display, texte Inter | Remplacé par ADR-11 (fond), polices conservées | Thème sombre reporté en V2 |
+| ADR-10 | 2026-11-16 | Carte publique : Leaflet (hébergé avec le site) et fond OpenStreetMap, désaturé en CSS | Proposé | Politique d'usage des tuiles OSM : prévoir un fournisseur de tuiles (ou nos propres tuiles) avant la mise en production. Le fond CARTO exige désormais une clé |
+| ADR-11 | 2026-11-16 | Palette « Eau claire » : bleu #0E6BA8 (actions), bleu clair #7CC6EE (accent seulement), marine #0B3550 (fonds sombres), fond #F8FBFD. Plus de vert dans la marque ; le vert reste seulement la couleur du thème Forêts dans les données. Logo : même forme, recoloré | Décidé | Bleu clair jamais en texte sur fond clair (1,9:1). Le nom « Green Biometry » reste un nom de travail |

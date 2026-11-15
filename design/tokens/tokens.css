@@ -10,53 +10,53 @@
  */
 
 :root {
-  /* ---------- Marque (logo) ---------- */
-  --gb-vert: #0A4D18;          /* vert du logo : actions, liens, titres forts. 9,6:1 sur ivoire */
-  --gb-vert-fonce: #083D13;    /* survol et état actif des actions */
-  --gb-vert-600: #1F6B2E;      /* variante plus claire, icônes et graphiques. 6,2:1 sur ivoire */
-  --gb-or: #F2AC00;            /* or du logo : ACCENT seulement, jamais en texte sur fond clair */
-  --gb-or-texte: #7A5600;      /* or lisible sur fond clair. 6,3:1 sur ivoire */
+  /* ---------- Marque (logo) : palette « Eau claire », 16 nov. 2026 (ADR-11) ---------- */
+  --gb-bleu: #0E6BA8;          /* bleu de l'eau : actions, liens, titres forts. 5,5:1 sur brume */
+  --gb-bleu-fonce: #0A5689;    /* survol et état actif des actions. 7,4:1 */
+  --gb-bleu-600: #2A7FBA;      /* icônes et graphiques (pas pour le texte courant). 4,2:1 */
+  --gb-ciel: #7CC6EE;          /* bleu clair : ACCENT seulement, jamais en texte sur fond clair. 6,8:1 sur marine */
+  --gb-ciel-texte: #0B5E8E;    /* bleu clair lisible sur fond clair (étiquettes). 6,7:1 */
 
-  /* ---------- Fonds sombres (maquette) ---------- */
-  --gb-foret: #153E2B;         /* grands fonds sombres : pied de page, bandeaux */
-  --gb-foret-profond: #0E2A1D; /* superpositions sur photos */
+  /* ---------- Fonds sombres ---------- */
+  --gb-marine: #0B3550;        /* grands fonds sombres : pied de page, bandeaux */
+  --gb-marine-profond: #082638; /* superpositions sur photos */
 
-  /* ---------- Neutres ---------- */
-  --gb-ivoire: #FBF9F5;        /* fond de page */
-  --gb-parchemin: #F4F1EA;     /* sections alternées */
+  /* ---------- Neutres (gris bleutés) ---------- */
+  --gb-brume: #F8FBFD;         /* fond de page */
+  --gb-brume-alt: #EEF4F9;     /* sections alternées */
   --gb-blanc: #FFFFFF;         /* cartes, champs */
-  --gb-sauge-50: #F1F4F0;      /* surfaces secondaires (vert grisâtre du cahier § 14) */
-  --gb-sauge-100: #E6EBE5;
-  --gb-sauge-300: #C3CCC4;     /* bordures, séparateurs ; texte discret sur fond forêt */
-  --gb-sauge-600: #5E7366;     /* texte très discret (légendes). 4,9:1 sur ivoire */
-  --gb-encre: #17241C;         /* texte principal. 15,3:1 sur ivoire */
-  --gb-encre-douce: #4A5A50;   /* texte secondaire. 7,0:1 sur ivoire */
+  --gb-ardoise-50: #F1F5F8;    /* surfaces secondaires */
+  --gb-ardoise-100: #E3EBF1;
+  --gb-ardoise-300: #C2CFDA;   /* bordures, séparateurs ; texte discret sur fond marine (8,1:1) */
+  --gb-ardoise-600: #566B7B;   /* texte très discret (légendes). 5,3:1 sur brume */
+  --gb-encre: #13222E;         /* texte principal. 15,6:1 sur brume */
+  --gb-encre-douce: #455767;   /* texte secondaire. 7,2:1 sur brume */
 
   /* ---------- Sémantique ---------- */
-  --gb-succes: #0A4D18;   --gb-succes-fond: #E3F0E2;
-  --gb-info: #1D5B8C;     --gb-info-fond: #E3EEF7;
+  --gb-succes: #0A5689;   --gb-succes-fond: #E3F1FA;
+  --gb-info: #4338A8;     --gb-info-fond: #ECEAF8;
   --gb-avert: #8A5300;    --gb-avert-fond: #FFF1CC;
   --gb-erreur: #B3261E;   --gb-erreur-fond: #FCE8E6;
-  --gb-restreint: #5B3A8C; --gb-restreint-fond: #EEE8F6;
-  --gb-neutre: #4A5A50;   --gb-neutre-fond: #ECEFEA;
+  --gb-restreint: #7A3E1D; --gb-restreint-fond: #F6EBE3;
+  --gb-neutre: #455767;   --gb-neutre-fond: #E9EEF2;
 
   /* ---------- Rôles (à utiliser dans les composants) ---------- */
-  --couleur-fond: var(--gb-ivoire);
-  --couleur-fond-alt: var(--gb-parchemin);
+  --couleur-fond: var(--gb-brume);
+  --couleur-fond-alt: var(--gb-brume-alt);
   --couleur-surface: var(--gb-blanc);
   --couleur-texte: var(--gb-encre);
   --couleur-texte-doux: var(--gb-encre-douce);
-  --couleur-texte-discret: var(--gb-sauge-600);
-  --couleur-bordure: var(--gb-sauge-300);
-  --couleur-bordure-forte: var(--gb-sauge-600);
-  --couleur-action: var(--gb-vert);
-  --couleur-action-survol: var(--gb-vert-fonce);
+  --couleur-texte-discret: var(--gb-ardoise-600);
+  --couleur-bordure: var(--gb-ardoise-300);
+  --couleur-bordure-forte: var(--gb-ardoise-600);
+  --couleur-action: var(--gb-bleu);
+  --couleur-action-survol: var(--gb-bleu-fonce);
   --couleur-sur-action: var(--gb-blanc);
-  --couleur-lien: var(--gb-vert);
-  --couleur-focus: var(--gb-or);
-  --couleur-sombre: var(--gb-foret);
+  --couleur-lien: var(--gb-bleu);
+  --couleur-focus: var(--gb-bleu);       /* sur fonds sombres : --gb-ciel (composants.css) */
+  --couleur-sombre: var(--gb-marine);
   --couleur-sur-sombre: var(--gb-blanc);
-  --couleur-sur-sombre-doux: var(--gb-sauge-300);
+  --couleur-sur-sombre-doux: var(--gb-ardoise-300);
 
   /* ---------- Typographie ---------- */
   --police-titre: "Playfair Display", Georgia, "Times New Roman", serif;
@@ -98,8 +98,8 @@
   --rayon-plein: 9999px;
 
   /* ---------- Ombres (discrètes) ---------- */
-  --ombre-1: 0 1px 2px rgb(23 36 28 / 0.06), 0 1px 3px rgb(23 36 28 / 0.08);
-  --ombre-2: 0 4px 12px rgb(23 36 28 / 0.08);
+  --ombre-1: 0 1px 2px rgb(19 34 46 / 0.06), 0 1px 3px rgb(19 34 46 / 0.08);
+  --ombre-2: 0 4px 12px rgb(19 34 46 / 0.08);
 
   /* ---------- Mouvement ---------- */
   --duree-rapide: 120ms;

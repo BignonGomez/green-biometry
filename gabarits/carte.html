@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="{{@lang}}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{carte.meta_titre}}</title>
+<meta name="description" content="{{carte.meta_description}}">
+<meta name="robots" content="noindex">
+<link rel="alternate" hreflang="fr" href="{{@chemin_fr}}">
+<link rel="alternate" hreflang="en" href="{{@chemin_en}}">
+<link rel="icon" href="{{@racine}}assets/logo/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="{{@racine}}assets/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="{{@racine}}assets/css/tokens.css">
+<link rel="stylesheet" href="{{@racine}}assets/css/composants.css">
+<link rel="stylesheet" href="{{@racine}}assets/css/accueil.css">
+<link rel="stylesheet" href="{{@racine}}assets/css/catalogue.css">
+<link rel="stylesheet" href="{{@racine}}assets/vendor/leaflet/leaflet.min.css">
+<link rel="stylesheet" href="{{@racine}}assets/css/carte.css">
+<script src="{{@racine}}assets/vendor/leaflet/leaflet.min.js" defer></script>
+<script src="{{@racine}}assets/js/carte.js" defer></script>
+</head>
+<body>
+{{> icones}}
+<a class="lien-evitement" href="#contenu">{{commun.aller_contenu}}</a>
+<div class="bandeau-demo" role="note">
+  <div class="conteneur"><span class="badge badge--demo">{{commun.demo}}</span><span>{{commun.bandeau_demo}}</span></div>
+</div>
+{{> entete}}
+
+<main id="contenu">
+  <div class="entete-page">
+    <div class="conteneur">
+      <nav class="fil" aria-label="{{commun.fil_label}}"><ol><li><a href="{{@racine}}{{@lang}}/">{{commun.fil_accueil}}</a></li><li aria-current="page">{{carte.titre}}</li></ol></nav>
+      <h1 class="titre-lg">{{carte.titre}}</h1>
+      <p class="texte-doux entete-page__intro">{{carte.intro}}</p>
+    </div>
+  </div>
+
+  <div class="conteneur carte-page">
+    <div class="carte-page__carte">
+      <div id="carte" class="carte-fond" role="region" aria-label="{{carte.region_label}}" aria-describedby="carte-aide">
+        <noscript><p class="carte-fond__message">{{carte.sans_js}}</p></noscript>
+      </div>
+      <p id="carte-aide" class="texte-sm texte-doux carte-page__note"><svg aria-hidden="true"><use href="#i-attention"/></svg><span>{{carte.note_emprise}}</span></p>
+    </div>
+
+    <aside class="carte-panneau" aria-labelledby="t-jeux-carte">
+      <form class="carte-panneau__legende" data-legende>
+        {{@carte_legende}}
+      </form>
+      <h2 class="titre-sm" id="t-jeux-carte"><span data-compte aria-live="polite" data-un="{{carte.compte_un}}" data-plusieurs="{{carte.compte_plusieurs}}">{{@nb_jeux}} {{carte.compte_plusieurs}}</span></h2>
+      <ul class="carte-liste" data-liste>
+{{@carte_liste}}
+      </ul>
+      <a class="bouton bouton--secondaire" href="{{@racine}}{{@lang}}/catalogue/">{{carte.vers_catalogue}}<svg aria-hidden="true"><use href="#i-fleche"/></svg></a>
+    </aside>
+  </div>
+</main>
+
+<script type="application/json" id="donnees-carte">{{@carte_donnees}}</script>
+{{> pied}}
+</body>
+</html>

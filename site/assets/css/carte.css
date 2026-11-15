@@ -1,0 +1,43 @@
+/* Page Carte : fond de carte Leaflet + panneau légende et liste des jeux. */
+.carte-page { display: grid; gap: var(--esp-5); padding-block: var(--esp-6) var(--esp-8); }
+@media (min-width: 1024px) { .carte-page { grid-template-columns: minmax(0, 1fr) 21rem; gap: var(--esp-6); align-items: start; } }
+
+.carte-fond {
+  height: min(70vh, 40rem); min-height: 22rem;
+  border: 1px solid var(--couleur-bordure); border-radius: var(--rayon-lg);
+  background: var(--gb-ardoise-50); overflow: hidden;
+  font-family: var(--police-texte);
+}
+.carte-fond:focus-visible { outline: 3px solid var(--couleur-focus); outline-offset: 2px; }
+.carte-fond__message { padding: var(--esp-6); text-align: center; color: var(--couleur-texte-doux); }
+.carte-page__note { display: flex; gap: var(--esp-2); align-items: flex-start; margin-top: var(--esp-3); }
+.carte-page__note svg { width: 1rem; height: 1rem; flex: none; margin-top: 0.2rem; color: var(--gb-avert); }
+
+.carte-panneau { display: grid; gap: var(--esp-4); background: var(--couleur-surface); border: 1px solid var(--couleur-bordure); border-radius: var(--rayon-lg); padding: var(--esp-5); }
+@media (min-width: 1024px) { .carte-panneau { position: sticky; top: var(--esp-4); max-height: calc(100vh - 2rem); overflow: auto; } }
+.carte-panneau .case { align-items: center; }
+
+.carte-legende__pastille { width: 0.875rem; height: 0.875rem; flex: none; border-radius: 3px; background: color-mix(in srgb, var(--pastille) 22%, transparent); border: 2px solid var(--pastille); }
+
+.carte-liste { list-style: none; margin: 0; padding: 0; display: grid; }
+.carte-liste__item { display: flex; gap: var(--esp-3); align-items: flex-start; padding-block: var(--esp-3); border-top: 1px solid var(--gb-ardoise-100); }
+.carte-liste__item .carte-legende__pastille { margin-top: 0.3rem; }
+.carte-liste__item[hidden] { display: none; }
+.carte-liste__item.est-actif { background: var(--gb-ardoise-50); box-shadow: -4px 0 0 var(--gb-ciel); }
+.carte-liste__titre { font-weight: var(--graisse-forte); font-size: var(--taille-texte-sm); color: var(--couleur-texte); }
+.carte-liste__titre:hover { color: var(--couleur-action); }
+.carte-liste__localiser { margin-top: var(--esp-1); margin-left: calc(-1 * var(--esp-3)); }
+
+/* Infobulle Leaflet aux couleurs du site */
+.leaflet-container { font: inherit; }
+.leaflet-popup-content-wrapper { border-radius: var(--rayon-md); box-shadow: var(--ombre-2); }
+.leaflet-popup-content { margin: var(--esp-4); font-size: var(--taille-texte-sm); line-height: var(--ligne-texte-sm); min-width: 14rem; }
+.popup-jeux__titre { font-weight: var(--graisse-forte); margin: 0 0 var(--esp-2); color: var(--couleur-texte-doux); font-size: var(--taille-etiquette); text-transform: uppercase; letter-spacing: 0.06em; }
+.popup-jeux ul { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--esp-3); }
+.popup-jeux li { display: flex; gap: var(--esp-2); align-items: flex-start; }
+.popup-jeux li .carte-legende__pastille { margin-top: 0.25rem; }
+.popup-jeux a { font-weight: var(--graisse-forte); color: var(--couleur-action); }
+.popup-jeux p { margin: 0; color: var(--couleur-texte-doux); }
+
+/* Fond OpenStreetMap adouci : les cadres des jeux restent l'information principale. */
+.leaflet-tile-pane { filter: saturate(0.3) brightness(1.04) contrast(0.92); }
