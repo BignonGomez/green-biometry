@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="{{@lang}}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{@ind_titre}} · Green Biometry</title>
+<meta name="description" content="{{@meta_description}}">
+<meta name="robots" content="noindex">
+<link rel="alternate" hreflang="fr" href="{{@chemin_fr}}">
+<link rel="alternate" hreflang="en" href="{{@chemin_en}}">
+<link rel="icon" href="{{@racine}}assets/logo/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="{{@racine}}assets/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="{{@racine}}assets/css/tokens.css">
+<link rel="stylesheet" href="{{@racine}}assets/css/composants.css">
+<link rel="stylesheet" href="{{@racine}}assets/css/accueil.css">
+<link rel="stylesheet" href="{{@racine}}assets/css/catalogue.css">
+<link rel="stylesheet" href="{{@racine}}assets/css/indicateurs.css">
+</head>
+<body>
+{{> icones}}
+<a class="lien-evitement" href="#contenu">{{commun.aller_contenu}}</a>
+<div class="bandeau-demo" role="note">
+  <div class="conteneur"><span class="badge badge--demo">{{commun.demo}}</span><span>{{commun.bandeau_demo}}</span></div>
+</div>
+{{> entete}}
+
+<main id="contenu">
+  <div class="entete-page">
+    <div class="conteneur">
+      <nav class="fil" aria-label="{{commun.fil_label}}"><ol><li><a href="{{@racine}}{{@lang}}/">{{commun.fil_accueil}}</a></li><li><a href="{{@racine}}{{@lang}}/indicateurs/">{{indicateurs.titre}}</a></li><li aria-current="page">{{@ind_titre}}</li></ol></nav>
+      <div class="carte__badges">{{@ind_badges}}</div>
+      <h1 class="titre-lg fiche__titre">{{@ind_titre}}</h1>
+      <p class="texte-lg texte-doux entete-page__intro">{{@ind_resume}}</p>
+      <p class="fiche__ids texte-sm texte-doux"><span>{{fiche.identifiant}}{{commun.deux_points}}<strong>{{@ind_identifiant}}</strong></span><span>{{fiche.m_maj}}{{commun.deux_points}}{{@ind_maj}}</span></p>
+    </div>
+  </div>
+
+  <div class="conteneur fiche fiche--indicateur">
+    <div class="fiche__principal">
+      {{@ind_reserve}}
+
+      <dl class="chiffres-cles">
+        <div><dt>{{indicateur.derniere_valeur}}</dt><dd><span class="indicateur__valeur">{{@ind_valeur}}</span> <span class="indicateur__unite">{{@ind_unite}}</span><span class="texte-sm texte-doux">{{indicateurs.en}} {{@ind_annee}}</span></dd></div>
+        <div><dt>{{indicateur.evolution_titre}}</dt><dd>{{@ind_evolution}}</dd></div>
+        <div><dt>{{fiche.m_periode}}</dt><dd>{{@ind_periode}}</dd></div>
+        <div><dt>{{indicateur.frequence}}</dt><dd>{{@ind_frequence}}</dd></div>
+      </dl>
+
+      <section class="fiche__bloc" aria-labelledby="t-graphe">
+        <h2 class="titre-md" id="t-graphe">{{indicateur.sec_graphe}}</h2>
+        {{@ind_graphe}}
+      </section>
+
+      <section class="fiche__bloc" aria-labelledby="t-def">
+        <h2 class="titre-md" id="t-def">{{indicateur.sec_definition}}</h2>
+        <p>{{@ind_definition}}</p>
+        <h3 class="fiche__sous-titre">{{indicateur.methode}}</h3>
+        <p>{{@ind_methode}}</p>
+      </section>
+
+      <section class="fiche__bloc" aria-labelledby="t-meta">
+        <h2 class="titre-md" id="t-meta">{{fiche.sec_metadonnees}}</h2>
+        <dl class="metadonnees">
+          <div><dt>{{indicateur.unite}}</dt><dd>{{@ind_unite}}</dd></div>
+          <div><dt>{{indicateur.frequence}}</dt><dd>{{@ind_frequence}}</dd></div>
+          <div><dt>{{fiche.m_periode}}</dt><dd>{{@ind_periode}}</dd></div>
+          <div><dt>{{fiche.m_territoire}}</dt><dd>{{@ind_territoire}}</dd></div>
+          <div><dt>{{fiche.m_theme}}</dt><dd>{{@ind_theme}}</dd></div>
+          <div><dt>{{indicateur.validation}}</dt><dd>{{@ind_validation}}</dd></div>
+        </dl>
+      </section>
+
+      <section class="fiche__bloc" aria-labelledby="t-lim">
+        <h2 class="titre-md" id="t-lim">{{indicateur.sec_limites}}</h2>
+        <div class="alerte alerte--avert" role="note"><svg aria-hidden="true"><use href="#i-attention"/></svg><p>{{@ind_limites}}</p></div>
+      </section>
+    </div>
+
+    <aside class="fiche__lateral" aria-label="{{fiche.actions_label}}">
+      <section class="carte" aria-labelledby="t-src">
+        <h2 class="titre-sm" id="t-src">{{indicateur.source_titre}}</h2>
+        <p class="texte-sm texte-doux">{{indicateur.source_intro}}</p>
+        <p><a class="carte-source__lien" href="{{@ind_source_lien}}">{{@ind_source_titre}}</a></p>
+        <dl class="meta"><dt>{{commun.lbl_source}}</dt><dd>{{@ind_source_producteur}}</dd><dt>{{commun.lbl_licence}}</dt><dd>{{@ind_source_licence}}</dd></dl>
+        <a class="bouton bouton--secondaire bouton--petit" href="{{@ind_source_lien}}">{{indicateur.voir_jeu}}<svg aria-hidden="true"><use href="#i-fleche"/></svg></a>
+      </section>
+      <div class="fiche__liens">
+        <a class="bouton bouton--discret" href="{{@racine}}{{@lang}}/carte/?jeu={{@ind_jeu_slug}}"><svg aria-hidden="true"><use href="#i-carte"/></svg>{{indicateur.voir_zone}}</a>
+        <a class="bouton bouton--discret" href="{{@racine}}{{@lang}}/indicateurs/"><svg aria-hidden="true"><use href="#i-retour"/></svg>{{indicateur.retour}}</a>
+      </div>
+    </aside>
+  </div>
+</main>
+
+{{> pied}}
+</body>
+</html>

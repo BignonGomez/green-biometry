@@ -186,7 +186,7 @@ select.saisie { appearance: none; padding-right: var(--esp-7);
 .meta { display: grid; grid-template-columns: max-content 1fr; gap: var(--esp-1) var(--esp-3); font-size: var(--taille-texte-sm); margin: 0; }
 .meta dt { color: var(--couleur-texte-doux); }
 .meta dd { margin: 0; font-weight: var(--graisse-moyenne); }
-.indicateur__valeur { font-family: var(--police-titre); font-size: 2.25rem; line-height: 1; font-weight: var(--graisse-titre); color: var(--gb-bleu); }
+.indicateur__valeur { font-variant-numeric: lining-nums tabular-nums; font-family: var(--police-titre); font-size: 2.25rem; line-height: 1; font-weight: var(--graisse-titre); color: var(--gb-bleu); }
 .indicateur__unite { font-size: var(--taille-texte); font-family: var(--police-texte); color: var(--couleur-texte-doux); font-weight: var(--graisse-moyenne); }
 
 /* ---------- Tableau ---------- */

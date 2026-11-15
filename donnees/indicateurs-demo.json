@@ -1,0 +1,57 @@
+{
+  "_avertissement": "Indicateurs de DÉMONSTRATION : valeurs fictives, calculées à partir des jeux de démonstration. Ne jamais présenter comme réels (cahier des charges, § 6).",
+  "indicateurs": [
+    {
+      "slug": "perte-couvert-arbore-benin",
+      "identifiant": "GB-IND-0001",
+      "titre": {"fr": "Perte annuelle de couvert arboré au Bénin", "en": "Annual tree cover loss in Benin"},
+      "resume": {"fr": "Surface de couvert arboré perdue chaque année sur l'ensemble du territoire national.", "en": "Area of tree cover lost each year across the whole country."},
+      "theme": "forets", "territoire": "benin", "jeu": "couverture-forestiere-benin",
+      "unite": "ha", "decimales": 0, "variation": "relative",
+      "frequence": "annuelle", "statut": "publie", "maj": "2026-10-03",
+      "definition": {"fr": "Surface de couvert arboré perdue au cours de l'année civile, toutes causes confondues : défrichement, exploitation, feux, coupes de plantations.", "en": "Area of tree cover lost during the calendar year, all causes combined: clearing, logging, fires, plantation harvests."},
+      "methode": {"fr": "Somme, sur les 77 communes, des pixels Landsat de 30 m passés sous le seuil de 30 % de couvert arboré pendant l'année, convertie en hectares.", "en": "Sum, over the 77 municipalities, of 30 m Landsat pixels that fell below the 30% tree cover threshold during the year, converted to hectares."},
+      "limites": {"fr": "Une perte de couvert n'est pas toujours une déforestation : les coupes de plantations et les feux sont comptés. La précision est plus faible dans les savanes arborées.", "en": "Tree cover loss is not always deforestation: plantation harvests and fires are counted. Accuracy is lower in wooded savannas."},
+      "serie": [["2016", 21400], ["2017", 23900], ["2018", 19800], ["2019", 22600], ["2020", 18700], ["2021", 20900], ["2022", 24300], ["2023", 22100]]
+    },
+    {
+      "slug": "pluviometrie-annuelle-atlantique",
+      "identifiant": "GB-IND-0002",
+      "titre": {"fr": "Cumul annuel de pluie, département de l'Atlantique", "en": "Annual rainfall, Atlantique department"},
+      "resume": {"fr": "Hauteur de pluie tombée en un an, en moyenne sur les stations du département.", "en": "Rainfall over one year, averaged across the department's stations."},
+      "theme": "eau", "territoire": "atlantique", "jeu": "pluviometrie-atlantique",
+      "unite": "mm", "decimales": 0, "variation": "relative",
+      "frequence": "annuelle", "statut": "publie", "maj": "2026-09-12",
+      "definition": {"fr": "Moyenne, sur les stations du département, du cumul des précipitations journalières de l'année civile.", "en": "Average, across the department's stations, of the sum of daily rainfall over the calendar year."},
+      "methode": {"fr": "Cumul annuel calculé par station, puis moyenne simple des stations. Une année est déclarée manquante si moins de 80 % des jours sont renseignés.", "en": "Annual total computed per station, then a simple average of stations. A year is marked missing if fewer than 80% of days are recorded."},
+      "limites": {"fr": "Les années 2019 et 2020 manquent : trop de jours non renseignés. Une tendance calculée sur la période doit tenir compte de ces lacunes.", "en": "2019 and 2020 are missing: too many days without records. Any trend over the period must account for these gaps."},
+      "serie": [["2015", 1180], ["2016", 1240], ["2017", 1095], ["2018", 1310], ["2019", null], ["2020", null], ["2021", 1205], ["2022", 1150], ["2023", 1275], ["2024", 1190], ["2025", 1230]]
+    },
+    {
+      "slug": "anomalie-temperature-afrique-ouest",
+      "identifiant": "GB-IND-0003",
+      "titre": {"fr": "Écart de température maximale, Afrique de l'Ouest", "en": "Maximum temperature anomaly, West Africa"},
+      "resume": {"fr": "Écart entre la température maximale moyenne de l'année et la normale 1991–2020.", "en": "Difference between the year's mean maximum temperature and the 1991–2020 normal."},
+      "theme": "climat", "territoire": "afrique-ouest", "jeu": "temperatures-afrique-ouest",
+      "unite": "°C", "decimales": 2, "variation": "absolue",
+      "frequence": "annuelle", "statut": "publie", "maj": "2026-08-30",
+      "definition": {"fr": "Température maximale journalière moyenne de l'année, moins la moyenne de la même grandeur sur 1991–2020. Une valeur positive signifie une année plus chaude que la normale.", "en": "The year's mean daily maximum temperature, minus the 1991–2020 mean of the same quantity. A positive value means a year warmer than normal."},
+      "methode": {"fr": "Moyenne mensuelle par pays, pondérée par la surface, puis moyenne annuelle. La normale est calculée une fois et reste fixe.", "en": "Monthly mean per country, weighted by area, then annual mean. The normal is computed once and stays fixed."},
+      "limites": {"fr": "Moyenne régionale : elle masque des écarts forts entre zones côtières et sahéliennes. Ne pas l'utiliser pour une commune.", "en": "Regional average: it hides large differences between coastal and Sahelian areas. Do not use it for a single municipality."},
+      "serie": [["2015", 0.62], ["2016", 0.81], ["2017", 0.70], ["2018", 0.66], ["2019", 0.84], ["2020", 0.88], ["2021", 0.72], ["2022", 0.69], ["2023", 0.97], ["2024", 1.08]]
+    },
+    {
+      "slug": "survie-plantations-abomey-calavi",
+      "identifiant": "GB-IND-0004",
+      "titre": {"fr": "Taux de survie des plantations à 12 mois, Abomey-Calavi", "en": "12-month planting survival rate, Abomey-Calavi"},
+      "resume": {"fr": "Part des arbres plantés encore vivants un an après la plantation.", "en": "Share of planted trees still alive one year after planting."},
+      "theme": "restauration", "territoire": "abomey-calavi", "jeu": "plantations-abomey-calavi",
+      "unite": "%", "decimales": 0, "variation": "absolue",
+      "frequence": "annuelle", "statut": "reserve", "maj": "2026-07-15",
+      "definition": {"fr": "Nombre de plants vivants douze mois après la plantation, divisé par le nombre de plants mis en terre, sur l'ensemble des tronçons suivis.", "en": "Number of live seedlings twelve months after planting, divided by the number of seedlings planted, across all monitored road sections."},
+      "methode": {"fr": "Comptage exhaustif des plants par tronçon, en juin de chaque année. Les plants remplacés ne sont pas comptés comme vivants.", "en": "Full count of seedlings per section, in June each year. Replaced seedlings are not counted as alive."},
+      "limites": {"fr": "Deux mesures seulement : on ne peut pas encore parler de tendance. La revue scientifique n'est pas terminée.", "en": "Only two measurements: it is too early to speak of a trend. The scientific review is not finished."},
+      "serie": [["2024", 76], ["2025", 78]]
+    }
+  ]
+}

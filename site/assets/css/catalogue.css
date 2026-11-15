@@ -91,3 +91,7 @@
   .fiche { grid-template-columns: minmax(0, 1fr) 20rem; }
 }
 @media (max-width: 1023px) { .fiche__lateral { order: -1; } }
+
+/* Graphiques lisibles sur mobile : largeur minimale, défilement horizontal dans le cadre. */
+.graphe__cadre { overflow-x: auto; }
+.graphe__cadre .graphe { min-width: 34rem; }

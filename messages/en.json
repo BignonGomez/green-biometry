@@ -229,5 +229,38 @@
     "popup_plusieurs": "{n} datasets cover this point",
     "popup_aucun": "No dataset shown covers this point.",
     "attribution": "© <a href=\"https://www.openstreetmap.org/copyright\">OpenStreetMap contributors</a>"
+  },
+  "indicateurs": {
+    "meta_titre": "Indicators — Green Biometry",
+    "meta_description": "Documented environmental indicators: definition, unit, method, source and change over time. Pilot in Benin.",
+    "titre": "Indicators",
+    "intro": "Each indicator sums up a dataset as one figure tracked over time. Its page gives the definition, calculation method, source and interpretation limits.",
+    "compte": "indicators",
+    "en": "in",
+    "evolution": "Change {debut} → {fin}: <strong>{valeur}</strong>",
+    "une_valeur": "Not enough measurements yet to show a change.",
+    "points": "pts",
+    "note_titre": "What may change, what may not",
+    "note_texte": "How an indicator is displayed may change, but not what it means. Any change to a definition, unit or method is dated and approved by its scientific lead."
+  },
+  "indicateur": {
+    "derniere_valeur": "Latest value",
+    "evolution_titre": "Change",
+    "frequence": "Update frequency",
+    "frequence_annuelle": "Yearly",
+    "sec_graphe": "Change over time",
+    "sec_definition": "Definition",
+    "methode": "Calculation method",
+    "unite": "Unit",
+    "validation": "Validation level",
+    "sec_limites": "Interpretation limits",
+    "annee": "Year",
+    "manque_texte": "These years are left empty: the line is not drawn between the values around them.",
+    "source_titre": "Source dataset",
+    "source_intro": "The indicator is calculated from this dataset:",
+    "voir_jeu": "View the dataset",
+    "voir_zone": "Show the area on the map",
+    "retour": "Back to indicators",
+    "evolution_court": "{debut} → {fin}: <strong>{valeur}</strong>"
   }
 }

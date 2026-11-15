@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="{{@lang}}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{indicateurs.meta_titre}}</title>
+<meta name="description" content="{{indicateurs.meta_description}}">
+<meta name="robots" content="noindex">
+<link rel="alternate" hreflang="fr" href="{{@chemin_fr}}">
+<link rel="alternate" hreflang="en" href="{{@chemin_en}}">
+<link rel="icon" href="{{@racine}}assets/logo/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="{{@racine}}assets/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="{{@racine}}assets/css/tokens.css">
+<link rel="stylesheet" href="{{@racine}}assets/css/composants.css">
+<link rel="stylesheet" href="{{@racine}}assets/css/accueil.css">
+<link rel="stylesheet" href="{{@racine}}assets/css/catalogue.css">
+<link rel="stylesheet" href="{{@racine}}assets/css/indicateurs.css">
+</head>
+<body>
+{{> icones}}
+<a class="lien-evitement" href="#contenu">{{commun.aller_contenu}}</a>
+<div class="bandeau-demo" role="note">
+  <div class="conteneur"><span class="badge badge--demo">{{commun.demo}}</span><span>{{commun.bandeau_demo}}</span></div>
+</div>
+{{> entete}}
+
+<main id="contenu">
+  <div class="entete-page">
+    <div class="conteneur">
+      <nav class="fil" aria-label="{{commun.fil_label}}"><ol><li><a href="{{@racine}}{{@lang}}/">{{commun.fil_accueil}}</a></li><li aria-current="page">{{indicateurs.titre}}</li></ol></nav>
+      <h1 class="titre-lg">{{indicateurs.titre}}</h1>
+      <p class="texte-doux entete-page__intro">{{indicateurs.intro}}</p>
+    </div>
+  </div>
+
+  <div class="conteneur indicateurs">
+    <h2 class="sr-only">{{@nb_indicateurs}} {{indicateurs.compte}}</h2>
+    <div class="grille indicateurs__liste">
+{{@liste_indicateurs}}
+    </div>
+    <div class="alerte alerte--info indicateurs__note" role="note"><svg aria-hidden="true"><use href="#i-loupe-doc"/></svg><div>
+      <p class="alerte__titre">{{indicateurs.note_titre}}</p>
+      <p class="texte-sm">{{indicateurs.note_texte}}</p>
+    </div></div>
+  </div>
+</main>
+
+{{> pied}}
+</body>
+</html>

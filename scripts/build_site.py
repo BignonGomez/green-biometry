@@ -6,6 +6,7 @@
      accueil   -> _site/<langue>/index.html
      catalogue -> _site/<langue>/catalogue/index.html
      carte     -> _site/<langue>/carte/index.html
+     indicateurs -> _site/<langue>/indicateurs/index.html, plus une fiche par indicateur
      fiche     -> _site/<langue>/catalogue/<slug>/index.html (une par jeu de donnees/jeux-demo.json)
 4. Vérifie le bilinguisme (EF-14) : la construction échoue si une clé manque
    dans une langue ou si une balise {{...}} reste non remplacée.
@@ -28,12 +29,14 @@ import sys
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import catalogue as cat  # noqa: E402
 import carte  # noqa: E402
+import indicateurs as ind  # noqa: E402
 
 RACINE = Path(__file__).resolve().parent.parent
 SORTIE = RACINE / "_site"
 GABARITS = RACINE / "gabarits"
 MESSAGES = RACINE / "messages"
 DONNEES = RACINE / "donnees" / "jeux-demo.json"
+INDICATEURS = RACINE / "donnees" / "indicateurs-demo.json"
 LANGUES = ["fr", "en"]  # la première est la langue de référence
 NAV = ["catalogue", "carte", "indicateurs", "projets", "apropos"]
 
@@ -86,6 +89,7 @@ def verifier_donnees(donnees: dict) -> None:
                 parcourir(v, f"{chemin}[{i}]")
 
     parcourir(donnees["jeux"], "jeux")
+    parcourir(donnees.get("indicateurs", []), "indicateurs")
     if erreurs:
         sys.exit("Données incomplètes :\n  " + "\n  ".join(erreurs))
 
@@ -132,6 +136,11 @@ def pages(donnees):
         "@facettes": cat.facettes(jeux, ref, l, M),
         "@nb_jeux": str(len(jeux))}
     yield "carte.html", "carte/", "carte", lambda l, M, r: carte.variables_carte(jeux, ref, l, M, r)
+    inds = donnees["indicateurs"]
+    yield "indicateurs.html", "indicateurs/", "indicateurs", lambda l, M, r: ind.variables_liste(inds, ref, l, M, r)
+    for i in inds:
+        yield "indicateur.html", f"indicateurs/{i['slug']}/", "indicateurs", (
+            lambda l, M, r, i=i: ind.variables_fiche(i, jeux, ref, l, M, r))
     for jeu in jeux:
         yield "fiche.html", f"catalogue/{jeu['slug']}/", "catalogue", (
             lambda l, M, r, jeu=jeu: cat.variables_fiche(jeu, ref, l, M, r))
@@ -150,7 +159,9 @@ def main() -> None:
 
     messages = charger_messages()
     donnees = json.loads(DONNEES.read_text(encoding="utf-8"))
+    donnees["indicateurs"] = json.loads(INDICATEURS.read_text(encoding="utf-8"))["indicateurs"]
     verifier_donnees(donnees)
+    ind.verifier(donnees["indicateurs"], donnees["jeux"], donnees["referentiels"])
 
     n = 0
     for gabarit, chemin, rubrique, variables_page in pages(donnees):

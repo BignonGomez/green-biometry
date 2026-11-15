@@ -1,0 +1,28 @@
+/* Pages Indicateurs : liste (cartes avec valeur et courbe) et fiche (chiffres clés, graphique temporel). */
+.indicateurs { display: grid; gap: var(--esp-6); padding-block: var(--esp-6) var(--esp-8); }
+.indicateurs__liste { grid-template-columns: repeat(auto-fill, minmax(min(100%, 22rem), 1fr)); }
+.indicateurs__note { max-width: var(--largeur-texte); }
+
+.indicateur-carte { display: grid; gap: var(--esp-3); align-content: start; }
+.indicateur-carte__chiffre { display: flex; align-items: flex-end; justify-content: space-between; gap: var(--esp-4); padding-block: var(--esp-2); border-top: 1px solid var(--gb-ardoise-100); border-bottom: 1px solid var(--gb-ardoise-100); }
+.indicateur-carte__chiffre p { margin: 0; }
+
+.mini-graphe { width: 9rem; height: auto; flex: none; overflow: visible; }
+.mini-graphe polyline { fill: none; stroke: var(--gb-bleu-600); stroke-width: 2; stroke-linejoin: round; stroke-linecap: round; }
+.mini-graphe circle { fill: var(--gb-bleu); }
+
+.chiffres-cles { display: grid; grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr)); gap: var(--esp-3); margin: 0; }
+.chiffres-cles > div { background: var(--couleur-surface); border: 1px solid var(--couleur-bordure); border-radius: var(--rayon-lg); padding: var(--esp-4); display: grid; gap: var(--esp-1); align-content: start; }
+.chiffres-cles dt { font-size: var(--taille-etiquette); font-weight: var(--graisse-forte); letter-spacing: 0.08em; text-transform: uppercase; color: var(--couleur-texte-doux); }
+.chiffres-cles dd { margin: 0; font-weight: var(--graisse-moyenne); }
+.chiffres-cles dd .texte-sm { display: block; margin-top: var(--esp-1); }
+
+.graphe__ligne { fill: none; stroke: var(--gb-bleu-600); stroke-width: 2.5; stroke-linejoin: round; stroke-linecap: round; }
+.graphe__point { fill: var(--couleur-surface); stroke: var(--gb-bleu); stroke-width: 2.5; }
+.graphe__point:hover { fill: var(--gb-bleu); }
+.graphe__etiquette { fill: var(--couleur-texte); font-size: 13px; font-weight: 700; font-variant-numeric: tabular-nums; }
+
+.carte-source__lien { font-weight: var(--graisse-forte); }
+
+/* Sur mobile, la valeur et le graphique passent avant le bloc « source » (l'inverse des fiches jeux). */
+@media (max-width: 1023px) { .fiche--indicateur .fiche__lateral { order: 0; } }

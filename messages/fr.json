@@ -229,5 +229,38 @@
     "popup_plusieurs": "{n} jeux couvrent ce point",
     "popup_aucun": "Aucun jeu affiché ne couvre ce point.",
     "attribution": "© <a href=\"https://www.openstreetmap.org/copyright\">contributeurs OpenStreetMap</a>"
+  },
+  "indicateurs": {
+    "meta_titre": "Indicateurs — Green Biometry",
+    "meta_description": "Indicateurs environnementaux documentés : définition, unité, méthode, source et évolution dans le temps. Pilote au Bénin.",
+    "titre": "Indicateurs",
+    "intro": "Chaque indicateur résume un jeu de données en un chiffre suivi dans le temps. Sa fiche donne la définition, la méthode de calcul, la source et les limites d'interprétation.",
+    "compte": "indicateurs",
+    "en": "en",
+    "evolution": "Évolution {debut} → {fin} : <strong>{valeur}</strong>",
+    "une_valeur": "Pas encore assez de mesures pour une évolution.",
+    "points": "points",
+    "note_titre": "Ce qui change, ce qui ne change pas",
+    "note_texte": "La présentation d'un indicateur peut évoluer, pas sa signification. Toute modification de définition, d'unité ou de méthode est datée et validée par son responsable scientifique."
+  },
+  "indicateur": {
+    "derniere_valeur": "Dernière valeur",
+    "evolution_titre": "Évolution",
+    "frequence": "Fréquence de mise à jour",
+    "frequence_annuelle": "Annuelle",
+    "sec_graphe": "Évolution dans le temps",
+    "sec_definition": "Définition",
+    "methode": "Méthode de calcul",
+    "unite": "Unité",
+    "validation": "Niveau de validation",
+    "sec_limites": "Limites d'interprétation",
+    "annee": "Année",
+    "manque_texte": "Ces années sont laissées vides : la courbe n'est pas tracée entre les valeurs qui les entourent.",
+    "source_titre": "Jeu de données source",
+    "source_intro": "L'indicateur est calculé à partir de ce jeu :",
+    "voir_jeu": "Voir la fiche du jeu",
+    "voir_zone": "Voir la zone sur la carte",
+    "retour": "Retour aux indicateurs",
+    "evolution_court": "{debut} → {fin} : <strong>{valeur}</strong>"
   }
 }
