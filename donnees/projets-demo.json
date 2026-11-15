@@ -1,0 +1,89 @@
+{
+  "_avertissement": "Projets de DÉMONSTRATION : porteurs, valeurs et rapports fictifs. Ne jamais présenter comme réels (cahier des charges, § 6).",
+  "projets": [
+    {
+      "slug": "restauration-mangrove-togbin",
+      "identifiant": "GB-PRJ-0001",
+      "titre": {"fr": "Restauration de la mangrove de Togbin", "en": "Togbin mangrove restoration"},
+      "resume": {"fr": "Replantation de palétuviers sur les berges dégradées de la lagune de Togbin, avec suivi annuel de la surface et de la survie des plants.", "en": "Replanting mangrove trees on the degraded banks of the Togbin lagoon, with yearly monitoring of area and seedling survival."},
+      "theme": "restauration", "territoire": "littoral", "statut": "en_cours",
+      "debut": 2021, "fin": 2026,
+      "porteur": {"fr": "ONG de conservation côtière (exemple)", "en": "Coastal conservation NGO (example)"},
+      "partenaires": [{"fr": "Laboratoire universitaire (exemple)", "en": "University laboratory (example)"}, {"fr": "Mairie de Cotonou (exemple)", "en": "Cotonou city council (example)"}],
+      "jeux": ["mangroves-togbin"],
+      "objectif": {"fr": "Rétablir 40 ha de mangrove fonctionnelle d'ici 2026 et atteindre 70 % de survie des plants à 12 mois.", "en": "Restore 40 ha of functional mangrove by 2026 and reach 70% seedling survival at 12 months."},
+      "indicateurs": [
+        {
+          "code": "surface",
+          "titre": {"fr": "Surface de mangrove replantée", "en": "Replanted mangrove area"},
+          "niveau": "resultat", "unite": "ha", "decimales": 0,
+          "reference": {"annee": "2021", "valeur": 0},
+          "cible": {"annee": "2026", "valeur": 40},
+          "serie": [["2022", 8, "observee"], ["2023", 17, "observee"], ["2024", null, null], ["2025", 31, "declaree"]],
+          "note": {"fr": "2024 : rapport non déposé. 2025 : surface déclarée par le porteur, pas encore vérifiée sur image.", "en": "2024: report not submitted. 2025: area declared by the project holder, not yet checked on imagery."}
+        },
+        {
+          "code": "survie",
+          "titre": {"fr": "Survie des palétuviers à 12 mois", "en": "Mangrove seedling survival at 12 months"},
+          "niveau": "effet", "unite": "%", "decimales": 0,
+          "reference": null,
+          "cible": {"annee": "2026", "valeur": 70},
+          "serie": [["2022", 58, "observee"], ["2023", 64, "observee"], ["2024", null, null], ["2025", 69, "estimation"]],
+          "note": {"fr": "Pas de valeur de référence : aucun plant avant le projet. 2025 : estimation sur un échantillon de 3 parcelles sur 12.", "en": "No baseline: no seedlings before the project. 2025: estimate from a sample of 3 plots out of 12."}
+        }
+      ],
+      "activites": [
+        {"libelle": {"fr": "Plants de palétuviers produits en pépinière", "en": "Mangrove seedlings grown in the nursery"}, "valeur": 52000, "unite": {"fr": "plants", "en": "seedlings"}},
+        {"libelle": {"fr": "Personnes formées à la plantation et au suivi", "en": "People trained in planting and monitoring"}, "valeur": 86, "unite": {"fr": "personnes", "en": "people"}},
+        {"libelle": {"fr": "Journées de plantation communautaire", "en": "Community planting days"}, "valeur": 14, "unite": {"fr": "jours", "en": "days"}}
+      ],
+      "rapports": [
+        {"periode": "2022", "date": "2023-02-10", "statut": "valide"},
+        {"periode": "2023", "date": "2024-02-22", "statut": "valide"},
+        {"periode": "2024", "date": null, "statut": "manquant"},
+        {"periode": "2025", "date": "2026-02-05", "statut": "soumis"}
+      ]
+    },
+    {
+      "slug": "plantations-alignement-abomey-calavi",
+      "identifiant": "GB-PRJ-0002",
+      "titre": {"fr": "Plantations d'alignement à Abomey-Calavi", "en": "Roadside tree planting in Abomey-Calavi"},
+      "resume": {"fr": "Plantation d'arbres le long de 14 tronçons de voie pour ombrager les axes et réduire la chaleur en ville.", "en": "Planting trees along 14 road sections to shade streets and reduce urban heat."},
+      "theme": "restauration", "territoire": "abomey-calavi", "statut": "en_cours",
+      "debut": 2023, "fin": 2027,
+      "porteur": {"fr": "Organisation partenaire (exemple)", "en": "Partner organisation (example)"},
+      "partenaires": [{"fr": "Mairie d'Abomey-Calavi (exemple)", "en": "Abomey-Calavi city council (example)"}],
+      "jeux": ["plantations-abomey-calavi"],
+      "objectif": {"fr": "Planter 3 000 arbres d'ici 2027 avec au moins 80 % de survie à 12 mois.", "en": "Plant 3,000 trees by 2027 with at least 80% survival at 12 months."},
+      "indicateurs": [
+        {
+          "code": "arbres",
+          "titre": {"fr": "Arbres plantés (cumul)", "en": "Trees planted (cumulative)"},
+          "niveau": "activite", "unite": {"fr": "arbres", "en": "trees"}, "decimales": 0,
+          "reference": {"annee": "2023", "valeur": 0},
+          "cible": {"annee": "2027", "valeur": 3000},
+          "serie": [["2024", 1200, "observee"], ["2025", 2600, "observee"]],
+          "note": {"fr": "Comptage exhaustif des arbres plantés, tronçon par tronçon.", "en": "Full count of planted trees, section by section."}
+        },
+        {
+          "code": "survie",
+          "titre": {"fr": "Taux de survie à 12 mois", "en": "Survival rate at 12 months"},
+          "niveau": "effet", "unite": "%", "decimales": 0,
+          "indicateur_public": "survie-plantations-abomey-calavi",
+          "reference": null,
+          "cible": {"annee": "2027", "valeur": 80},
+          "serie": [["2024", 76, "observee"], ["2025", 78, "observee"]],
+          "note": {"fr": "Deux mesures seulement : trop tôt pour parler de tendance.", "en": "Only two measurements: too early to speak of a trend."}
+        }
+      ],
+      "activites": [
+        {"libelle": {"fr": "Tronçons de voie aménagés", "en": "Road sections planted"}, "valeur": 14, "unite": {"fr": "tronçons", "en": "sections"}},
+        {"libelle": {"fr": "Riverains engagés à arroser", "en": "Residents committed to watering"}, "valeur": 210, "unite": {"fr": "personnes", "en": "people"}}
+      ],
+      "rapports": [
+        {"periode": "2024", "date": "2024-07-30", "statut": "valide"},
+        {"periode": "2025", "date": "2025-07-18", "statut": "soumis"}
+      ]
+    }
+  ]
+}

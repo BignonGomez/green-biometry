@@ -1,0 +1,53 @@
+/* Pages Projets : liste, fiche avec résultats suivis (référence, dernière valeur, cible). */
+@import url("indicateurs.css");
+
+.projets__liste { grid-template-columns: repeat(auto-fill, minmax(min(100%, 30rem), 1fr)); }
+.projet-carte { display: grid; gap: var(--esp-3); align-content: start; }
+.projet-carte__suivis { list-style: none; margin: 0; padding: var(--esp-3) 0 0; border-top: 1px solid var(--gb-ardoise-100); display: grid; gap: var(--esp-3); }
+.projet-carte__suivis li > .texte-sm { font-weight: var(--graisse-forte); }
+
+/* Barre d'avancement vers la cible */
+.avancement { display: grid; gap: var(--esp-1); }
+.avancement__piste { height: 0.5rem; border-radius: var(--rayon-plein); background: var(--gb-ardoise-100); overflow: hidden; }
+.avancement__jauge { height: 100%; background: var(--gb-bleu); border-radius: inherit; }
+.avancement p { margin: 0; }
+
+/* Niveau de l'indicateur : activité, résultat, effet écologique */
+.badge--niveau { background: var(--gb-ardoise-100); color: var(--gb-encre-douce); }
+.badge--niveau-effet { background: var(--gb-succes-fond); color: var(--gb-succes); }
+.badge--niveau-resultat { background: var(--gb-info-fond); color: var(--gb-info); }
+
+/* Nature d'une valeur : repère identique dans la légende, le tableau et le graphique */
+.type-valeur { display: inline-flex; align-items: center; gap: var(--esp-2); font-size: var(--taille-texte-sm); font-weight: var(--graisse-forte); white-space: nowrap; }
+.type-valeur__repere { width: 0.75rem; height: 0.75rem; border-radius: 50%; border: 2.5px solid var(--gb-bleu); background: var(--gb-bleu); flex: none; }
+.type-valeur--estimation .type-valeur__repere { background: var(--couleur-surface); }
+.type-valeur--declaree .type-valeur__repere { background: var(--couleur-surface); border-style: dashed; border-color: var(--gb-avert); }
+.type-valeur--reference .type-valeur__repere { border-radius: 2px; background: var(--gb-encre-douce); border-color: var(--gb-encre-douce); }
+.type-valeur--cible .type-valeur__repere { width: 1.25rem; height: 0; border-radius: 0; border: 0; border-top: 2.5px dashed var(--gb-ciel-texte); background: none; }
+
+.legende-types { list-style: none; margin: 0; padding: var(--esp-4); display: grid; gap: var(--esp-2); background: var(--couleur-surface); border: 1px solid var(--couleur-bordure); border-radius: var(--rayon-lg); }
+.legende-types li { display: grid; grid-template-columns: 8.5rem 1fr; gap: var(--esp-3); align-items: baseline; }
+@media (max-width: 479px) { .legende-types li { grid-template-columns: 1fr; gap: 0; } }
+
+/* Bloc d'un indicateur suivi */
+.suivis { display: grid; gap: var(--esp-5); }
+.suivi { display: grid; gap: var(--esp-4); background: var(--couleur-surface); border: 1px solid var(--couleur-bordure); border-radius: var(--rayon-lg); padding: var(--esp-5); min-width: 0; }
+.suivi__tete { display: grid; gap: var(--esp-2); justify-items: start; }
+.suivi__valeurs { display: grid; grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr)); gap: var(--esp-3); margin: 0; }
+.suivi__valeurs > div { display: grid; gap: var(--esp-1); align-content: start; }
+.suivi__valeurs dt { font-size: var(--taille-etiquette); font-weight: var(--graisse-forte); letter-spacing: 0.08em; text-transform: uppercase; color: var(--couleur-texte-doux); }
+.suivi__valeurs dd { margin: 0; font-weight: var(--graisse-moyenne); }
+.suivi .graphe__cadre { border: 0; padding: 0; }
+.suivi__note { margin: 0; }
+.icone-texte { width: 1rem; height: 1rem; vertical-align: -0.15em; margin-right: var(--esp-1); color: var(--gb-bleu); }
+
+/* Graphique : nature des valeurs, référence, cible */
+.graphe__point--estimation { fill: var(--couleur-surface); }
+.graphe__point--observee { fill: var(--gb-bleu); }
+.graphe__point--declaree { fill: var(--couleur-surface); stroke: var(--gb-avert); stroke-dasharray: 3 2; }
+.graphe__reference { fill: var(--gb-encre-douce); }
+.graphe__cible { stroke: var(--gb-ciel-texte); stroke-width: 2; stroke-dasharray: 7 5; }
+.graphe__cible-texte { fill: var(--gb-ciel-texte); font-size: 12px; font-weight: 700; }
+
+.ligne-manque td { color: var(--gb-avert); font-style: italic; }
+.liste-simple { margin: 0; padding-left: 1.1rem; display: grid; gap: var(--esp-1); }

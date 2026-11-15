@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="{{@lang}}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{@prj_titre}} · Green Biometry</title>
+<meta name="description" content="{{@meta_description}}">
+<meta name="robots" content="noindex">
+<link rel="alternate" hreflang="fr" href="{{@chemin_fr}}">
+<link rel="alternate" hreflang="en" href="{{@chemin_en}}">
+<link rel="icon" href="{{@racine}}assets/logo/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="{{@racine}}assets/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="{{@racine}}assets/css/tokens.css">
+<link rel="stylesheet" href="{{@racine}}assets/css/composants.css">
+<link rel="stylesheet" href="{{@racine}}assets/css/accueil.css">
+<link rel="stylesheet" href="{{@racine}}assets/css/catalogue.css">
+<link rel="stylesheet" href="{{@racine}}assets/css/projets.css">
+</head>
+<body>
+{{> icones}}
+<a class="lien-evitement" href="#contenu">{{commun.aller_contenu}}</a>
+<div class="bandeau-demo" role="note">
+  <div class="conteneur"><span class="badge badge--demo">{{commun.demo}}</span><span>{{commun.bandeau_demo}}</span></div>
+</div>
+{{> entete}}
+
+<main id="contenu">
+  <div class="entete-page">
+    <div class="conteneur">
+      <nav class="fil" aria-label="{{commun.fil_label}}"><ol><li><a href="{{@racine}}{{@lang}}/">{{commun.fil_accueil}}</a></li><li><a href="{{@racine}}{{@lang}}/projets/">{{projets.titre}}</a></li><li aria-current="page">{{@prj_titre}}</li></ol></nav>
+      <div class="carte__badges">{{@prj_badges}}</div>
+      <h1 class="titre-lg fiche__titre">{{@prj_titre}}</h1>
+      <p class="texte-lg texte-doux entete-page__intro">{{@prj_resume}}</p>
+      <p class="fiche__ids texte-sm texte-doux"><span>{{fiche.identifiant}}{{commun.deux_points}}<strong>{{@prj_identifiant}}</strong></span><span>{{projets.porteur}}{{commun.deux_points}}{{@prj_porteur}}</span></p>
+    </div>
+  </div>
+
+  <div class="conteneur fiche fiche--indicateur">
+    <div class="fiche__principal">
+      <dl class="chiffres-cles">
+        <div><dt>{{commun.lbl_periode}}</dt><dd>{{@prj_periode}}</dd></div>
+        <div><dt>{{commun.lbl_territoire}}</dt><dd>{{@prj_territoire}}</dd></div>
+        <div><dt>{{projet.nb_indicateurs}}</dt><dd>{{@prj_nb_indicateurs}}</dd></div>
+        <div><dt>{{projet.dernier_rapport}}</dt><dd>{{@prj_dernier_rapport}}</dd></div>
+      </dl>
+
+      <section class="fiche__bloc" aria-labelledby="t-obj">
+        <h2 class="titre-md" id="t-obj">{{projet.sec_objectif}}</h2>
+        <p>{{@prj_objectif}}</p>
+        <div class="alerte alerte--info" role="note"><svg aria-hidden="true"><use href="#i-loupe-doc"/></svg><div>
+          <p class="alerte__titre">{{projets.limite_titre}}</p>
+          <p class="texte-sm">{{projets.limite_texte}}</p>
+        </div></div>
+      </section>
+
+      <section class="fiche__bloc" aria-labelledby="t-suivi">
+        <h2 class="titre-md" id="t-suivi">{{projet.sec_suivi}}</h2>
+        <p class="texte-sm texte-doux">{{projet.suivi_intro}}</p>
+        {{@prj_legende}}
+        {{@prj_alerte_manque}}
+        <div class="suivis">
+{{@prj_suivis}}
+        </div>
+      </section>
+
+      <section class="fiche__bloc" aria-labelledby="t-act">
+        <h2 class="titre-md" id="t-act">{{projet.sec_activites}}</h2>
+        <p class="texte-sm texte-doux">{{projet.activites_intro}}</p>
+        {{@prj_activites}}
+      </section>
+
+      <section class="fiche__bloc" aria-labelledby="t-rap">
+        <h2 class="titre-md" id="t-rap">{{projet.sec_rapports}}</h2>
+        <p class="texte-sm texte-doux">{{projet.rapports_intro}}</p>
+        {{@prj_rapports}}
+      </section>
+    </div>
+
+    <aside class="fiche__lateral" aria-label="{{fiche.actions_label}}">
+      <section class="carte pile" aria-labelledby="t-acteurs">
+        <h2 class="titre-sm" id="t-acteurs">{{projet.acteurs}}</h2>
+        <div><p class="etiquette">{{projets.porteur}}</p><p>{{@prj_porteur}}</p></div>
+        <div><p class="etiquette">{{projet.partenaires}}</p><ul class="liste-simple">{{@prj_partenaires}}</ul></div>
+      </section>
+      <section class="carte pile" aria-labelledby="t-jeux">
+        <h2 class="titre-sm" id="t-jeux">{{projet.jeux_lies}}</h2>
+        <ul class="liste-simple">{{@prj_jeux}}</ul>
+      </section>
+      <div class="fiche__liens">
+        <a class="bouton bouton--discret" href="{{@racine}}{{@lang}}/carte/?jeu={{@prj_jeu_carte}}"><svg aria-hidden="true"><use href="#i-carte"/></svg>{{indicateur.voir_zone}}</a>
+        <a class="bouton bouton--discret" href="{{@racine}}{{@lang}}/projets/"><svg aria-hidden="true"><use href="#i-retour"/></svg>{{projet.retour}}</a>
+      </div>
+    </aside>
+  </div>
+</main>
+
+{{> pied}}
+</body>
+</html>
