@@ -159,7 +159,7 @@ L'e-mail reste dans `auth.users` (géré par Supabase), jamais dupliqué ni publ
 
 | Table | Champs | Rôle |
 | --- | --- | --- |
-| **`projets`** | **id**, **identifiant** (`GB-PRJ-0001`), **slug**, **titre**, **resume**, **objectif** (bilingues), **theme**, territoire_id, **statut** (`en_cours`, `termine`), **debut**, fin, **porteur_organisation_id**, **visibilite** (`public`, `restreint`, `prive`), **gestionnaire_id**, **est_demo** | La fiche projet |
+| **`projets`** | **id**, **identifiant** (`GB-PRJ-0001`), **slug**, **titre**, **resume**, **objectif** (bilingues), **theme**, territoire_id, **statut** (`en_cours`, `termine`), **debut**, fin, **porteur_organisation_id**, **visibilite** (`public`, `restreint`, `prive`), **statut_publication** (publié par un administrateur), **gestionnaire_id**, **est_demo** | La fiche projet |
 | **`projets_partenaires`** | **projet_id**, **organisation_id** | Partenaires |
 | **`projets_jeux`** | **projet_id**, **jeu_id** | Jeux liés |
 | **`suivis_projet`** | **id**, **projet_id**, **titre** (bilingue), **niveau** (`activite`, `resultat`, `effet`), **unite** (bilingue), **decimales**, indicateur_id (indicateur public correspondant), reference_valeur, reference_periode, **cible_valeur**, **cible_periode**, note (bilingue), ordre | Indicateurs suivis : référence et cible obligatoires (une référence absente est dite explicitement) |

@@ -1,0 +1,8 @@
+{
+  "name": "green-biometry-tests-base",
+  "private": true,
+  "description": "Tests du schéma et des règles d'accès, sur PostgreSQL (PGlite), sans Docker",
+  "type": "module",
+  "scripts": { "test": "node lancer.mjs" },
+  "devDependencies": { "@electric-sql/pglite": "0.5.13" }
+}
