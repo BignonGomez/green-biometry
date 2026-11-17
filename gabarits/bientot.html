@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="{{@lang}}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{bientot.meta_titre}}</title>
+<meta name="description" content="{{bientot.intro}}">
+<meta name="robots" content="noindex">
+<link rel="alternate" hreflang="fr" href="{{@chemin_fr}}">
+<link rel="alternate" hreflang="en" href="{{@chemin_en}}">
+<link rel="icon" href="{{@racine}}assets/logo/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="{{@racine}}assets/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="{{@racine}}assets/css/tokens.css">
+<link rel="stylesheet" href="{{@racine}}assets/css/composants.css">
+<link rel="stylesheet" href="{{@racine}}assets/css/accueil.css">
+<link rel="stylesheet" href="{{@racine}}assets/css/catalogue.css">
+<link rel="stylesheet" href="{{@racine}}assets/css/contact.css">
+</head>
+<body>
+{{> icones}}
+<a class="lien-evitement" href="#contenu">{{commun.aller_contenu}}</a>
+<div class="bandeau-demo" role="note">
+  <div class="conteneur"><span class="badge badge--demo">{{commun.demo}}</span><span>{{commun.bandeau_demo}}</span></div>
+</div>
+{{> entete}}
+
+<main id="contenu">
+  <div class="entete-page">
+    <div class="conteneur">
+      <nav class="fil" aria-label="{{commun.fil_label}}"><ol><li><a href="{{@racine}}{{@lang}}/">{{commun.fil_accueil}}</a></li><li aria-current="page">{{bientot.titre}}</li></ol></nav>
+      <div class="carte__badges"><span class="badge badge--soumis"><svg aria-hidden="true"><use href="#i-horloge"/></svg>{{bientot.badge}}</span></div>
+      <h1 class="titre-lg">{{bientot.titre}}</h1>
+      <p class="texte-lg texte-doux entete-page__intro">{{bientot.intro}}</p>
+    </div>
+  </div>
+
+  <div class="conteneur bientot">
+    <section class="carte pile bientot__bloc" id="connexion" aria-labelledby="t-connexion">
+      <h2 class="titre-md" id="t-connexion"><svg aria-hidden="true"><use href="#i-bouclier"/></svg>{{bientot.connexion_titre}}</h2>
+      <p>{{bientot.connexion_texte}}</p>
+      <ul class="bientot__liste"><li>{{bientot.connexion_1}}</li><li>{{bientot.connexion_2}}</li><li>{{bientot.connexion_3}}</li></ul>
+    </section>
+
+    <section class="carte pile bientot__bloc" id="contribuer" aria-labelledby="t-contribuer">
+      <h2 class="titre-md" id="t-contribuer"><svg aria-hidden="true"><use href="#i-depot"/></svg>{{bientot.contribuer_titre}}</h2>
+      <p>{{bientot.contribuer_texte}}</p>
+      <ol class="bientot__liste"><li>{{bientot.contribuer_1}}</li><li>{{bientot.contribuer_2}}</li><li>{{bientot.contribuer_3}}</li><li>{{bientot.contribuer_4}}</li></ol>
+      <p><a class="bouton bouton--primaire" href="{{@racine}}{{@lang}}/contact/?sujet=donnees">{{bientot.contribuer_bouton}}</a></p>
+    </section>
+
+    <section class="carte pile bientot__bloc" id="charte" aria-labelledby="t-charte">
+      <h2 class="titre-md" id="t-charte"><svg aria-hidden="true"><use href="#i-loupe-doc"/></svg>{{bientot.charte_titre}}</h2>
+      <p>{{bientot.charte_texte}}</p>
+      <ul class="bientot__liste"><li>{{bientot.charte_1}}</li><li>{{bientot.charte_2}}</li><li>{{bientot.charte_3}}</li><li>{{bientot.charte_4}}</li></ul>
+    </section>
+
+    <section class="carte pile bientot__bloc" id="evaluateur" aria-labelledby="t-evaluateur">
+      <h2 class="titre-md" id="t-evaluateur"><svg aria-hidden="true"><use href="#i-ok"/></svg>{{bientot.evaluateur_titre}}</h2>
+      <p>{{bientot.evaluateur_texte}}</p>
+      <ul class="bientot__liste"><li>{{bientot.evaluateur_1}}</li><li>{{bientot.evaluateur_2}}</li><li>{{bientot.evaluateur_3}}</li></ul>
+      <p><a class="bouton bouton--secondaire" href="{{@racine}}{{@lang}}/contact/?sujet=evaluateur">{{bientot.evaluateur_bouton}}</a></p>
+    </section>
+
+    <p class="texte-sm texte-doux bientot__note">{{bientot.calendrier}} <a href="{{@racine}}{{@lang}}/a-propos/">{{bientot.calendrier_lien}}</a>.</p>
+  </div>
+</main>
+
+{{> pied}}
+</body>
+</html>

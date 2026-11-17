@@ -27,7 +27,7 @@
 <main id="contenu">
   <form id="catalogue" class="catalogue" method="get" action="" role="search" aria-label="{{catalogue.titre}}">
 
-    <div class="entete-page">
+    <div class="entete-page {{@entete_classe}}">{{@hero_photo}}{{@hero_credit}}
       <div class="conteneur">
         <nav class="fil" aria-label="{{commun.fil_label}}"><ol><li><a href="{{@racine}}{{@lang}}/">{{commun.fil_accueil}}</a></li><li aria-current="page">{{catalogue.titre}}</li></ol></nav>
         <h1 class="titre-lg">{{catalogue.titre}}</h1>

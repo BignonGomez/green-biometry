@@ -17,8 +17,8 @@
         <a href="{{@chemin_fr}}" lang="fr" hreflang="fr" {{@courant_fr}}>FR</a>
         <a href="{{@chemin_en}}" lang="en" hreflang="en" {{@courant_en}}>EN</a>
       </div>
-      <a class="bouton bouton--discret" href="#">{{commun.se_connecter}}</a>
-      <a class="bouton bouton--primaire" href="#"><svg aria-hidden="true"><use href="#i-depot"/></svg>{{commun.contribuer}}</a>
+      <a class="bouton bouton--discret" href="{{@racine}}{{@lang}}/bientot/#connexion">{{commun.se_connecter}}</a>
+      <a class="bouton bouton--primaire" href="{{@racine}}{{@lang}}/bientot/#contribuer"><svg aria-hidden="true"><use href="#i-depot"/></svg>{{commun.contribuer}}</a>
     </div>
     <details class="menu-mobile">
       <summary><svg aria-hidden="true"><use href="#i-menu"/></svg>{{commun.menu}}</summary>
@@ -31,8 +31,8 @@
           <li><a href="{{@racine}}{{@lang}}/a-propos/">{{commun.nav_apropos}}</a></li>
         </ul>
         <div class="rangee">
-          <a class="bouton bouton--primaire" href="#"><svg aria-hidden="true"><use href="#i-depot"/></svg>{{commun.contribuer}}</a>
-          <a class="bouton bouton--secondaire" href="#">{{commun.se_connecter}}</a>
+          <a class="bouton bouton--primaire" href="{{@racine}}{{@lang}}/bientot/#contribuer"><svg aria-hidden="true"><use href="#i-depot"/></svg>{{commun.contribuer}}</a>
+          <a class="bouton bouton--secondaire" href="{{@racine}}{{@lang}}/bientot/#connexion">{{commun.se_connecter}}</a>
           <div class="langue" role="group" aria-label="{{commun.langue}}">
             <a href="{{@chemin_fr}}" lang="fr" hreflang="fr" {{@courant_fr}}>FR</a>
             <a href="{{@chemin_en}}" lang="en" hreflang="en" {{@courant_en}}>EN</a>

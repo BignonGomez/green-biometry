@@ -44,7 +44,8 @@
     "domaine_public": "Domaine public",
     "fil_label": "Fil d'Ariane",
     "fil_accueil": "Accueil",
-    "deux_points": " : "
+    "deux_points": " : ",
+    "photo": "Photo"
   },
   "accueil": {
     "meta_titre": "Green Biometry : données environnementales fiables et partagées",
@@ -483,5 +484,37 @@
     "s4_texte": "<p>Les comptes, le dépôt de données et le vrai formulaire de contact collecteront des données personnelles (nom, adresse e-mail, organisation). Cette page sera alors complétée : finalités, durée de conservation, destinataires, et vos droits d'accès, de rectification et de suppression.</p><p>Le cadre visé est la loi béninoise sur les données personnelles (Code du numérique) et, pour les personnes situées dans l'Union européenne, le RGPD.</p>",
     "s5_titre": "Nous contacter",
     "s5_texte": "<p>Pour toute question sur vos données, passez par la page <a href=\"../contact/\">Contact</a>.</p>"
+  },
+  "bientot": {
+    "meta_titre": "Bientôt disponible — Green Biometry",
+    "titre": "Bientôt disponible",
+    "badge": "En construction",
+    "intro": "Les comptes, le dépôt de données et la validation font partie de la plateforme en cours de construction. Voici ce qui est prévu.",
+    "connexion_titre": "Se connecter",
+    "connexion_texte": "Un compte servira à contribuer, à suivre ses dépôts et, pour les évaluateurs, à relire les données soumises. La consultation du catalogue restera libre, sans compte.",
+    "connexion_1": "Connexion par un lien envoyé par e-mail, sans mot de passe à retenir",
+    "connexion_2": "Trois rôles : contributeur, évaluateur, administrateur",
+    "connexion_3": "Vos informations ne servent qu'au fonctionnement de la plateforme",
+    "contribuer_titre": "Soumettre des données",
+    "contribuer_texte": "Toute contribution suit le même circuit avant d'être publiée. Rien n'est publié automatiquement.",
+    "contribuer_1": "Vous déposez le fichier et remplissez la fiche : source, méthode, licence, période, territoire, limites",
+    "contribuer_2": "Contrôle administratif : la source et le droit de partager sont vérifiés",
+    "contribuer_3": "Contrôle technique : formats, unités, coordonnées et doublons",
+    "contribuer_4": "Revue scientifique, puis publication avec son statut visible",
+    "contribuer_bouton": "Proposer des données dès maintenant",
+    "charte_titre": "Charte de contribution",
+    "charte_texte": "En contribuant, vous vous engagez sur quelques règles simples. La charte complète sera publiée avec la plateforme.",
+    "charte_1": "Ne déposer que des données que vous avez le droit de partager",
+    "charte_2": "Indiquer la source, la méthode et les limites connues",
+    "charte_3": "Choisir une licence claire, ouverte de préférence",
+    "charte_4": "Respecter les communautés et les personnes dont proviennent les données",
+    "evaluateur_titre": "Devenir évaluateur",
+    "evaluateur_texte": "Les évaluateurs relisent les données soumises avant leur publication : cohérence de la méthode, des unités et des résultats.",
+    "evaluateur_1": "Profil recherché : chercheur, enseignant, ingénieur ou expert de terrain en environnement",
+    "evaluateur_2": "Quelques relectures par mois, selon vos disponibilités",
+    "evaluateur_3": "Votre nom figure, si vous le souhaitez, sur les fiches que vous validez",
+    "evaluateur_bouton": "Proposer ma candidature",
+    "calendrier": "Ces fonctions sont prévues pour la version minimale de la plateforme. Calendrier prévisionnel : voir",
+    "calendrier_lien": "Où en est le projet"
   }
 }

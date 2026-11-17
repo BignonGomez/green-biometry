@@ -36,6 +36,7 @@ import carte  # noqa: E402
 import indicateurs as ind  # noqa: E402
 import projets as prj  # noqa: E402
 import pages_texte  # noqa: E402
+import photos  # noqa: E402
 
 RACINE = Path(__file__).resolve().parent.parent
 SORTIE = RACINE / "_site"
@@ -45,7 +46,12 @@ DONNEES = RACINE / "donnees" / "jeux-demo.json"
 INDICATEURS = RACINE / "donnees" / "indicateurs-demo.json"
 PROJETS = RACINE / "donnees" / "projets-demo.json"
 LANGUES = ["fr", "en"]  # la première est la langue de référence
+# Chemin du site sur le serveur (GitHub Pages de projet). À changer avec un nom de domaine propre.
+BASE_URL = "/green-biometry/"
 NAV = ["catalogue", "carte", "indicateurs", "projets", "apropos"]
+# Pages de rubrique qui ont une photo d'en-tête (voir scripts/photos.py).
+HEROS = {"catalogue/": "catalogue", "carte/": "carte", "indicateurs/": "indicateurs",
+         "projets/": "projets", "a-propos/": "apropos", "contact/": "contact"}
 
 RE_PARTIEL = re.compile(r"\{\{>\s*([\w-]+)\s*\}\}")
 RE_BALISE = re.compile(r"\{\{\s*(@?[\w.]+)\s*\}\}")
@@ -151,6 +157,7 @@ def pages(donnees):
             lambda l, M, r, i=i: ind.variables_fiche(i, jeux, ref, l, M, r))
     yield "apropos.html", "a-propos/", "apropos", lambda l, M, r: {}
     yield "contact.html", "contact/", None, lambda l, M, r: {}
+    yield "bientot.html", "bientot/", None, lambda l, M, r: {}
     for page in ("conditions", "confidentialite"):
         yield "texte.html", f"{page}/", None, lambda l, M, r, page=page: pages_texte.variables(page, M)
     prjs = donnees["projets"]
@@ -196,12 +203,16 @@ def main() -> None:
             }
             for nav in NAV:
                 variables[f"@actif_{nav}"] = 'aria-current="page"' if nav == rubrique else ""
+            variables.update(photos.variables(HEROS.get(chemin), langue, messages[langue], racine))
             variables.update(variables_page(langue, messages[langue], racine))
             cible = SORTIE / langue / chemin / "index.html"
             cible.parent.mkdir(parents=True, exist_ok=True)
             cible.write_text(rendre(GABARITS / gabarit, langue, messages[langue], variables), encoding="utf-8")
             n += 1
 
+    # Page 404 bilingue : servie par GitHub Pages à n'importe quelle profondeur, donc chemins absolus.
+    (SORTIE / "404.html").write_text(
+        rendre(GABARITS / "404.html", LANGUES[0], messages[LANGUES[0]], {"@racine": BASE_URL}), encoding="utf-8")
     (SORTIE / ".nojekyll").touch()
     fichiers = [p for p in SORTIE.rglob("*") if p.is_file()]
     taille = sum(p.stat().st_size for p in fichiers)

@@ -44,7 +44,8 @@
     "domaine_public": "Public domain",
     "fil_label": "Breadcrumb",
     "fil_accueil": "Home",
-    "deux_points": ": "
+    "deux_points": ": ",
+    "photo": "Photo"
   },
   "accueil": {
     "meta_titre": "Green Biometry: reliable, shared environmental data",
@@ -483,5 +484,37 @@
     "s4_texte": "<p>Accounts, data submission and the real contact form will collect personal data (name, email address, organisation). This page will then be completed: purposes, retention period, recipients, and your rights of access, correction and deletion.</p><p>The intended framework is Benin's personal data law (Digital Code) and, for people located in the European Union, the GDPR.</p>",
     "s5_titre": "Contact us",
     "s5_texte": "<p>For any question about your data, use the <a href=\"../contact/\">Contact</a> page.</p>"
+  },
+  "bientot": {
+    "meta_titre": "Coming soon — Green Biometry",
+    "titre": "Coming soon",
+    "badge": "Under construction",
+    "intro": "Accounts, data submission and review are part of the platform being built. Here is what is planned.",
+    "connexion_titre": "Sign in",
+    "connexion_texte": "An account will be used to contribute, follow your submissions and, for reviewers, check submitted data. Browsing the catalogue will stay open, without an account.",
+    "connexion_1": "Sign in with a link sent by email, no password to remember",
+    "connexion_2": "Three roles: contributor, reviewer, administrator",
+    "connexion_3": "Your information is only used to run the platform",
+    "contribuer_titre": "Submit data",
+    "contribuer_texte": "Every contribution follows the same path before publication. Nothing is published automatically.",
+    "contribuer_1": "You upload the file and fill in its record: source, method, licence, period, area, limits",
+    "contribuer_2": "Administrative check: the source and the right to share are verified",
+    "contribuer_3": "Technical check: formats, units, coordinates and duplicates",
+    "contribuer_4": "Scientific review, then publication with its visible status",
+    "contribuer_bouton": "Propose data now",
+    "charte_titre": "Contribution charter",
+    "charte_texte": "By contributing, you agree to a few simple rules. The full charter will be published with the platform.",
+    "charte_1": "Only submit data you have the right to share",
+    "charte_2": "State the source, the method and known limits",
+    "charte_3": "Choose a clear licence, preferably an open one",
+    "charte_4": "Respect the communities and people the data comes from",
+    "evaluateur_titre": "Become a reviewer",
+    "evaluateur_texte": "Reviewers check submitted data before publication: consistency of the method, units and results.",
+    "evaluateur_1": "Profile: researcher, lecturer, engineer or field expert in the environment",
+    "evaluateur_2": "A few reviews per month, depending on your availability",
+    "evaluateur_3": "Your name appears, if you wish, on the records you validate",
+    "evaluateur_bouton": "Apply",
+    "calendrier": "These features are planned for the platform's minimum version. Provisional timeline: see",
+    "calendrier_lien": "Where the project stands"
   }
 }

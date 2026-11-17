@@ -246,3 +246,22 @@ select.saisie { appearance: none; padding-right: var(--esp-7);
 
 /* Focus visible sur les fonds sombres (hero, bandeau d appel, pied de page) */
 .hero, .appel, .pied { --couleur-focus: var(--gb-ciel); }
+
+/* ---------- En-tête de rubrique avec photo (scripts/photos.py) ---------- */
+.entete-page.entete-page--photo { position: relative; overflow: hidden; background: var(--gb-marine); color: var(--couleur-sur-sombre); border-bottom: 0; padding-block: var(--esp-8) var(--esp-9); }
+.entete-page__photo { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.entete-page--photo::before { content: ""; position: absolute; inset: 0; z-index: 1;
+  background: linear-gradient(90deg, rgb(8 38 56 / 0.92) 0%, rgb(8 38 56 / 0.78) 45%, rgb(8 38 56 / 0.35) 100%); }
+@media (max-width: 767px) { .entete-page--photo::before { background: rgb(8 38 56 / 0.82); } }
+.entete-page--photo .conteneur { position: relative; z-index: 2; }
+.entete-page--photo h1, .entete-page--photo .fil li[aria-current] { color: var(--couleur-sur-sombre); }
+.entete-page--photo .texte-doux, .entete-page--photo .fil ol { color: var(--couleur-sur-sombre-doux); }
+.entete-page--photo .fil a { color: var(--couleur-sur-sombre); }
+.entete-page--photo .fil li + li::before { color: var(--gb-ardoise-300); }
+.entete-page--photo a:focus-visible, .entete-page--photo input:focus-visible { outline-color: var(--gb-ciel); }
+.entete-page__credit { position: absolute; z-index: 2; right: var(--marge-page); bottom: var(--esp-2); margin: 0; max-width: calc(100% - 2 * var(--marge-page));
+  font-size: 0.6875rem; line-height: 1rem; color: var(--couleur-sur-sombre-doux); text-align: right; }
+.entete-page__credit a { color: var(--couleur-sur-sombre-doux); }
+.entete-page__credit a:hover { color: var(--gb-ciel); }
+/* Sur mobile, le crédit (souvent sur deux lignes) a sa propre place sous le texte. */
+@media (max-width: 767px) { .entete-page.entete-page--photo { padding-bottom: calc(var(--esp-7) + 2.5rem); } }
